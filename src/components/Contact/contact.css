@@ -1,0 +1,148 @@
+#contactus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #1A1C20;
+}
+
+.contactUsTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 0rem;
+    color: white;
+    border-bottom: 1px solid gold;
+}
+
+.contactUsDesc {
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 50vw;
+    margin-top: 1rem;
+    color: white;
+}
+
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstname {
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+    border-radius: .5rem;
+    text-align: center;
+    background: #030302;
+    padding: .5rem 5rem;
+    border: none;
+    color: white;
+    font-weight: 300;
+    
+}
+.lastname {
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+    border-radius: .5rem;
+    text-align: center;
+    background: #030302;
+    padding: .5rem 5rem;
+    border: none;
+    color: white;
+    font-weight: 300;
+    
+}
+
+.company {
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+    border-radius: .5rem;
+    text-align: center;
+    background: #030302;
+    padding: .5rem 5rem;
+    border: none;
+    color: white;
+    font-weight: 300;
+    
+}
+
+.jobTitle {
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+    border-radius: .5rem;
+    text-align: center;
+    background: #030302;
+    padding: .5rem 5rem;
+    border: none;
+    color: white;
+    font-weight: 300;
+    
+}
+
+.phone {
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+    border-radius: .5rem;
+    text-align: center;
+    background: #030302;
+    padding: .5rem 5rem;
+    border: none;
+    color: white;
+    font-weight: 300;
+    
+}
+
+.email {
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+    border-radius: .5rem;
+    text-align: center;
+    background: #030302;
+    padding: .5rem 5rem;
+    border: none;
+    color: white;
+    font-weight: 300;
+    
+}
+
+.fblink {
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+    border-radius: .5rem;
+    text-align: center;
+    background: #030302;
+    padding: .5rem 5rem;
+    border: none;
+    color: white;
+    font-weight: 300;
+    
+}
+
+.message {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    text-align: center;
+    background: #030302;
+    padding: 0 5rem;
+    color: white;
+    font-weight: 300;
+    border: none;
+    
+}
+
+.submitBtn {
+    border-radius: 1rem;
+    padding: .5rem 2rem;
+    background: rgb(187, 141, 13);
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.reachus{
+    margin-top: 1rem;
+    color: gray;
+    font-weight: 400;
+}

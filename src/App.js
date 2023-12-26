@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Navbar from "./components/NavBar/navBar";
+import Intro from "./components/Intro/intro";
+import About from "./components/About/about";
+import Residential from './components/WeBuild/residential';
+import Land from "./components/WeSell/land";
+import Footer from "./components/Footer/footer";
+import LoadingScreen from "./components/LoadingScreen/loadingScreen";
+import { useEffect, useState } from "react";
+import Contact from "./components/Contact/contact";
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {loading ? (
+       
+        <LoadingScreen />
+      ) : (
+     
+        <>
+          <Navbar />
+          <Intro />
+          <Residential />
+          <Land />
+          <About />
+          <Contact/>
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

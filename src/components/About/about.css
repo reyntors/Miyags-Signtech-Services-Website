@@ -1,0 +1,92 @@
+#about {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;   
+    background: #c99c42;
+    color: black;
+    
+}
+
+.aboutTitle {
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: black;
+ 
+}
+
+.aboutDescription {
+    display: flex;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    color: black;
+    
+   
+}
+
+.aboutText {
+    font-size: 1rem;
+    font-weight: 300;
+   
+  
+}
+.aboutDesc {
+    font-weight: 300;
+    font-size: 1rem;
+    max-width: 50rem;
+    padding: 0 2rem;
+}
+
+.aboutSustain {
+    margin-top: 5rem;
+   
+}
+
+.aboutCorporate {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    max-width: 100vw;
+
+}
+
+.aboutLicense {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    
+}
+
+.corporateImgs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.corporateImg {
+    object-fit: cover;
+    max-width: 20vw;
+    border-radius: 50%;
+    background: black;
+    margin: auto;
+    margin-top: 3rem;
+
+}
+
+.corporateImgText {
+    margin: 3rem;
+    
+}
+
+.corporateImgText>h2 {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+

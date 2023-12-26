@@ -1,0 +1,153 @@
+#landForSale {
+    overflow: hidden;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    background: #1A1C20;
+}
+
+.landForSaleTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.landForSaleDesc {
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 50rem;
+    padding: 0 2rem;
+    
+
+}
+.Desktop3 {
+    margin-top: 1rem;
+    max-width: 100vw;
+    overflow: auto;
+}
+.LandImage {
+
+
+    width: 1438;
+    height: 870;
+    left: 0;
+    top: 68;
+    position: absolute;
+ 
+    
+}
+
+.subdivisionTitle {
+    margin-top: 1rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.Lot1 {
+    border: 2px solid rgb(199, 21, 21);
+    background: red;
+    width: 25.58px; /* Remove the comma and use the correct unit (e.g., px) */
+    height: 23.97px; /* Remove the comma and use the correct unit (e.g., px) */
+    left: 189.89px; /* Remove the comma and use the correct unit (e.g., px) */
+    top: 202px; /* Remove the comma and use the correct unit (e.g., px) */
+    position: absolute;
+    transform: rotate(18.15deg);
+    transform-origin: 0 0; /* Use camelCase for transform-origin */
+    border-top-left-radius: 3px; /* Use hyphenated style for CSS properties */
+    opacity: 0.7;
+}
+
+.sellTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.sellOthersDesc {
+    font-weight: 300;
+}
+
+.sellImgs {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.sellImg {
+
+    width: 30vw;
+    margin-top: 2rem;
+    padding: .5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#weProvide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.weProvideTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    max-width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.weProvideDesc {
+    font-weight: 300;
+    max-width: 80vw;
+}
+
+p {
+    font-weight: 300;
+}
+
+.heavyEquipmentTitle {
+    margin-top: 4rem;
+}
+
+.surveyServicesTitle {
+    margin-top: 4rem;
+}
+
+.titlingProcessTitle {
+    margin-top: 4rem;
+}
+
+.businessPermitTitle {
+    margin-top: 4rem;
+    
+}
+
+.heavyEquipment, .surveyServices, .titlingProcess, .businessPermit > h2 >p{
+    max-width: 80vw;
+}
+
+.businessPermit {
+    max-width: 80vw;
+}

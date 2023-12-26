@@ -1,0 +1,160 @@
+#intro {
+    height: 50vh;
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  
+}
+
+.backgroundVideo {
+    object-fit: cover;
+    position: absolute;
+    top: -5rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50vh;
+    margin-top: 5rem;
+    opacity: 0.8;
+    width: 100vw;
+    
+}
+
+.introContent {
+    height:  100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bg {
+
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+    width: 20rem;
+    
+}
+
+
+
+.introBtn {
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 10rem;
+    background: #E3B04B;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 5rem;
+    animation: glow .7s infinite alternate;
+    border: none;
+    cursor: pointer;
+    
+}
+@keyframes glow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 230, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.8);
+    }
+}
+
+.gifHand {
+    position: absolute;
+    top: 18.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 5rem;
+    opacity: 0.7;
+}
+
+.introBtn:hover {
+   
+    background: rgb(255, 102, 0);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 102, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.8);
+    animation: normal;
+
+}
+
+.introBtn:hover + .gifHand{
+   
+    display: none;
+
+}
+
+
+
+
+@media screen and (max-width: 937px) {
+    #intro {
+        height: calc(100vh - 30rem);
+        width: 100vw;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        
+       
+    }
+    .bg {
+
+        position: absolute;
+        top: 4rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; 
+        width: 15rem;
+    }
+    .backgroundVideo {
+        height: 50vh;
+        width: 100vw;
+        
+    }
+    .introBtn {
+        position: absolute;
+        top: 10rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 10rem;
+        background: gold;
+        margin: 1rem 0;
+        padding: 0.75rem;
+        border-radius: 5rem;
+        animation: glow 1s infinite alternate;
+        
+    }
+    
+    @keyframes glow {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 230, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.8);
+        }
+    }
+    
+    .gifHand {
+        position: absolute;
+        top: 13.5rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 5rem;
+        
+    }
+    
+}
