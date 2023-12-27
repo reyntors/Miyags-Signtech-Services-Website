@@ -9,10 +9,10 @@ import LandImage from '../../assets/SubdivisionPlan.png'
 const Land = () => {
   return (
     <section id="landForSale">
-        <span className="landForSaleTitle">We Sell</span>
+        <span id="landForSaleTitle">We Sell</span>
         <span className="landForSaleDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quis saepe eum officia id ducimus, maxime temporibus ea a. Velit.</span>
   <span className="subdivisionTitle">Subdivision Scheme Plan</span> 
-  <Fade left>
+  <Fade bottom>
   <div className="Desktop3" style={{width: 1440, height: 1024, position: 'relative', background: 'white'}}>
   <img className="LandImage" style={{width: 1438, height: 870, left: 0, top: 68, position: 'absolute'}} src={LandImage}  alt='LandImage'/>
   <div className="Lot1" />
@@ -389,7 +389,7 @@ const Land = () => {
 
   <section id='weProvide'>
    
-    <span className="weProvideTitle">We Provide</span>
+    <span id="weProvideTitle">We Provide</span>
     <span className="weProvideDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus porro ipsum rem aliquam fuga quidem. Natus accusamus quisquam maxime soluta!</span>
     
     <div className='heavyEquipment'>

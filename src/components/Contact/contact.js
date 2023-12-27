@@ -10,36 +10,41 @@ const Contact = () => {
         <span className="contactUsTitle"> Contact Us</span>
         </Fade>
         <Fade bottom>
-        <span className="contactUsDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsum ab molestiae dolor molestias maiores, vel nisi sunt autem at!</span>
+        
         </Fade>
         <form action="post" className="contactUs">
+          <div className="contactLeft">
             <Fade left>
             <input type="text" className="firstname" placeholder='Your First Name' />
             </Fade>
             <Fade right>
             <input type="text" className="lastname" placeholder='Your Last Name' />
             </Fade>
+            </div>
             <Fade left>
-            <input type="text" className="company" placeholder='Your Company' />
-            </Fade>
-            <Fade right>
-            <input type="text" className="jobTitle" placeholder='Your Job Title' />
-            </Fade>
-            <Fade left>
-            <input type="text" className="phone" placeholder='Your Phone Number'/>
-            </Fade>
-            <Fade right>
             <input type="text" className="email" placeholder='Your Email' />
+            </Fade>
+            <Fade right>
+            <input type="text" className="phone" placeholder='Your Phone Number' />
             </Fade>
             <Fade left>
             <input type="text" className="fblink" placeholder='Your Facebook Link'/>
             </Fade>
+            
+            <div className="contactRight">
+            <Fade right>
+            <input type="text" className="company" placeholder='Your Company' />
+            </Fade>
+            <Fade left>
+            <input type="text" className="jobTitle" placeholder='Your Job Title'/>
+            </Fade>
+            </div>
             <Fade bottom>
             <textarea name="message" id="" cols="30" rows="6" className="message" placeholder='Your Message'></textarea>
             </Fade>
 
            <button type='submit' className="submitBtn">Submit</button>
-
+           
         </form>
     </section>
   )

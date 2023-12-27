@@ -8,13 +8,23 @@ import './navBar.css';
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
+
   return (
     <nav className="navbar">
         <img src={logo} alt="" className="logo" />
         <div className="desktopMenu">
             <Link activeClass='active' to='intro' spy={true} offset={-100} duration={500} smooth={true} className='desktopMenuListItem'>Home</Link>
             <Link activeClass='active' to='about' spy={true} offset={-70} duration={500} smooth={true} className='desktopMenuListItem'>About</Link>
-            <Link activeClass='active' to='residential' spy={true} offset={-50} duration={500} smooth={true} className='desktopMenuListItem'>Services</Link>
+            <Link  activeClass='active' to='' className='desktopMenuListItem1'>Services
+            <Fade right duration={300} >
+            <ul className="sub-menus">
+              <li> <Link activeClass='active2' to='residential' spy={true} offset={-50} duration={500} smooth={true} className='sublist1'>We Build</Link> </li>
+              <li><Link activeClass='active2' to='landForSaleTitle' spy={true} offset={-50} duration={500} smooth={true} className='sublist2'>We Sell</Link> </li>
+              <li> <Link activeClass='active2' to='weProvideTitle' spy={true} offset={-110} duration={500} smooth={true} className='sublist3'>We Provide</Link> </li> 
+            </ul>
+            </Fade>
+            </Link>
+
             <Link activeClass='active' to='clients' spy={true} offset={-50} duration={500} smooth={true} className='desktopMenuListItem'>Projects</Link>
             <Link activeClass='active' to='clients' spy={true} offset={-50} duration={500} smooth={true} className='desktopMenuListItem'>Careers</Link>
             <Link activeClass='active' to='contactus' spy={true} offset={-87} duration={500} smooth={true} className='desktopMenuListItem'>Contact Us</Link>

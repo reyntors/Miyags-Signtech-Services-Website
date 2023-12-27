@@ -28,108 +28,127 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
+}
+
+.contactLeft {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.contactRight {
+    display: flex;
+    flex-direction: row;
 }
 
 .firstname {
     margin-top: 1rem;
     margin-bottom: .4rem;
-    border-radius: .5rem;
+    margin-right: 1rem;
     text-align: center;
-    background: #030302;
     padding: .5rem 5rem;
     border: none;
     color: white;
     font-weight: 300;
+    border-bottom: 1px solid goldenrod;
+    outline: none;
     
 }
 .lastname {
     margin-top: 1rem;
     margin-bottom: .4rem;
-    border-radius: .5rem;
+ 
     text-align: center;
-    background: #030302;
     padding: .5rem 5rem;
     border: none;
     color: white;
     font-weight: 300;
+    border-bottom: 1px solid goldenrod;
+    outline: none;
     
 }
 
 .company {
     margin-top: 1rem;
     margin-bottom: .4rem;
-    border-radius: .5rem;
+    margin-right: 1rem;
     text-align: center;
-    background: #030302;
     padding: .5rem 5rem;
     border: none;
     color: white;
     font-weight: 300;
+    border-bottom: 1px solid goldenrod;
+    outline: none;
     
 }
 
 .jobTitle {
     margin-top: 1rem;
     margin-bottom: .4rem;
-    border-radius: .5rem;
+  
     text-align: center;
-    background: #030302;
     padding: .5rem 5rem;
     border: none;
     color: white;
     font-weight: 300;
+    border-bottom: 1px solid goldenrod;
+    outline: none;
     
 }
 
 .phone {
     margin-top: 1rem;
     margin-bottom: .4rem;
-    border-radius: .5rem;
     text-align: center;
-    background: #030302;
     padding: .5rem 5rem;
     border: none;
     color: white;
     font-weight: 300;
+    border-bottom: 1px solid goldenrod;
+    outline: none;
     
 }
 
 .email {
     margin-top: 1rem;
     margin-bottom: .4rem;
-    border-radius: .5rem;
+    
     text-align: center;
-    background: #030302;
     padding: .5rem 5rem;
     border: none;
     color: white;
     font-weight: 300;
+    border-bottom: 1px solid goldenrod;
+    outline: none;
     
 }
 
 .fblink {
     margin-top: 1rem;
     margin-bottom: .4rem;
-    border-radius: .5rem;
+   
     text-align: center;
-    background: #030302;
     padding: .5rem 5rem;
     border: none;
     color: white;
     font-weight: 300;
+    border-bottom: 1px solid goldenrod;
+    outline: none;
     
 }
 
 .message {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border-radius: .5rem;
+   
     text-align: center;
     background: #030302;
     padding: 0 5rem;
     color: white;
     font-weight: 300;
     border: none;
+    outline: none;
     
 }
 
