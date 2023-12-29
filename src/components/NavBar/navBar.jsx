@@ -5,11 +5,23 @@ import login from '../../assets/login.png'
 import menu from '../../assets/menu.png';
 import Fade from 'react-reveal/Fade';
 import './navBar.css';
+import LoginSignUp from '../LoginSignUp/loginSignUp';
+
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const [showLoginSignUp, setShowLoginSignUp] = useState(false);
+
+    const handleLogicSignUpClick = () => {
+      setShowLoginSignUp(true);
+    };
+
+    const handleCloseLoginSignUp = () => {
+      setShowLoginSignUp(false);
+    };
 
   return (
+    
     <nav className="navbar">
         <img src={logo} alt="" className="logo" />
         <div className="desktopMenu">
@@ -29,11 +41,11 @@ const Navbar = () => {
             <Link activeClass='active' to='clients' spy={true} offset={-50} duration={500} smooth={true} className='desktopMenuListItem'>Careers</Link>
             <Link activeClass='active' to='contactus' spy={true} offset={-87} duration={500} smooth={true} className='desktopMenuListItem'>Contact Us</Link>
         </div>
-        <button className="desktopLoginBtn"> 
+        <button className="desktopLoginBtn" onClick={() => {handleLogicSignUpClick(); }}> 
         <img src={login} alt="" className="desktopMenuImg" /> Login/Signup</button>
         
         <img src={menu} alt="Menu" className="mobMenu" onClick={()=>setShowMenu(!showMenu)}/>
-        <Fade right>
+        <Fade right duration={300}>
         <div className="navMenu" style={{display: showMenu? 'flex' : 'none'}}>
             <Link activeClass='active' to='intro' spy={true} offset={-100} duration={500} smooth={true} onClick={()=>setShowMenu(false)} className='listItem'>Home</Link>
             <Link activeClass='active' to='about' spy={true} offset={-50} duration={500} smooth={true} onClick={()=>setShowMenu(false)} className='listItem'>About</Link>
@@ -41,11 +53,13 @@ const Navbar = () => {
             <Link activeClass='active' to='clients' spy={true} offset={-50} duration={500} smooth={true} onClick={()=>setShowMenu(false)} className='listItem'>Projects</Link>
             <Link activeClass='active' to='clients' spy={true} offset={-50} duration={500} smooth={true} onClick={()=>setShowMenu(false)} className='listItem'>Careers</Link>
             <Link activeClass='active' to='contactus' spy={true} offset={-50} duration={500} smooth={true} onClick={()=>setShowMenu(false)} className='listItem'>Contact Us</Link>
-            <Link activeClass='active' to='clients' spy={true} offset={-50} duration={500} smooth={true} onClick={()=>setShowMenu(false)} className='listItem'>Login/Signup</Link>
+            <Link onClick={() => { setShowMenu(false); handleLogicSignUpClick(); }} className='listItem'>Login/Signup</Link>
         </div>
         </Fade>
+        {showLoginSignUp && <LoginSignUp onClose={handleCloseLoginSignUp} />}
+       
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;

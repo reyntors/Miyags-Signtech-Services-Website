@@ -1,0 +1,183 @@
+#loginSignUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5rem 8rem;
+    background: #0f1013;
+    max-width: 30vw;
+    height: 50vh;
+    opacity: 0.99;
+    box-shadow: 8px 8px 1px rgb(255, 196, 0);
+    animation: fadeIn 0.3s ease-in-out;
+    
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+  }
+
+
+.loginTitle {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 25rem;
+    
+}
+
+
+.loginForm {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+  }
+
+
+.loginInput {
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 300;
+    border-bottom: 1px solid goldenrod;
+    margin: 1rem;
+    width: 100%; 
+    max-width: 200px; 
+    margin-right: 1rem;
+}
+
+.signUpInput {
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: 300;
+    border-bottom: 1px solid #0f1013;
+    margin: 1rem;
+    width: 100%; 
+    max-width: 200px; 
+    margin-right: 1rem;
+}
+
+.signUpForm {
+    margin-top: 3rem;
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: fadeIns 0.3s ease-in-out;
+}
+
+
+
+@keyframes fadeIns {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+  }
+
+.arrow {
+    margin-left: 10rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    color: #0f1013;
+    cursor: pointer;
+}
+
+
+.loginLogo {
+    margin-top: 24rem;
+    width: 50%;
+    position: absolute;
+}
+
+
+.loginBtn {
+    border: none;
+    background: goldenrod;
+    margin-left: 1rem;
+    padding: .5rem 1rem;
+}
+
+.loginBtn:hover {
+    color: white;
+    box-shadow: 2px 2px 1px rgb(59, 59, 55);
+}
+
+
+.forgotpassText {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 1rem;
+    margin-top: 5rem;
+    position: absolute; 
+}
+
+.forgotpassLink {
+    color: goldenrod;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.registerText {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 1rem;
+    margin-top: 18rem;
+    position: absolute;
+  }
+  
+  .registerLink {
+    color: goldenrod;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .closeBtn {
+    max-width: 20px;
+    position: absolute;
+    margin-left: 15rem;
+    margin-bottom: 26rem;
+    cursor: pointer;
+    
+}
+
+.signUpInput.invalid {
+    border-bottom: 1px solid red;
+  }
+
+
+@media screen and (max-width: 937px) {
+    #loginSignUp {
+        max-width: 70vw;
+    }
+
+    .loginForm {
+        width: 50%;
+    }
+}

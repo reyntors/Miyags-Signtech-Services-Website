@@ -10,7 +10,7 @@
     position: sticky;  
     top: 0;
     z-index: 5;
-    opacity: 0.8;
+   
     
 }
 
@@ -30,6 +30,14 @@
     padding: 0 1rem;
     border-radius: 2rem;
 }
+
+.desktopLoginBtn:hover {
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.8), rgba(65, 54, 18, 0.8));
+    color: rgb(255, 255, 255);
+    transition: background 0.3s ease;
+}
+
+
 
 .desktopMenuImg {
     object-fit: cover;
@@ -151,9 +159,11 @@
 
 
 
+
+
 @media screen and (max-width: 937px) {
     .navbar {
-        opacity: 0.8;
+        
         background: #0f1013;
     }
 
