@@ -1,7 +1,7 @@
 import Navbar from "./components/NavBar/navBar";
 import Intro from "./components/Intro/intro";
 import About from "./components/About/about";
-import Services from './components/WeBuild/residential';
+import Services from './components/WeBuild/services';
 // import Land from "./components/WeSell/land";
 import Footer from "./components/Footer/footer";
 import LoadingScreen from "./components/LoadingScreen/loadingScreen";

@@ -1,5 +1,5 @@
 .navbar {
-    background: #0f0702;
+    background: #000000;
     height: 5.5rem;
     width: 100vw;
     margin: 0 auto;
@@ -7,11 +7,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;  
+    position: sticky;
     top: 0;
     z-index: 5;
-   
-    
 }
 
 .logo {
@@ -37,8 +35,6 @@
     transition: background 0.3s ease;
 }
 
-
-
 .desktopMenuImg {
     object-fit: cover;
     height: 1rem;
@@ -63,19 +59,16 @@
     object-fit: cover;
     height: 2.8rem;
     justify-content: space-between;
-    
 }
 
 .listItem {
     display: none;
-    
 }
 
 .listItem:hover {
     color: black;
     background: #ff7504;
     padding: 0.5rem;
-   
 }
 
 .active {
@@ -84,86 +77,58 @@
     border-bottom: 3px solid #e96d07;
 }
 
+/* Sub-menu styling with slide-down effect */
+.desktopMenuListItem1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .sub-menus {
-    display: none;
     position: absolute;
+    top: 100%; /* Position below the main menu item */
+    left: 0;
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.desktopMenuListItem1:hover {
-    color: white;
-    padding: 2rem 1rem;
     background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Smooth transition */
+    z-index: 1;
+    border: 1px solid rgba(5, 5, 5, 0.5);
 }
 
 .desktopMenuListItem1:hover .sub-menus {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    opacity: 1;
+    max-height: 500px; /* Adjust based on the content */
+    padding: 0.5rem 0;
+}
+
+.sub-menus li {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.sub-menus li a {
+    text-decoration: none;
     color: white;
-    background: black;
-    margin-left: 10rem;
-    font-weight: 300;
-    margin-top: 1.9rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border: none;
-    border-bottom: 1px solid rgb(243, 117, 0);
-    
-
-  }
-
-.sublist1 {
-    padding: 0 0rem;
     font-size: large;
-    padding: 0.4rem 5rem;
 }
 
-
-.sublist1:hover {
-    color:#0f1013;
-    background: #E3B04B;
-    padding: 0.4rem 5rem;
+.sub-menus li:hover {
+    background: #f16100;
+    color: #0f1013;
 }
 
-.sublist2{
-    padding: 0 0rem;
-    font-size: large;
-    padding: 0.4rem 3rem;
-}
-
-
-.sublist2:hover {
-    color:#0f1013;
-    background: #E3B04B;
-    padding: 0.4rem 5.3rem;
-}
-
-.sublist3{
-    padding: 0 0rem;
-    font-size: large;
-    padding: 0.4rem 3rem;
-}
-
-
-.sublist3:hover {
-    color:#0f1013;
-    background: #E3B04B;
-    padding: 0.4rem 4.2rem;
-}
-
-
-
-
-
-
-
-
+/* Responsive adjustments */
 @media screen and (max-width: 937px) {
     .navbar {
-        
         background: #0f1013;
     }
 
@@ -176,8 +141,8 @@
         background: #0f1013;
         width: 100%;
         box-sizing: border-box;
-        
     }
+
     .navMenu {
         position: absolute;
         top: 5rem;
@@ -190,29 +155,23 @@
         min-height: 15rem;
         background: #0f1013;
         align-items: center;
-        
-        
     }
 
-   
-    
     .mobMenu {
         display: flex;
-        
     }
+
     .desktopMenu {
         display: none;
     }
+
     .desktopLoginBtn {
         display: none;
     }
+
     .logo {
         object-fit: cover;
         height: 3rem;
         width: 8rem;
     }
-    
-    
-    
 }
-

@@ -18,10 +18,11 @@
   .introImg {
     position: absolute;
     top: 0;
-    opacity: 0;
+    opacity: 0.5;
     width: 100%; /* Ensure image covers the container */
     height: 100%; /* Ensure image covers the container */
     object-fit: cover; /* Ensure image scales correctly */
+    filter: blur(3px); /* Apply blur to the image */
     transition: left 1s ease-in-out, opacity 1s ease-in-out;
   }
   
@@ -40,19 +41,41 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  
   
   .bg {
     position: absolute;
-    top: 8rem;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1; 
-    width: 20rem;
+    z-index: 1;
+    width: 30rem;
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center; /* Centers the text horizontally */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+    display: flex;
+    justify-content: center; /* Ensures text is centered horizontally */
+    align-items: center; /* Centers text vertically */
   }
+
+  .highlight {
+    background-color: rgb(248, 70, 0);
+    color: white; /* Ensures the text is visible on the black background */
+    padding: 0 1rem; /* Optional: adds some spacing around the highlighted words */
+  }
+
+  .highlight2 {
+    background-color: rgb(248, 70, 0);
+    color: white; /* Ensures the text is visible on the black background */
+    padding: 0 3rem 0 0.2rem; /* Optional: adds some spacing around the highlighted words */
+  }
+  
   
   .introBtn {
     position: absolute;
-    top: 15rem;
+    top: 18rem;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -61,7 +84,7 @@
     margin: 1rem 0;
     padding: 0.75rem;
     border-radius: 5rem;
-    animation: glow 0.7s infinite alternate;
+    animation: glow 1s infinite alternate;
     border: none;
     cursor: pointer;
   }
