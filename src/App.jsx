@@ -1,8 +1,8 @@
 import Navbar from "./components/NavBar/navBar";
 import Intro from "./components/Intro/intro";
 import About from "./components/About/about";
-import Residential from './components/WeBuild/residential';
-import Land from "./components/WeSell/land";
+import Services from './components/WeBuild/residential';
+// import Land from "./components/WeSell/land";
 import Footer from "./components/Footer/footer";
 import LoadingScreen from "./components/LoadingScreen/loadingScreen";
 import { useEffect, useState } from "react";
@@ -30,9 +30,10 @@ function App() {
         <>
           <Navbar />
           <Intro />
-          <Residential />
-          <Land />
           <About />
+          <Services />
+          {/* <Land /> */}
+          
           <Contact/>
           <Footer />
         </>

@@ -1,5 +1,5 @@
 .navbar {
-    background: #0f1013;
+    background: #0f0702;
     height: 5.5rem;
     width: 100vw;
     margin: 0 auto;
@@ -16,12 +16,12 @@
 
 .logo {
     object-fit: cover;
-    height: 3rem;
+    height: 4rem;
     width: 8rem;
 }
 
 .desktopLoginBtn {
-    background: #E3B04B;
+    background: #e44709;
     color: black;
     border: none;
     display: flex;
@@ -32,7 +32,7 @@
 }
 
 .desktopLoginBtn:hover {
-    background: linear-gradient(45deg, rgba(255, 215, 0, 0.8), rgba(65, 54, 18, 0.8));
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.8), rgba(243, 3, 3, 0.8));
     color: rgb(255, 255, 255);
     transition: background 0.3s ease;
 }
@@ -53,9 +53,9 @@
 }
 
 .desktopMenuListItem:hover {
-    color: #E3B04B;
+    color: #e96d07;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid #E3B04B;
+    border-bottom: 3px solid #e96d07;
 }
 
 .mobMenu {
@@ -73,15 +73,15 @@
 
 .listItem:hover {
     color: black;
-    background: #E3B04B;
+    background: #ff7504;
     padding: 0.5rem;
    
 }
 
 .active {
-    color: #E3B04B;
+    color: #e96d07;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid #E3B04B;
+    border-bottom: 3px solid #e96d07;
 }
 
 .sub-menus {
@@ -110,7 +110,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     border: none;
-    border-bottom: 1px solid goldenrod;
+    border-bottom: 1px solid rgb(243, 117, 0);
     
 
   }

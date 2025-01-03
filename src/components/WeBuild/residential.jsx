@@ -1,80 +1,133 @@
 import React, { useEffect, useState } from 'react';
 import './residential.css';
-import frontView from '../../assets/front-view-house1.jpg';
-import rightView from '../../assets/right-view-house1.jpg';
-import rearView from '../../assets/rear-vew-house1.jpg';
-import leftView from '../../assets/left-view-house1.jpg';
 import { Fade } from 'react-reveal';
 
-const Residential = () => {
-  const [currentImages, setCurrentImages] = useState([0, 0, 0, 0]);
+// Import images
+const importAll = (requireContext) => requireContext.keys().map(requireContext);
+const billboardAdvertisingImgs = importAll(require.context('../../assets/billboard', false, /\.(png|jpe?g|svg)$/));
+const signFabricationImgs = importAll(require.context('../../assets/signFabrication', false, /\.(png|jpe?g|svg)$/));
+const stickerImgs = importAll(require.context('../../assets/sticker', false, /\.(png|jpe?g|svg)$/));
 
-  const images = [frontView, rightView, rearView, leftView];
+const Services = () => {
+  const [currentSection, setCurrentSection] = useState(0); // State to track the current section
+  const [currentBillboardImage, setCurrentBillboardImage] = useState(0);
+  const [currentSignFabricationImage, setCurrentSignFabricationImage] = useState(0);
+  const [currentStickerImage, setCurrentStickerImage] = useState(0);
 
   useEffect(() => {
-    const intervalIds = currentImages.map((_, index) => {
-      return setInterval(() => {
-        setCurrentImages((prevImages) =>
-          prevImages.map((prevImage, i) => (i === index ? (prevImage + 1) % images.length : prevImage))
-        );
-      }, 3000);
-    });
+    const billboardIntervalId = setInterval(() => {
+      setCurrentBillboardImage((prevImage) => (prevImage + 1) % billboardAdvertisingImgs.length);
+    }, 3000);
+
+    const signFabricationIntervalId = setInterval(() => {
+      setCurrentSignFabricationImage((prevImage) => (prevImage + 1) % signFabricationImgs.length);
+    }, 3000);
+
+    const stickerIntervalId = setInterval(() => {
+      setCurrentStickerImage((prevImage) => (prevImage + 1) % stickerImgs.length);
+    }, 3000);
 
     return () => {
-      intervalIds.forEach((intervalId) => clearInterval(intervalId));
+      clearInterval(billboardIntervalId);
+      clearInterval(signFabricationIntervalId);
+      clearInterval(stickerIntervalId);
     };
-  }, [currentImages, images.length]);
+  }, [billboardAdvertisingImgs.length, signFabricationImgs.length, stickerImgs.length]);
 
-  const handleNext = (index) => {
-    setCurrentImages((prevImages) =>
-      prevImages.map((prevImage, i) => (i === index ? (prevImage + 1) % images.length : prevImage))
-    );
-  };
+  const sections = [
+    {
+      title: 'Billboard Advertising',
+      description: 'At Miyags Signtech Services, we specialize in creating and managing impactful billboard advertising campaigns that put your brand in the spotlight. Our services are designed to ensure your message reaches a broad and diverse audience, maximizing visibility and engagement. We use high-quality Gonzheng printing machines to deliver vibrant, durable billboards that effectively capture attention and convey your message with clarity and impact.',
+      images: billboardAdvertisingImgs,
+      currentImage: currentBillboardImage
+    },
+    {
+      title: 'Sign Fabrication',
+      description: 'At Miyags Signtech Services, we specialize in high-quality sign fabrication tailored to meet your unique needs. Our team of skilled craftsmen and designers work diligently to bring your vision to life, ensuring every detail is perfect. Whether you need custom signs for your business, event, or special project, we use state-of-the-art technology and premium materials to create durable and visually appealing signage.',
+      images: signFabricationImgs,
+      currentImage: currentSignFabricationImage
+    },
+    {
+      title: 'Directional Signs',
+      description: 'Lorem ipsum...',
+      images: null,
+      currentImage: 0
+    },
+    {
+      title: 'BIR & NON-BIR Forms Printing',
+      description: 'Lorem ipsum...',
+      images: null,
+      currentImage: 0
+    },
+    {
+      title: 'Packaging Printing',
+      description: 'Lorem ipsum...',
+      images: null,
+      currentImage: 0
+    },
+    {
+      title: 'Tarp Printing',
+      description: 'Lorem ipsum...',
+      images: null,
+      currentImage: 0
+    },
+    {
+      title: 'Sticker Printing',
+      description: 'Enhance your brand visibility with our custom sticker printing services. Perfect for promotional events, product labeling, and personal use, our stickers are crafted with high-quality materials to ensure durability and vibrant color accuracy. We utilize state-of-the-art UCJV300-160 and JV330-160 printing machines to deliver exceptional quality and precision in every print.',
+      images: stickerImgs,
+      currentImage: currentStickerImage
+    }
+  ];
 
-  const handlePrev = (index) => {
-    setCurrentImages((prevImages) =>
-      prevImages.map((prevImage, i) => (i === index ? (prevImage - 1 + images.length) % images.length : prevImage))
-    );
-  };
-
-  const renderResidentialSection = (title, description, index) => (
+  const renderResidentialSection = (title, description, index, images, currentImage) => (
     <div className="residentials" key={index}>
       <Fade bottom>
         <h2>{title}</h2>
         <p>{description}</p>
       </Fade>
-      <Fade bottom>
-        <div className="residentialImgs">
-          <div className="img-container" style={{ transform: `translateX(${-currentImages[index] * 100}%)` }}>
-            {images.map((image, imgIndex) => (
-              <img key={imgIndex} src={image} alt="" className="residentialImg" />
-            ))}
+      {images && (
+        <Fade left>
+          <div className="residentialImgs">
+            <div className="img-container">
+              <img src={images[currentImage]} alt="" className="residentialImg" />
+            </div>
           </div>
-        </div>
-        <div>
-          <button className="residentialBtn" onClick={() => handlePrev(index)}>
-            Prev
-          </button>
-          <button className="residentialBtn" onClick={() => handleNext(index)}>
-            Next
-          </button>
-        </div>
-      </Fade>
+        </Fade>
+      )}
+      <div className="buttonContainer">
+        <button
+          onClick={() => setCurrentSection(currentSection - 1)}
+          className="navBtn"
+          disabled={currentSection === 0}
+        >
+          Previous
+        </button>
+        <button
+          onClick={() => setCurrentSection(currentSection + 1)}
+          className="navBtn"
+          disabled={currentSection === sections.length - 1}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 
   return (
     <section id="residential">
       <Fade bottom>
-        <span className="weBuildTitle">We Build</span>
+        <h2 className="explore">EXPLORE</h2>
+        <span className="weBuildTitle">Our Services</span>
       </Fade>
-
-      {renderResidentialSection('Residential House Model', 'Lorem ipsum...', 0)}
-      {renderResidentialSection('Commercial Building', 'Lorem ipsum...', 1)}
-      {renderResidentialSection('Amenities', 'Lorem ipsum...', 2)}
-      {renderResidentialSection('Structural Foundation', 'Lorem ipsum...', 3)}
+      {renderResidentialSection(
+        sections[currentSection].title,
+        sections[currentSection].description,
+        currentSection,
+        sections[currentSection].images,
+        sections[currentSection].currentImage
+      )}
     </section>
   );
 };
 
-export default Residential;
+export default Services;

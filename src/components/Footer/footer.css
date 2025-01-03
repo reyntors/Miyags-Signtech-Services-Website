@@ -123,18 +123,20 @@
 .weBuild {
     display: flex;
     flex-direction: column;
-    margin-right: 17rem;
-    position: absolute;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 7rem;
+    width: 100%;
+    text-align: center;
 }
 
 .weBuildTitles {
-    font-weight: 400;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid goldenrod;
+    font-weight: 200;
+    
+    
 }
 
-.weSell {
+/* .weSell {
     display: flex;
     flex-direction: column;
     margin-right: 17rem;
@@ -163,7 +165,7 @@
     margin-bottom: 0.5rem;
     border-bottom: 1px solid goldenrod;
     
-}
+} */
 
 .rightFooter {
 

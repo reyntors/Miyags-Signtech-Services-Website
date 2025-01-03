@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './loginSignUp.css';
-import loginLogo from '../../assets/logo.png'
+import loginLogo from '../../assets/miyags.png'
 import closeButton from '../../assets/close-button2.png'
 
 
@@ -33,7 +33,7 @@ const LoginSignUp = ({onClose}) => {
 
   return (
     
-        <section id="loginSignUp" style={{background: showLoginForm? '#0f1013' : '#E3B04B', boxShadow: showLoginForm ? '8px 8px 1px rgb(255, 196, 0)' : '8px 8px 1px #0f1013' }}>
+        <section id="loginSignUp" style={{background: showLoginForm? '#0f1013' : '#f89500', boxShadow: showLoginForm ? '8px 8px 1px rgb(253, 135, 0)' : '8px 8px 1px #0f1013' }}>
           <img src={closeButton} onClick={onClose} alt="" className="closeBtn" style={{background: showLoginForm? '' : 'black' , borderRadius: '50%'}} />
           <h2 className='loginTitle' style = {{color: showLoginForm? 'white' : 'black'}}>{showLoginForm ? 'Login' : 'SignUp'}</h2>
           

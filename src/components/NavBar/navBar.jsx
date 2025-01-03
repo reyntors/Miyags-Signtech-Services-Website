@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/miyags.png'
 import { Link } from 'react-scroll';
 import login from '../../assets/login.png'
 import menu from '../../assets/menu.png';
@@ -30,9 +30,10 @@ const Navbar = () => {
             <Link  activeClass='active' to='' className='desktopMenuListItem1'>Services
             <Fade right duration={300} >
             <ul className="sub-menus">
-              <li> <Link activeClass='active2' to='residential' spy={true} offset={-50} duration={500} smooth={true} className='sublist1'>We Build</Link> </li>
-              <li><Link activeClass='active2' to='landForSaleTitle' spy={true} offset={-50} duration={500} smooth={true} className='sublist2'>We Sell</Link> </li>
-              <li> <Link activeClass='active2' to='weProvideTitle' spy={true} offset={-110} duration={500} smooth={true} className='sublist3'>We Provide</Link> </li> 
+              <li> <Link activeClass='active2' to='residential' spy={true} offset={-50} duration={500} smooth={true} className='sublist1'>Billboard Advertising</Link> </li>
+              <li><Link activeClass='active2' to='landForSaleTitle' spy={true} offset={-50} duration={500} smooth={true} className='sublist2'>Sign Fabrication</Link> </li>
+              <li> <Link activeClass='active2' to='weProvideTitle' spy={true} offset={-110} duration={500} smooth={true} className='sublist3'>Directional Signs</Link> </li> 
+              <li> <Link activeClass='active2' to='residential' spy={true} offset={-110} duration={500} smooth={true} className='sublist3'>BIR & NON-BIR Forms Printing</Link> </li> 
             </ul>
             </Fade>
             </Link>

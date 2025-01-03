@@ -11,7 +11,7 @@
     max-width: 30vw;
     height: 50vh;
     opacity: 0.99;
-    box-shadow: 8px 8px 1px rgb(255, 196, 0);
+    box-shadow: 8px 8px 1px rgb(255, 123, 0);
     animation: fadeIn 0.3s ease-in-out;
     
 }
@@ -57,7 +57,7 @@
     outline: none;
     color: white;
     font-weight: 300;
-    border-bottom: 1px solid goldenrod;
+    border-bottom: 1px solid rgb(253, 135, 0);
     margin: 1rem;
     width: 100%; 
     max-width: 200px; 
@@ -67,7 +67,7 @@
 .signUpInput {
     border: none;
     outline: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 300;
     border-bottom: 1px solid #0f1013;
     margin: 1rem;
@@ -83,6 +83,7 @@
     left: 45%;
     transform: translate(-50%, -50%);
     animation: fadeIns 0.3s ease-in-out;
+    
 }
 
 
@@ -117,7 +118,7 @@
 
 .loginBtn {
     border: none;
-    background: goldenrod;
+    background: rgb(252, 134, 0);
     margin-left: 1rem;
     padding: .5rem 1rem;
 }
@@ -138,7 +139,7 @@
 }
 
 .forgotpassLink {
-    color: goldenrod;
+    color: rgb(255, 123, 0);
     text-decoration: underline;
     cursor: pointer;
 }
@@ -153,7 +154,7 @@
   }
   
   .registerLink {
-    color: goldenrod;
+    color: rgb(218, 116, 32);
     text-decoration: underline;
     cursor: pointer;
   }

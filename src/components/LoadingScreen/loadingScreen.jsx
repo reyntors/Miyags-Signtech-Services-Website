@@ -1,6 +1,6 @@
 import React from 'react';
 import './loadingScreen.css';
-import loading from '../../assets/loading.png'
+import loading from '../../assets/miyags.png'
 
 const LoadingScreen = () => {
   return (

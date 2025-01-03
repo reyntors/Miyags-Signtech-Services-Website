@@ -1,11 +1,13 @@
 import React from 'react'
 import './footer.css'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/miyags.png'
 import fb from '../../assets/facebook.png'
 import ig from '../../assets/instagram.png'
+import Fade from 'react-reveal/Fade';
 
 const Footer = () => {
   return (
+    <Fade bottom>
     <footer className="footer">
 
       <div className="container">
@@ -16,27 +18,29 @@ const Footer = () => {
           <img src={ig} alt="" className="iconImg" />
         </div>
         <h2>Head Office</h2>
-        <p>Purok Dahlia, Sitio Buenavista, Barangay Matutungan, Sta. Cruz, Davao del Sur</p>
+        <p>Lot 7 Yangzte St. Riverview Village Brgy. 19-B, Bacaca, Davao City, Davao del Sur, Philippines 8000</p>
         <div className="contactNumber">
-        <h3>Phone</h3>
-        <p>+63 912 912 8267 <br></br>+63 912 912 8267<br></br>+63 912 912 8267 </p>
+        <h3>Telephone Number</h3>
+        <p>(082) 221-0918</p>
+        <h3>Cellphone NUmber</h3>
+        <p>+63917-717-0415</p>
         <h3>Email</h3>
-        <p>rjlanddevcorp@gmail.com</p>
+        <p>sales@miyagssigntech.com</p>
         
         </div>
         </div>
 
         <div className="middleFooter">
-        <h2>Services</h2>
+        <h2>Our Services</h2>
           
-          <div className="weBuild">
-          <span className="weBuildTitles">We Build</span>
-          <span className="servicesDesc">Residential House</span>
-          <span className="servicesDesc">Commercial Building</span>
-          <span className="servicesDesc">Amenities</span>
-          <span className="servicesDesc">Structural Foundation</span>
+        <div className="weBuild">
+          <span className="weBuildTitles">Billboard Advertising</span>
+          <span className="servicesDesc">Sign Fabrication</span>
+          <span className="servicesDesc">Directional Signs</span>
+          <span className="servicesDesc">BIR & NON-BIR Forms Printing</span>
+          <span className="servicesDesc">Packaging Printing</span>
           </div>
-          <div className="weSell">
+          {/* <div className="weSell">
           <span className="weSellTitles">We Sell</span>
           <span className="servicesDesc">Amenities</span>
           <span className="servicesDesc">Structural Foundation</span>
@@ -47,7 +51,7 @@ const Footer = () => {
           <span className="servicesDesc">Survey Services</span>
           <span className="servicesDesc">Titling Processing</span>
           <span className="servicesDesc">Business Permits and Licenses</span>
-          </div>
+          </div> */}
         </div>
 
         <div className="rightFooter">
@@ -93,9 +97,10 @@ const Footer = () => {
 
        </div>
        
-       <p>Copyright &#169; 2023 R & J Land Development Corporation. All right received.</p> 
+       <p>Copyright &#169; 2024 Miyags Signtech Services. All rights reserved.</p> 
        
     </footer>
+    </Fade>
    
   )
 }

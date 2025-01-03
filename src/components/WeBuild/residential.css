@@ -9,15 +9,14 @@
     margin: 0 auto;
     position: relative;
     background: #1A1C20;
-   
-    
+  
 }
 
 .weBuildTitle {
     font-size: 2.5rem;
     font-weight: 600;
     padding-top: 3rem;
-    margin-bottom: 1.5rem;
+    margin-top: -3rem;
 }
 
 .weBuildDesc {
@@ -34,6 +33,7 @@
     max-width: 50rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
+  
 }
 
 .residentials>h2{
@@ -51,7 +51,7 @@
 
 .residentialImg {
     object-fit: cover;
-    width: 50rem;
+    width: 40rem;
     margin-bottom: 1.5rem;
 }
 
@@ -68,10 +68,57 @@
 .residentialImgs {
     position: relative;
     overflow: hidden;
+    height: 40rem;
   }
   
   .residentialImgs .img-container {
     display: flex;
-    transition: transform 0.5s ease; 
+    transition: transform 1s ease; 
+    
+  }
+
+  .explore{
+    margin-top: 2rem;
+    color: gray;
+    font-weight: 400;
+}
+
+/* .nextBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #df4904;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nextBtn:hover {
+    background-color: #ff6600;
+  } */
+
+  .buttonContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navBtn {
+    padding: 10px 20px;
+    background-color: #df4904;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .navBtn:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
+  .navBtn:hover:not(:disabled) {
+    background-color: #ff6600;
   }
   
