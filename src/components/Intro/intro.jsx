@@ -41,7 +41,7 @@ const Intro = () => {
     <Fade>
       <section id="intro">
         <div className="introContent">
-          {/* <img src={bg} alt="" className="bg" /> */}
+          <img src={bg} alt="" className="bg" />
           <Link
             to="contactus" // The id of the "Contact Us" section
             spy={true}
