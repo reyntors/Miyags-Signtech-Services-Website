@@ -30,8 +30,9 @@ function App() {
         <>
           <Navbar />
           <Intro />
-          <About />
           <Services />
+          <About />
+          
           {/* <Land /> */}
           
           <Contact/>
