@@ -10,6 +10,10 @@ import billboard4 from '../../assets/billboard/billboard4.jpg';
 import signage from '../../assets/signage.jpg';
 import miniBillboard from '../../assets/mini-billboard.jpg';
 import { Link } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+
 
 const IntroImg = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -46,9 +50,22 @@ const Intro = () => {
       <section id="intro">
         <div className="introContent">
           {/* <img src={bg} alt="" className="bg" /> */}
-        
+          
           <div className="bg">
-           We Bring <span className="highlight">Imagination</span> to <span className="highlight2">Life</span>
+           {/* We Bring <span className="highlight">Imagination</span> to <span className="highlight2">Life</span> */}
+           
+           <h1>
+  <span className="quote-icon">
+    <FontAwesomeIcon icon={faQuoteLeft} />
+  </span>
+  WE BRING <span className="highlight">IMAGINATION</span> 
+  <br/>
+  TO<span className="highlight2"> LIFE</span>
+  <span className="quote-icon">
+    <FontAwesomeIcon icon={faQuoteRight} />
+  </span>
+</h1>
+
           </div>
          
 
@@ -59,7 +76,9 @@ const Intro = () => {
             offset={-88} // Adjust based on your header height
             duration={1000}
           >
-            <button className="introBtn">Contact Us Now!</button>
+            <button className="introBtn">
+  Let's get started <FontAwesomeIcon icon={faArrowRight} />
+</button>
           </Link>
           {/* <img src={gifHand} alt="" className="gifHand" /> */}
           <IntroImg />

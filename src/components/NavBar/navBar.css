@@ -1,5 +1,5 @@
 .navbar {
-    background: #000000;
+    background: #343131;
     height: 5.5rem;
     width: 100vw;
     margin: 0 auto;
@@ -84,29 +84,41 @@
     cursor: pointer;
 }
 
+
+/* Dropdown icon styling */
+.dropdown-icon {
+    margin-left: 8px;
+    font-size: 0.8rem;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.desktopMenuListItem1:hover .dropdown-icon {
+    transform: rotate(180deg); /* Rotate icon on hover */
+}
+
+/* Sub-menu dropdown */
 .sub-menus {
     position: absolute;
-    top: 100%; /* Position below the main menu item */
+    top: 100%; /* Position the submenu below the parent item */
     left: 0;
+    background: #000000; /* Dark background for submenu */
+    color: #ffffff;
     list-style: none;
     padding: 0;
     margin: 0;
-    background: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease; /* Smooth transition */
-    z-index: 1;
-    border: 1px solid rgba(5, 5, 5, 0.5);
+    transition: all 0.3s ease; /* Smooth transition for dropdown */
+    z-index: 2;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .desktopMenuListItem1:hover .sub-menus {
     opacity: 1;
-    max-height: 500px; /* Adjust based on the content */
+    max-height: 300px; /* Adjust based on the submenu content */
     padding: 0.5rem 0;
 }
 

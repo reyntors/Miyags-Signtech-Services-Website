@@ -28,7 +28,6 @@ const Contact = () => {
             <input type="text" className="phone" placeholder='Your Phone Number' />
             </Fade>
             <Fade left>
-            <input type="text" className="fblink" placeholder='Your Facebook Link'/>
             </Fade>
             
             <div className="contactRight">

@@ -1,142 +1,175 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './services.css';
-import { Fade } from 'react-reveal';
 import landingPage from '../../assets/Drawing/SignType/Landing Page2.jpg';
+import { Fade } from 'react-reveal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faChevronLeft, faChevronRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-// Import images
-const importAll = (requireContext) => requireContext.keys().map(requireContext);
-const billboardAdvertisingImgs = importAll(require.context('../../assets/billboard', false, /\.(png|jpe?g|svg)$/));
-const signFabricationImgs = importAll(require.context('../../assets/signFabrication', false, /\.(png|jpe?g|svg)$/));
-const stickerImgs = importAll(require.context('../../assets/sticker', false, /\.(png|jpe?g|svg)$/));
+const servicesData = [
+  {
+    name: 'Column Ads',
+    img: require('../../assets/Drawing/Column ads.jpg'),
+  },
+  {
+    name: 'Vehicle Graphics',
+    img: require('../../assets/Drawing/Vehicle Graphics Sticker.jpg'),
+  },
+  {
+    name: 'Gondola Shelves Dress-up',
+    img: require('../../assets/Drawing/End Cap Gondola Dress-up.jpg'),
+  },
+  {
+    name: 'Pylon',
+    img: require('../../assets/Drawing/Pylon.jpg'),
+  },
+  {
+    name: 'Escalator Sticker Ads',
+    img: require('../../assets/Drawing/Elevator ads.jpg'),
+  },
+  {
+    name: 'Wall Signage',
+    img: require('../../assets/Drawing/Signage 1.jpg'),
+  },
+  {
+    name: 'Monument Sign',
+    img: require('../../assets/Drawing/Signage 2.jpg'),
+  },
+  {
+    name: 'Flag Banner',
+    img: require('../../assets/Drawing/Flag Banner.jpg'),
+  },
+  {
+    name: 'Island Display Shelves Dress-up',
+    img: require('../../assets/Drawing/Island Display Dress-up.jpg'),
+  },
+  {
+    name: 'Build-up Signages',
+    img: require('../../assets/Drawing/Signage 3.jpg'),
+  },
+  {
+    name: 'Ads Standee',
+    img: require('../../assets/Drawing/Standee.jpg'),
+  },
+  {
+    name: 'Sticker Ads',
+    img: require('../../assets/Drawing/Sticker 1.jpg'),
+  },
+  {
+    name: 'Display Sticker',
+    img: require('../../assets/Drawing/Sticker 2.jpg'),
+  },
+  {
+    name: 'Tarp Printing',
+    img: require('../../assets/Drawing/Tarpaulin.jpg'),
+  },
+  {
+    name: 'Trophy',
+    img: require('../../assets/Drawing/Trophy.jpg'),
+  },
+  {
+    name: 'Wall Ads',
+    img: require('../../assets/Drawing/Wall Ads.jpg'),
+  },
+  {
+    name: 'Wall Sticker',
+    img: require('../../assets/Drawing/Wall Sticker Signage.jpg'),
+  },
 
-const Services = () => {
-  const [currentSection, setCurrentSection] = useState(0); // State to track the current section
-  const [currentBillboardImage, setCurrentBillboardImage] = useState(0);
-  const [currentSignFabricationImage, setCurrentSignFabricationImage] = useState(0);
-  const [currentStickerImage, setCurrentStickerImage] = useState(0);
+];const Services = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    const billboardIntervalId = setInterval(() => {
-      setCurrentBillboardImage((prevImage) => (prevImage + 1) % billboardAdvertisingImgs.length);
-    }, 3000);
+  // Open modal with selected image
+  const openModal = (image, index) => {
+    setSelectedImage(image);
+    setCurrentImageIndex(index);
+    setIsModalOpen(true);
+  };
 
-    const signFabricationIntervalId = setInterval(() => {
-      setCurrentSignFabricationImage((prevImage) => (prevImage + 1) % signFabricationImgs.length);
-    }, 3000);
+  // Close modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+    setCurrentImageIndex(0);
+  };
 
-    const stickerIntervalId = setInterval(() => {
-      setCurrentStickerImage((prevImage) => (prevImage + 1) % stickerImgs.length);
-    }, 3000);
+  // Go to the previous image
+  const goToPrevious = () => {
+    const newIndex = (currentImageIndex - 1 + servicesData.length) % servicesData.length;
+    setSelectedImage(servicesData[newIndex].img);
+    setCurrentImageIndex(newIndex);
 
-    return () => {
-      clearInterval(billboardIntervalId);
-      clearInterval(signFabricationIntervalId);
-      clearInterval(stickerIntervalId);
-    };
-  }, []);
+  };
 
-  const sections = [
-    {
-      title: 'Billboard Advertising',
-      description: 'At Miyags Signtech Services, we specialize in creating and managing impactful billboard advertising campaigns that put your brand in the spotlight. Our services are designed to ensure your message reaches a broad and diverse audience, maximizing visibility and engagement. We use high-quality Gonzheng printing machines to deliver vibrant, durable billboards that effectively capture attention and convey your message with clarity and impact.',
-      images: billboardAdvertisingImgs,
-      currentImage: currentBillboardImage
-    },
-    {
-      title: 'Sign Fabrication',
-      description: 'At Miyags Signtech Services, we specialize in high-quality sign fabrication tailored to meet your unique needs. Our team of skilled craftsmen and designers work diligently to bring your vision to life, ensuring every detail is perfect. Whether you need custom signs for your business, event, or special project, we use state-of-the-art technology and premium materials to create durable and visually appealing signage.',
-      images: signFabricationImgs,
-      currentImage: currentSignFabricationImage
-    },
-    {
-      title: 'Directional Signs',
-      description: 'Lorem ipsum...',
-      images: null,
-      currentImage: 0
-    },
-    {
-      title: 'BIR & NON-BIR Forms Printing',
-      description: 'Lorem ipsum...',
-      images: null,
-      currentImage: 0
-    },
-    {
-      title: 'Packaging Printing',
-      description: 'Lorem ipsum...',
-      images: null,
-      currentImage: 0
-    },
-    {
-      title: 'Tarp Printing',
-      description: 'Lorem ipsum...',
-      images: null,
-      currentImage: 0
-    },
-    {
-      title: 'Sticker Printing',
-      description: 'Enhance your brand visibility with our custom sticker printing services. Perfect for promotional events, product labeling, and personal use, our stickers are crafted with high-quality materials to ensure durability and vibrant color accuracy. We utilize state-of-the-art UCJV300-160 and JV330-160 printing machines to deliver exceptional quality and precision in every print.',
-      images: stickerImgs,
-      currentImage: currentStickerImage
-    }
-  ];
-
-  const renderResidentialSection = (title, description, index, images, currentImage) => (
-    <div className="residentials" key={index}>
-      <Fade bottom>
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </Fade>
-      {images && (
-        <Fade left>
-          <div className="residentialImgs">
-            <div className="img-container">
-              <img src={images[currentImage]} alt="" className="residentialImg" />
-            </div>
-          </div>
-        </Fade>
-      )}
-      <div className="buttonContainer">
-        <button
-          onClick={() => setCurrentSection(currentSection - 1)}
-          className="navBtn"
-          disabled={currentSection === 0}
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => setCurrentSection(currentSection + 1)}
-          className="navBtn"
-          disabled={currentSection === sections.length - 1}
-        >
-          Next
-        </button>
-      </div>
-    </div>
-  );
+  // Go to the next image
+  const goToNext = () => {
+    const newIndex = (currentImageIndex + 1) % servicesData.length;
+    setSelectedImage(servicesData[newIndex].img);
+    setCurrentImageIndex(newIndex);
+  };
 
   return (
-    <section id="residential">
-      <Fade left>
-      <section id='sign'>
-      <h1 className="explore">GUIDE TO BASIC SIGN TYPES</h1>
-      <span className="weBuildTitle">Sign Types</span>
-      <div className="signDesc">
-      <p>This drawing helps you illustrate some basic types of signs that assist businesses and organizations in communicating effectively, offering insights into selecting the ideal signage solution for various needs.</p>
-      </div>
-      <img src={landingPage} alt="Sign Type" className="signtype" />
-      </section>
-      </Fade>
+    <section className="services">
       <Fade bottom>
-        <h2 className="explore">EXPLORE</h2>
-        <span className="weBuildTitle">Our Services</span>
+        <section id="sign">
+          <h1 className="explore">GUIDE TO BASIC SIGN TYPES</h1>
+          <span className="weBuildTitle">Different Types of Signs</span>
+          <div className="signDesc">
+            <p>
+              This drawing helps you illustrate some basic types of signs that
+              assist businesses and organizations in communicating effectively,
+              offering insights into selecting the ideal signage solution for
+              various needs.
+            </p>
+          </div>
+          <img src={landingPage} alt="Sign Type" className="signtype" />
+        </section>
       </Fade>
-      {renderResidentialSection(
-        sections[currentSection].title,
-        sections[currentSection].description,
-        currentSection,
-        sections[currentSection].images,
-        sections[currentSection].currentImage
-      )}
+
+      <h1 className="explore">EXPLORE</h1>
+      <h2 className="services-title">Our Services</h2>
+      <Fade right>
+        <div className="services-marquee">
+          {/* Marquee container */}
+          <div className="marquee-content">
+            {servicesData.map((service, index) => (
+              <div className="service-item" key={index} onClick={() => openModal(service.img, index)}>
+                <img src={service.img} alt={service.name} className="service-image" />
+                <p className="service-name">{service.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Fade>
+
+      {/* Modal Overlay with smooth fade-in */}
+      {isModalOpen && (
+  <div className={`modal-overlay ${isModalOpen ? 'show' : ''}`} onClick={closeModal}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      {/* Close Button */}
+      <button className="close-button" onClick={closeModal}>
+        <FontAwesomeIcon icon={faTimes} />
+      </button>
+      
+      {/* Previous and Next Buttons */}
+      <button className="prev-arrow" onClick={(e) => { e.stopPropagation(); goToPrevious(); }}>
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </button>
+      <img src={selectedImage} alt="Large View" className="modal-image" />
+      
+      <button className="next-arrow" onClick={(e) => { e.stopPropagation(); goToNext(); }}>
+        <FontAwesomeIcon icon={faChevronRight} />
+      </button>
+    </div>
+  </div>
+)}
+
+      <div className="learn-more-container">
+        <button className="learn-more-btn">
+          Learn More <FontAwesomeIcon icon={faArrowRight} />
+        </button>
+      </div>
     </section>
   );
 };
