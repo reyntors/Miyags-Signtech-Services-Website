@@ -19,7 +19,7 @@
     font-size: 1rem;
     font-weight: 300;
     max-width: 50vw;
-    margin-top: 1rem;
+    margin-top: 3rem;
     color: white;
 }
 
@@ -113,7 +113,6 @@
 .email {
     margin-top: 1rem;
     margin-bottom: .4rem;
-    
     text-align: center;
     padding: .5rem 5rem;
     border: none;
@@ -153,15 +152,63 @@
 }
 
 .submitBtn {
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     padding: .5rem 2rem;
-    background: rgb(187, 141, 13);
+    background: rgb(223, 123, 9);
     border: none;
     margin-bottom: 1rem;
 }
 
-.reachus{
+.reachus {
     margin-top: 1rem;
-    color: gray;
-    font-weight: 400;
-}
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #807f7f;
+  }
+  
+  .contactUsTitle {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+  
+  .contactDetailsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adds space between the containers */
+    padding: 0 2rem;
+  }
+  
+  .contactDetail {
+    flex: 1; /* Ensures even spacing */
+    min-width: 200px; /* Prevents containers from becoming too small */
+    max-width: 300px;
+    background: #f3f3f3; /* Light gray background for contrast */
+    border-radius: 10px; /* Rounded corners for better aesthetics */
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contactDetail:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contactDetail h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .detailDesc {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }

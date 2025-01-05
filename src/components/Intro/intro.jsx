@@ -12,7 +12,7 @@ import miniBillboard from '../../assets/mini-billboard.jpg';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+// import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const IntroImg = () => {
@@ -47,43 +47,35 @@ const IntroImg = () => {
 const Intro = () => {
   return (
     <Fade right>
-      <section id="intro">
-        <div className="introContent">
-          {/* <img src={bg} alt="" className="bg" /> */}
-          
-          <div className="bg">
-           {/* We Bring <span className="highlight">Imagination</span> to <span className="highlight2">Life</span> */}
-           
-           <h1>
-  <span className="quote-icon">
-    <FontAwesomeIcon icon={faQuoteLeft} />
-  </span>
-  WE BRING <span className="highlight">IMAGINATION</span> 
-  <br/>
-  TO<span className="highlight2"> LIFE</span>
-  <span className="quote-icon">
-    <FontAwesomeIcon icon={faQuoteRight} />
-  </span>
-</h1>
+     <section id="intro">
+  <div className="introContent">
+    {/* Background Image */}
+    {/* <img src={bg} alt="" className="bg" /> */}
 
-          </div>
-         
+    <div className="bg">
+      <h1>
+        COMPREHENSIVE <span className="highlight">OUTDOOR SIGN</span>
+        <br />
+        <span className="highlight2">SOLUTIONS</span>TO YOUR NEEDS
+      </h1>
+    </div>
 
-          <Link
-            to="contactus" // The id of the "Contact Us" section
-            spy={true}
-            smooth={true}
-            offset={-88} // Adjust based on your header height
-            duration={1000}
-          >
-            <button className="introBtn">
-  Let's get started <FontAwesomeIcon icon={faArrowRight} />
-</button>
-          </Link>
-          {/* <img src={gifHand} alt="" className="gifHand" /> */}
-          <IntroImg />
-        </div>
-      </section>
+    <Link
+      to="contactus" // The id of the "Contact Us" section
+      spy={true}
+      smooth={true}
+      offset={-88} // Adjust based on your header height
+      duration={1000}
+    >
+      <button className="introBtn">
+        Let's get started <FontAwesomeIcon icon={faArrowRight} />
+      </button>
+    </Link>
+    {/* <img src={gifHand} alt="" className="gifHand" /> */}
+    <IntroImg />
+  </div>
+</section>
+
     </Fade>
   );
 }

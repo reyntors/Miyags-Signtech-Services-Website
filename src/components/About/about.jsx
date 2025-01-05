@@ -1,8 +1,8 @@
 import React from 'react'
 import './about.css'
 import Fade from 'react-reveal/Fade';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
   return (
@@ -28,7 +28,7 @@ const About = () => {
             <div className="connect-btn-container">
           <button className="connect-btn">
             
-            Let's Connect! <FontAwesomeIcon icon={faArrowRight}/></button>
+            Learn More...</button>
         </div>
     </section>
     </Fade>

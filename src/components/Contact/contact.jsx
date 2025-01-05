@@ -6,43 +6,51 @@ const Contact = () => {
   return (
     <section id="contactus">
         <Fade bottom>
-         <h2 className='reachus'>REACH US</h2>
-        <span className="contactUsTitle"> Contact Us</span>
-        </Fade>
-        <Fade bottom>
-        
-        </Fade>
+  <h2 className="reachus">REACH US</h2>
+  <span className="contactUsTitle">Contact Us</span>
+  <div className="contactDetailsContainer">
+    <div className="contactDetail">
+      <h1>CALL US</h1>
+      <p className="detailDesc">(082) 221-0918 <br/>+63917-717-0415</p>
+    </div>
+    <div className="contactDetail">
+      <h1>EMAIL</h1>
+      <p className="detailDesc">sales@miyagssigntech.com</p>
+    </div>
+    <div className="contactDetail">
+      <h1>OFFICE</h1>
+      <p className="detailDesc">Lot 7 Jordan St. Riverview Village Brgy. 19-B, Bacaca, Davao City, Davao del Sur, Philippines 8000</p>
+    </div>
+  </div>
+  <p className="contactUsDesc">
+    For customers and potential customers, kindly use the form provided here. 
+    We are eager to talk with you about what your company’s new signage or advertising might look like!
+  </p>
+</Fade>
+
         <form action="post" className="contactUs">
           <div className="contactLeft">
             <Fade left>
-            <input type="text" className="firstname" placeholder='Your First Name' />
-            </Fade>
-            <Fade right>
-            <input type="text" className="lastname" placeholder='Your Last Name' />
+            <input type="text" className="firstname" placeholder='Full Name' />
             </Fade>
             </div>
             <Fade left>
-            <input type="text" className="email" placeholder='Your Email' />
+            <input type="text" className="email" placeholder='Email Address(required)' />
             </Fade>
             <Fade right>
-            <input type="text" className="phone" placeholder='Your Phone Number' />
+            <input type="text" className="phone" placeholder=' Phone Number' />
             </Fade>
             <Fade left>
             </Fade>
             
             <div className="contactRight">
-            <Fade right>
-            <input type="text" className="company" placeholder='Your Company' />
-            </Fade>
-            <Fade left>
-            <input type="text" className="jobTitle" placeholder='Your Job Title'/>
-            </Fade>
+            
             </div>
             <Fade bottom>
-            <textarea name="message" id="" cols="30" rows="6" className="message" placeholder='Your Message'></textarea>
+            <textarea name="message" id="" cols="30" rows="6" className="message" placeholder='How can Miyags Signtech help you?'></textarea>
             </Fade>
 
-           <button type='submit' className="submitBtn">Submit</button>
+           <button type='submit' className="submitBtn">Send Message</button>
            
         </form>
     </section>
