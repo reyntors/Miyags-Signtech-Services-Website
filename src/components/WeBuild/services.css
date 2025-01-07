@@ -2,7 +2,7 @@
 .services {
   padding: 2rem;
   text-align: center;
-  background-color: #fdfdfd;
+  background-color: #495057;
 }
 
 
@@ -46,7 +46,7 @@
   margin-top: 1rem;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #333333;
+  color: #e9ecef;
 }
 
 
@@ -79,10 +79,11 @@
 
 #sign {
   padding: 2rem; 
-  background-color: rgb(221, 220, 219); 
+  background-color: #adb5bd; 
   width: 100%; 
   max-width: 100vw; /* Prevent overflow */
   margin: 0;
+  border-radius: .7rem;
 }
 
 
@@ -166,13 +167,14 @@
 .explore {
   font-size: 2rem; 
   font-weight: 200;
-  color: #444546ab; 
+  color: #e9ecef; 
+  margin-top: 1rem;
 }
 
 
 .services-title {
   font-size: 3rem; 
-  color: rgb(243, 120, 5);
+  color: #e9ecef;
   margin-bottom: 2rem;
 }
 
@@ -285,19 +287,19 @@
 }
 
 .learn-more-btn {
-  background-color: #df4904; /* Customize button color */
+  background-color: #adb5bd; /* Customize button color */
   color: #fff; /* Text color */
   border: none;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   font-weight: bold;
-  border-radius: 2rem;
+  border-radius: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .learn-more-btn:hover {
-  background-color: #ff6f2f; /* Hover effect */
+  background-color: #6c757d; /* Hover effect */
 }
 .close-button {
   position: absolute;
@@ -314,3 +316,35 @@
 .close-button:hover {
   color: red;
 }
+
+
+.signtype-container {
+  position: relative;
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  pointer-events: none;
+  
+}
+
+.hover-overlay img {
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: contain;
+  border-radius: .5rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+
+

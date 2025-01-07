@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 
 const About = () => {
   return (
-    <Fade left>
+    <Fade bottom>
     <section id="about">
         <Fade right>
         

@@ -81,21 +81,21 @@
     text-align: left; /* Centers the text horizontally */
     white-space: nowrap; /* Prevents text from wrapping to a new line */
     justify-content: center; /* Ensures text is centered horizontally */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 5px #6c757d;
     font-style: italic;
   }
 
   
 
   .highlight {
-    color: rgb(243, 120, 5); /* Ensures the text is visible on the black background */
+    color: #6c757d; /* Ensures the text is visible on the black background */
     padding: 0 1rem; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   
   }
 
   .highlight2 {
-    color: rgb(243, 120, 5);
+    color: #6c757d;
     padding: 0 3rem 0 0.2rem; /* Optional: adds some spacing around the highlighted words */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
@@ -109,13 +109,14 @@
     transform: translate(-50%, -50%);
     z-index: 1;
     width: 10rem;
-    background: rgb(243, 120, 5);
+    background: #212529;
     margin: 1rem 0;
     padding: 0.75rem;
     border-radius: 0.5rem;
     animation: glow 1s infinite alternate;
     border: none;
     cursor: pointer;
+    color: white;
   }
   
   @keyframes glow {
@@ -124,7 +125,7 @@
     }
     100% {
       opacity: 1;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 115, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.8);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px #495057, 0 0 30px #adb5bd;
     }
   }
   
@@ -139,8 +140,8 @@
   }
   
   .introBtn:hover {
-    background: rgb(255, 102, 0);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 102, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.8);
+    background: #6c757d;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px #6c757d, 0 0 30px #6c757d;
     animation: none;
   }
   

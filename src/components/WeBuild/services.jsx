@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
 import './services.css';
-import landingPage from '../../assets/Drawing/SignType/Landing Page2.jpg';
 import { Fade } from 'react-reveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faChevronLeft, faChevronRight, faTimes } from '@fortawesome/free-solid-svg-icons';
+
+
+
+const imagePaths = {
+  Vehicle: require('../../assets/Drawing/Vehicle Graphics Sticker.jpg'),
+  Signage: require('../../assets/Drawing/Signage 3.jpg'),
+  RoofSignage: require('../../assets/Drawing/Signage 1.jpg'),
+  MonumentSignage: require('../../assets/Drawing/Signage 2.jpg'),
+  // Add more mappings as needed
+};
+
+
+
+
+
 
 const servicesData = [
   {
@@ -75,7 +89,12 @@ const servicesData = [
     img: require('../../assets/Drawing/Wall Sticker Signage.jpg'),
   },
 
-];const Services = () => {
+];
+
+
+
+
+const Services = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -109,10 +128,20 @@ const servicesData = [
     setCurrentImageIndex(newIndex);
   };
 
+  const [hoveredImage, setHoveredImage] = useState(null);
+
+  const handleMouseEnter = (path) => {
+    setHoveredImage(imagePaths[path]);
+  };
+  
+  const handleMouseLeave = () => {
+    setHoveredImage(null);
+  };
+
   return (
     <section className="services">
-      <Fade bottom>
-        <section id="sign">
+      <Fade left>
+      <section id="sign">
           <h1 className="explore">GUIDE TO BASIC SIGN TYPES</h1>
           <span className="weBuildTitle">Different Types of Signs</span>
           <div className="signDesc">
@@ -123,13 +152,94 @@ const servicesData = [
               various needs.
             </p>
           </div>
-          <img src={landingPage} alt="Sign Type" className="signtype" />
+          
+          <div className="signtype-container">
+          
+          <svg
+          className="responsive-svg"
+          viewBox="0 0 4096 2858"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"  // Set width to 100% to make it responsive
+          height="auto"  // Maintain aspect ratio
+        >
+
+          <image
+            id="LandingPage2"
+            href={require('../../assets/Drawing/SignType/Landing Page2.jpg')}  // Use your image path here
+            width="100%"  // Ensure the image inside the SVG scales to the container
+            height="100%"  // Adjust height to match aspect ratio
+            pointer-events="none"
+          />
+        
+      <path id="Signage15"  opacity="0.01" d="M3049.5 844L2303.5 797.5V733L2498.5 744L2507 535.5L2912 594V768L3049.5 778V844Z" fill="#D9D9D9" stroke="black" />
+      <path id="Signage14" opacity="0.01" d="M3966 442.5V764.5L3366 794.5V514.5L3966 442.5Z" fill="#D9D9D9" stroke="black" />
+      <path id="Signage13" opacity="0.01" d="M3510.5 1695L3478.5 1715L3445 1700.5V1205L3287.5 1225.5L3249 1186.5L3287.5 1139.5L3445 1122.5V1000H3510.5V1186.5L3700.5 1205L3739.5 1250.5L3700.5 1292.5L3504 1267.5L3510.5 1695Z" fill="#D9D9D9" stroke="black" />
+      <path 
+      id="Signage12"  
+      opacity="0.01" 
+      d="M3232.5 1802L2675.5 1683V1395L2776.5 1407.5C2848.67 1349.83 3026.9 1278.8 3162.5 1456L3232.5 1464.5V1802Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      onMouseEnter={() => handleMouseEnter('MonumentSignage')}  // Dynamically pass the path key
+          onMouseLeave={handleMouseLeave}
+      />
+      <path id="Signage11"  opacity="0.01" d="M2420.5 1858.5L2264 1803V1772L2228.5 1759.5L2296.5 1533.5L2481 1587.5L2420.5 1858.5Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Signage10"   opacity="0.01" d="M2261 1891.5L2084 1828.5L2089 1708L2265.5 1770.5L2261 1891.5Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Signage9"  opacity="0.01" d="M2070 1949.5L1857.5 1856.5V1775.5L2070 1856.5V1949.5Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Signage8"   opacity="0.01" d="M2997.5 2138.5V1926L3453 1904.5V2099L2997.5 2138.5Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Signage7"  opacity="0.01" d="M1825.5 1319V1032L2408 1039.5V1280L1825.5 1319Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Signage6"  opacity="0.01" d="M539 968.5V1056H712V968.5H539Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Signage5"  opacity="0.01" d="M376.5 990.5H34.5V785.5H376.5V990.5Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Signage4"  opacity="0.01" d="M840 869.5H620.5V757H840V869.5Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Signage3" opacity="0.01" d="M865.5 766.5V873.5L1509.5 843V665.5L865.5 766.5Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Signage2" 
+          opacity="0" 
+          d="M1462.5 459.5L1467.5 551L880 683.5V607L1462.5 459.5Z" 
+          fill="#D9D9D9" 
+          stroke="black"
+          onMouseEnter={() => handleMouseEnter('RoofSignage')}  // Dynamically pass the path key
+          onMouseLeave={handleMouseLeave}
+      />
+      <path id="Signage1" 
+          opacity="0.01" 
+          d="M1711.5 220L1712 825L1534.5 822V201.5L1711.5 220Z" 
+          fill="#D9D9D9" 
+          stroke="black"
+          onMouseEnter={() => handleMouseEnter('Signage')}  // Dynamically pass the path key
+          onMouseLeave={handleMouseLeave}
+      />
+      <path id="Awnings" opacity="0.01" d="M1694 909V1049L761 1014V964.5L844.5 924L1694 909Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Billboards" opacity="0.01" d="M876 487.5H264.5V63H876V487.5Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Banners" opacity="0.01" d="M1573.5 1279.5L894.5 1170V1083L1573.5 1145V1279.5Z" fill="#D9D9D9" stroke="black"/>
+      <path id="Vehicle" 
+          opacity="0" 
+          d="M1607.5 1997L689 1821L696.5 1381L1561.5 1314L1607.5 1997Z" 
+          fill="#D9D9D9" 
+          stroke="black" 
+          onMouseEnter={() => handleMouseEnter('Vehicle')}  // Dynamically pass the path key
+          onMouseLeave={handleMouseLeave}
+      />
+   
+      </svg>
+
+
+            
+
+            {/* Dynamic Image Overlay */}
+            {hoveredImage && (
+              <div className="hover-overlay">
+                <img src={hoveredImage} alt="Vehicle" />
+
+              </div>
+            )}
+          </div>
         </section>
       </Fade>
 
       <h1 className="explore">EXPLORE</h1>
       <h2 className="services-title">Our Services</h2>
-      <Fade right>
+      <Fade top>
         <div className="services-marquee">
           {/* Marquee container */}
           <div className="marquee-content">

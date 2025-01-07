@@ -1,5 +1,5 @@
 .navbar {
-    background: #343131;
+    background: #212529;
     height: 5.5rem;
     width: 100vw;
     margin: 0 auto;
@@ -49,9 +49,9 @@
 }
 
 .desktopMenuListItem:hover {
-    color: #e96d07;
+    color: #e9ecef;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid #e96d07;
+    border-bottom: 3px solid #ced4da;
 }
 
 .mobMenu {
@@ -67,14 +67,14 @@
 
 .listItem:hover {
     color: black;
-    background: #ff7504;
+    background: #ced4da;
     padding: 0.5rem;
 }
 
 .active {
-    color: #e96d07;
+    color: #ced4da;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid #e96d07;
+    border-bottom: 3px solid #ced4da;
 }
 
 /* Sub-menu styling with slide-down effect */
@@ -102,7 +102,7 @@
     position: absolute;
     top: 100%; /* Position the submenu below the parent item */
     left: 0;
-    background: #000000; /* Dark background for submenu */
+    background: #212529; /* Dark background for submenu */
     color: #ffffff;
     list-style: none;
     padding: 0;
@@ -134,7 +134,7 @@
 }
 
 .sub-menus li:hover {
-    background: #f16100;
+    background: #6c757d;
     color: #0f1013;
 }
 
