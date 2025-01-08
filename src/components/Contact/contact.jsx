@@ -1,6 +1,7 @@
 import React from 'react'
 import './contact.css'
 import { Fade } from 'react-reveal'
+import { FaPhone, FaEnvelope, FaBuilding } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -8,16 +9,20 @@ const Contact = () => {
         <Fade bottom>
   <h2 className="reachus">REACH US</h2>
   <span className="contactUsTitle">Contact Us</span>
+ 
   <div className="contactDetailsContainer">
     <div className="contactDetail">
+    <FaPhone className="contactIcon" />
       <h1>CALL US</h1>
       <p className="detailDesc">(082) 221-0918 <br/>+63917-717-0415</p>
     </div>
     <div className="contactDetail">
+    <FaEnvelope className="contactIcon" />
       <h1>EMAIL</h1>
       <p className="detailDesc">sales@miyagssigntech.com</p>
     </div>
     <div className="contactDetail">
+    <FaBuilding className="contactIcon" />
       <h1>OFFICE</h1>
       <p className="detailDesc">Lot 7 Jordan St. Riverview Village Brgy. 19-B, Bacaca, Davao City, Davao del Sur, Philippines 8000</p>
     </div>
@@ -47,7 +52,7 @@ const Contact = () => {
             
             </div>
             <Fade bottom>
-            <textarea name="message" id="" cols="30" rows="6" className="message" placeholder='How can Miyags Signtech help you?'></textarea>
+            <textarea name="message" id="" cols="30" rows="6" className="message" placeholder='How can Miyags Signtech help you? ( Message Here )' ></textarea>
             </Fade>
 
            <button type='submit' className="submitBtn">Send Message</button>

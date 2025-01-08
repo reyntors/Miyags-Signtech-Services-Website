@@ -12,7 +12,7 @@
     font-weight: 600;
     margin-top: 0rem;
     color: white;
-    border-bottom: 1px solid gold;
+    border-bottom: 1px solid #e9ecef;
 }
 
 .contactUsDesc {
@@ -51,7 +51,7 @@
     border: none;
     color: white;
     font-weight: 300;
-    border-bottom: 1px solid goldenrod;
+    border-bottom: 1px solid #e9ecef;
     outline: none;
     
 }
@@ -64,7 +64,7 @@
     border: none;
     color: white;
     font-weight: 300;
-    border-bottom: 1px solid goldenrod;
+    border-bottom: 1px solid #e9ecef;
     outline: none;
     
 }
@@ -78,7 +78,7 @@
     border: none;
     color: white;
     font-weight: 300;
-    border-bottom: 1px solid goldenrod;
+    border-bottom: 1px solid #e9ecef;
     outline: none;
     
 }
@@ -92,7 +92,7 @@
     border: none;
     color: white;
     font-weight: 300;
-    border-bottom: 1px solid goldenrod;
+    border-bottom: 1px solid #e9ecef;
     outline: none;
     
 }
@@ -105,7 +105,7 @@
     border: none;
     color: white;
     font-weight: 300;
-    border-bottom: 1px solid goldenrod;
+    border-bottom: 1px solid #e9ecef;
     outline: none;
     
 }
@@ -118,9 +118,8 @@
     border: none;
     color: white;
     font-weight: 300;
-    border-bottom: 1px solid goldenrod;
+    border-bottom: 1px solid #e9ecef;
     outline: none;
-    
 }
 
 .fblink {
@@ -140,11 +139,11 @@
 .message {
     margin-top: 1rem;
     margin-bottom: 1rem;
-   
+    border-radius: 1rem;
     text-align: center;
-    background: #030302;
+    background: #e9ecef;
     padding: 0 5rem;
-    color: white;
+    color: rgb(10, 10, 10);
     font-weight: 300;
     border: none;
     outline: none;
@@ -154,9 +153,13 @@
 .submitBtn {
     border-radius: 0.5rem;
     padding: .5rem 2rem;
-    background: rgb(223, 123, 9);
+    background: #e9ecef;
     border: none;
     margin-bottom: 1rem;
+}
+
+.submitBtn:hover{
+    background: #495057;
 }
 
 .reachus {
@@ -188,17 +191,24 @@
     flex: 1; /* Ensures even spacing */
     min-width: 200px; /* Prevents containers from becoming too small */
     max-width: 300px;
-    background: #f3f3f3; /* Light gray background for contrast */
+    background: rgba(255, 255, 255, 0.7); /* Glass effect background */
     border-radius: 10px; /* Rounded corners for better aesthetics */
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px); /* Glass effect with blur */
   }
   
   .contactDetail:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contactIcon {
+    font-size: 2.5rem; /* Adjust icon size */
+    color: #6c757d; /* Change icon color */
+    margin-bottom: 1rem; /* Add space between the icon and heading */
   }
   
   .contactDetail h1 {
@@ -212,3 +222,4 @@
     color: #666;
     margin: 0;
   }
+  

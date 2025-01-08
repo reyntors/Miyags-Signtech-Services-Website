@@ -7,6 +7,7 @@ import Footer from "./components/Footer/footer";
 import LoadingScreen from "./components/LoadingScreen/loadingScreen";
 import { useEffect, useState } from "react";
 import Contact from "./components/Contact/contact";
+
 function App() {
   const [loading, setLoading] = useState(true);
 

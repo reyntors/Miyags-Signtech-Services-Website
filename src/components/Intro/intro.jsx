@@ -17,18 +17,18 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const IntroImg = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [slideIn, setSlideIn] = useState(false);
+  // const [slideIn, setSlideIn] = useState(false);
   const images = [billboard1,billboard2,billboard3, billboard4, signage, miniBillboard];
-  
+  const [isFading, setIsFading] = useState(false);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setSlideIn(true); // Start by hiding the current image
+      setIsFading(true); 
       setTimeout(() => {
         setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
-        setSlideIn(true); // Trigger the slide-in animation
-      }, 2000); // Allow 0.5 seconds for the image to hide before showing the next one
-    }, 5000); // Change image every 3 seconds
+        setIsFading(false);  
+      }, 1000); 
+    }, 5000); 
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, [images.length]);
@@ -38,7 +38,7 @@ const IntroImg = () => {
       <img
         src={images[currentImageIndex]}
         alt="Intro"
-        className={`introImg ${slideIn ? 'slide-in' : ''}`}
+        className={`introImg ${isFading ? "fade-out" : "fade-in"}`}
       />
     </div>
   );

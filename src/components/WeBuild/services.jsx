@@ -224,12 +224,9 @@ const Services = () => {
       </svg>
 
 
-            
-
-            {/* Dynamic Image Overlay */}
             {hoveredImage && (
               <div className="hover-overlay">
-                <img src={hoveredImage} alt="Vehicle" />
+                <img src={hoveredImage} alt=""  className='hover-zoom' />
 
               </div>
             )}
@@ -241,7 +238,7 @@ const Services = () => {
       <h2 className="services-title">Our Services</h2>
       <Fade top>
         <div className="services-marquee">
-          {/* Marquee container */}
+        
           <div className="marquee-content">
             {servicesData.map((service, index) => (
               <div className="service-item" key={index} onClick={() => openModal(service.img, index)}>
@@ -253,16 +250,15 @@ const Services = () => {
         </div>
       </Fade>
 
-      {/* Modal Overlay with smooth fade-in */}
       {isModalOpen && (
   <div className={`modal-overlay ${isModalOpen ? 'show' : ''}`} onClick={closeModal}>
     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      {/* Close Button */}
+    
       <button className="close-button" onClick={closeModal}>
         <FontAwesomeIcon icon={faTimes} />
       </button>
       
-      {/* Previous and Next Buttons */}
+   
       <button className="prev-arrow" onClick={(e) => { e.stopPropagation(); goToPrevious(); }}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
