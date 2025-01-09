@@ -43,13 +43,22 @@ const Chatbot = () => {
     const [isTyping, setIsTyping] = useState(false);
     const [isMinimized, setIsMinimized] = useState(true);
     const messagesEndRef = useRef(null);
-    
+
+    // Scroll to the last message
     useEffect(() => {
         if (messagesEndRef.current) {
             messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
         }
-    }, [messages]);  // Trigger this effect when messages change
+    }, [messages]);
 
+    // Add initial bot message
+    useEffect(() => {
+        const initialMessage = {
+            text: "Hey, want assistance? Let's get started!",
+            sender: 'bot',
+        };
+        setMessages([initialMessage]);
+    }, []);
 
     const handleInputChange = (event) => {
         setUserInput(event.target.value);
@@ -57,7 +66,7 @@ const Chatbot = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+
         if (userInput.toLowerCase() === 'exit') {
             setMessages((prevMessages) => [...prevMessages, { text: 'Goodbye!', sender: 'bot' }]);
             return;
@@ -88,7 +97,7 @@ const Chatbot = () => {
                 } else if (intent === 'thank_you') {
                     botResponse = 'You\'re welcome! Let me know if you need anything else.';
                 } else if (intent === 'get_Email') {
-                    botResponse = 'Email Us at:  sales@miyagssigntech.com';
+                    botResponse = 'Email Us at: sales@miyagssigntech.com';
                 } else {
                     botResponse = 'No response from your words.';
                 }
@@ -113,9 +122,10 @@ const Chatbot = () => {
                     <>
                         <div className="chat-header">
                             <h2>Miyags Chat Assistant 
-                                 <span className="online-status">
+                                <span className="online-status">
                                     <i className="fa fa-circle"></i> Online
-                                </span></h2>
+                                </span>
+                            </h2>
                             <button className="minimize-btn" onClick={toggleMinimize}>
                                 <i className="fa fa-minus"></i>
                             </button>
@@ -138,14 +148,13 @@ const Chatbot = () => {
                                 </div>
                             ))}
                             {isTyping && (
-                                
                                 <div className="message bot typing">
-                                     <img
-                                                src={ChatBotImg}
-                                                alt="Bot Icon"
-                                                className="bot-icon"
-                                            />
-                                            <p id='typing'>Typing. . .</p>
+                                    <img
+                                        src={ChatBotImg}
+                                        alt="Bot Icon"
+                                        className="bot-icon2"
+                                    />
+                                    {/* <p id='typing'>Typing. . .</p> */}
                                     <div className="dot"></div>
                                     <div className="dot"></div>
                                     <div className="dot"></div>
@@ -161,7 +170,10 @@ const Chatbot = () => {
                                 placeholder="Type your message..."
                                 required
                             />
-                            <button type="submit">Send</button>
+                            <button type="submit" className="send-btn">
+                                <i className="fa fa-paper-plane"></i>
+                            </button>
+
                         </form>
                     </>
                 )}

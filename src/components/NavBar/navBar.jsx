@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className="navbar">
       <img src={logo} alt="" className="logo" />
       <div className="desktopMenu">
-        <Link activeClass="active" to="intro" spy={true} offset={-100} duration={500} smooth={true} className="desktopMenuListItem">
+        <Link activeClass="active" to="services" spy={true} offset={-100} duration={500} smooth={true} className="desktopMenuListItem">
           Home
         </Link>
         <Link activeClass="active" to="about" spy={true} offset={-70} duration={500} smooth={true} className="desktopMenuListItem">

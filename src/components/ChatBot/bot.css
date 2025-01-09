@@ -11,7 +11,7 @@
 /* Chat box */
 .chat-box {
     width: 100%;
-    background-color: #fff;
+    background-color: #ced4da;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -52,7 +52,7 @@
 
 
 .message.bot {
-    background-color: #0078ff;
+    background-color: #495057;
     color: white;
     align-self: flex-start;
     text-align: left;
@@ -72,6 +72,13 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
+}
+.bot-icon2 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: -2rem;
 }
 
 
@@ -117,7 +124,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0078ff;
+    background-color: #212529;
     color: white;
     padding: 10px 15px;
     border-radius: 10px 10px 0 0;
@@ -207,12 +214,13 @@ h2{
     display: flex;
     gap: 5px;
     align-items: center;
+   
 }
 
 .message.bot.typing .dot {
     width: 8px;
     height: 8px;
-    background-color: #0078ff;
+    background-color: #f8f9fa;
     border-radius: 50%;
     animation: blink 1.5s infinite;
 }
@@ -247,6 +255,16 @@ h2{
     }
 }
 
+.send-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.send-btn i {
+    font-size: 20px;
+    color: #f8f9fa; 
+}
 
 
 
