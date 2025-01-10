@@ -1,8 +1,8 @@
-import React, { useState } from 'react'; // Import useState
+import React, { useState } from 'react';
 import './contact.css';
 import { Fade } from 'react-reveal';
 import { FaPhone, FaEnvelope, FaBuilding } from "react-icons/fa";
-import emailjs from 'emailjs-com'; // Import emailjs
+import emailjs from 'emailjs-com'; 
 
 const Contact = () => {
 
@@ -12,6 +12,8 @@ const Contact = () => {
     phone: '',
     message: '',
   });
+
+  console.log("Form Data:", formData);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
@@ -31,16 +33,16 @@ const Contact = () => {
     // Call EmailJS to send the email
     emailjs
       .send(
-        'service_gcqz87p', // Replace with your EmailJS service ID
-        'template_i7cyqet', // Replace with your EmailJS template ID
+        'service_gcqz87p', //  EmailJS service ID
+        'template_i7cyqet', //  EmailJS template ID
         formData,
-        '0p_N2zH_Jazw3Mzec' // Replace with your EmailJS user ID
+        '0p_N2zH_Jazw3Mzec' //  EmailJS user ID
       )
       .then(
         (response) => {
           setIsSubmitting(false);
           setStatusMessage('Your message has been sent successfully!');
-          setFormData({ fullName: '', email: '', phone: '', message: '' });
+          setFormData({ fullName: '', email: '', phone: '', message: '', subject: '' });
         },
         (error) => {
           setIsSubmitting(false);
@@ -83,7 +85,7 @@ const Contact = () => {
           <Fade bottom>
             <input
               type="text"
-              className="firstname"
+              className="fullname"
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}

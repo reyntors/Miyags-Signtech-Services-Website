@@ -48,6 +48,8 @@
     align-self: flex-end;
     text-align: right;
     margin-left: 0; 
+    color: black;
+    font-weight: 300;
 }
 
 
@@ -57,6 +59,7 @@
     align-self: flex-start;
     text-align: left;
     max-width: fit-content;
+    font-weight: 300;
 }
 
 
