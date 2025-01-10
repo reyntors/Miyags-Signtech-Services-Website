@@ -44,6 +44,9 @@ const Chatbot = () => {
     const [isMinimized, setIsMinimized] = useState(true);
     const messagesEndRef = useRef(null);
 
+    const [hasMessageBeenShown, setHasMessageBeenShown] = useState(false);
+
+
     // Scroll to the last message
     useEffect(() => {
         if (messagesEndRef.current) {
@@ -108,11 +111,21 @@ const Chatbot = () => {
     };
 
     const toggleMinimize = () => {
-        setIsMinimized(!isMinimized);
-    };
+
+        
+        if (!hasMessageBeenShown) {
+          setHasMessageBeenShown(true); // Mark the message as shown
+        }
+        setIsMinimized(!isMinimized); // Toggle the minimize state
+      };
+    
 
     return (
         <div className="chatbot-container">
+            
+            { !hasMessageBeenShown && (
+        <h2 className="spam">Hey!, want to get started? Let's Chat!</h2>
+      )}
             <div className={`chat-box ${isMinimized ? 'minimized' : ''}`}>
                 {isMinimized ? (
                     <div className="chat-icon" onClick={toggleMinimize}>
@@ -121,7 +134,7 @@ const Chatbot = () => {
                 ) : (
                     <>
                         <div className="chat-header">
-                            <h2>Miyags Chat Assistant 
+                            <h2>Miyags Virtual Assistant 
                                 <span className="online-status">
                                     <i className="fa fa-circle"></i> Online
                                 </span>

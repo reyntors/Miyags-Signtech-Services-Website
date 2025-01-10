@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './services.css';
 import { Fade } from 'react-reveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faChevronLeft, faChevronRight, faTimes } from '@fortawesome/free-solid-svg-icons';
-
+import {  faChevronLeft, faChevronRight, faTimes } from '@fortawesome/free-solid-svg-icons';
+import LandingPage from '../../assets/Drawing/SignType/Landing Page2.jpg'
 
 
 const imagePaths = {
@@ -142,16 +142,7 @@ const Services = () => {
     <section className="services">
       <Fade left>
       <section id="sign">
-          <h1 className="explore">GUIDE TO BASIC SIGN TYPES</h1>
-          <span className="weBuildTitle">Different Types of Signs</span>
-          <div className="signDesc">
-            <p>
-              This drawing helps you illustrate some basic types of signs that
-              assist businesses and organizations in communicating effectively,
-              offering insights into selecting the ideal signage solution for
-              various needs.
-            </p>
-          </div>
+         
           
           <div className="signtype-container">
           
@@ -161,14 +152,14 @@ const Services = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           width="100%"  // Set width to 100% to make it responsive
-          height="auto"  // Maintain aspect ratio
+            // Maintain aspect ratio
         >
 
           <image
             id="LandingPage2"
-            href={require('../../assets/Drawing/SignType/Landing Page2.jpg')}  // Use your image path here
-            width="100%"  // Ensure the image inside the SVG scales to the container
-            height="100%"  // Adjust height to match aspect ratio
+            href={LandingPage}  
+            width="100%"  
+            height="100%"  
             pointer-events="none"
           />
         
@@ -222,18 +213,28 @@ const Services = () => {
       />
    
       </svg>
+      <h1 className="explore">GUIDE TO BASIC SIGN TYPES</h1>
+          <span className="weBuildTitle">Different Types of Signs</span>
+          <div className="signDesc">
+            <p>
+              This drawing helps you illustrate some basic types of signs that
+              assist businesses and organizations in communicating effectively,
+              offering insights into selecting the ideal signage solution for
+              various needs.
+            </p>
+          </div>
 
 
             {hoveredImage && (
-              <div className="hover-overlay">
-                <img src={hoveredImage} alt=""  className='hover-zoom' />
-
+              <div className="hover-overlay" style={{ pointerEvents: "none" }}>
+                <img  src={hoveredImage} alt="Example"  />
+                
               </div>
             )}
           </div>
         </section>
       </Fade>
-
+           
       <h1 className="explore">EXPLORE</h1>
       <h2 className="services-title">Our Services</h2>
       <Fade top>
@@ -272,10 +273,11 @@ const Services = () => {
 )}
 
       <div className="learn-more-container">
-        <button className="learn-more-btn">
+        {/* <button className="learn-more-btn">
           Learn More <FontAwesomeIcon icon={faArrowRight} />
-        </button>
+        </button> */}
       </div>
+ 
     </section>
   );
 };

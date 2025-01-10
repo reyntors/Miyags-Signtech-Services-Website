@@ -231,18 +231,35 @@
   padding: 20px;
   border-radius: 10px;
   overflow: hidden;
+  animation: zoomInEffect 0.3s ease-in-out; 
+  margin-top: 5rem;
 }
+
+
+@keyframes zoomInEffect {
+  0% {
+    transform: scale(0.5); 
+  }
+  50% {
+    transform: scale(1.2); 
+    
+  }
+  100% {
+    transform: scale(1); 
+    
+  }
+}
+
+
+
+
 .modal-image {
   width: 80%;
   height: auto;
-  max-height: 80vh; /* To make sure the image fits well */
+  max-height: 80vh; 
 }
 
 
-/* Zoom-in Effect */
-.modal-image.zoom-in {
-  transform: scale(1);
-}
 
 /* Previous Arrow */
 .prev-arrow, .next-arrow {
@@ -334,27 +351,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  pointer-events: none;
-  overflow: hidden;
 }
+
 
 /* Apply zoom effect on the image */
 .hover-overlay img {
+  margin-bottom: 30rem;
   max-width: 50%;
   max-height: 50%;
   object-fit: contain;
   border-radius: .5rem;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
-  transform: scale(1); /* Initial scale */
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); 
+  animation: zoomInEffect 0.5s ease-in-out; 
 }
 
-/* Zoom effect on hover */
-.hover-overlay:hover img {
-  transform: scale(1.5); /* Scale the image up */
+
+@keyframes zoomInEffect {
+  0% {
+    transform: scale(0.5); 
+  }
+  50% {
+    transform: scale(1.2); 
+    
+  }
+  100% {
+    transform: scale(1); 
+    
+  }
 }
+
 
 
 

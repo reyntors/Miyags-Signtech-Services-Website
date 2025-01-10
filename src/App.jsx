@@ -5,7 +5,7 @@ import Services from './components/WeBuild/services';
 // import Land from "./components/WeSell/land";
 import Footer from "./components/Footer/footer";
 // import LoadingScreen from "./components/LoadingScreen/loadingScreen";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Contact from "./components/Contact/contact";
 import ChatBot from "./components/ChatBot/bot";
 import 'font-awesome/css/font-awesome.min.css';
@@ -24,6 +24,18 @@ function App() {
   //   fetchData();
   // }, []);
 
+  const [showChatBot, setShowChatBot] = useState(false);
+
+  useEffect(() => {
+    // Delay the display of the ChatBot component
+    const timer = setTimeout(() => {
+      setShowChatBot(true);
+    }, 3000); // 2-second delay
+
+    // Cleanup timer on component unmount
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="App">
       {/* {loading ? (
@@ -32,7 +44,8 @@ function App() {
       ) : (
       */}
         <>
-          <ChatBot />
+      
+          {showChatBot && <ChatBot />}
           <Navbar />
           {/* <Intro /> */}
           <Services />

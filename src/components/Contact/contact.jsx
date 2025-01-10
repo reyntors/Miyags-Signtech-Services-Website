@@ -13,8 +13,6 @@ const Contact = () => {
     message: '',
   });
 
-  console.log("Form Data:", formData);
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
 

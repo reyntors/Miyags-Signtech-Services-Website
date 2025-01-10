@@ -271,5 +271,15 @@ h2{
 
 
 
+.spam {
+    background: #e9eaeb;
+    margin: 5rem 2rem 5rem 8rem;
+    color: black;
+    font-weight: 400;
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+
+
 
 

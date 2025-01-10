@@ -3,22 +3,26 @@ import logo from '../../assets/miyags.png';
 import { Link } from 'react-scroll';
 import menu from '../../assets/menu.png';
 import { FaChevronDown } from 'react-icons/fa'; // Import dropdown icon
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
 import './navBar.css';
-import LoginSignUp from '../LoginSignUp/loginSignUp';
+// import LoginSignUp from '../LoginSignUp/loginSignUp';
+// import { motion } from 'framer-motion';
+
+
+
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false); // State for dropdown menu
-  const [showLoginSignUp, setShowLoginSignUp] = useState(false);
+  // const [showLoginSignUp, setShowLoginSignUp] = useState(false);
 
-  const handleLogicSignUpClick = () => {
-    setShowLoginSignUp(true);
-  };
+  // const handleLogicSignUpClick = () => {
+  //   setShowLoginSignUp(true);
+  // };
 
-  const handleCloseLoginSignUp = () => {
-    setShowLoginSignUp(false);
-  };
+  // const handleCloseLoginSignUp = () => {
+  //   setShowLoginSignUp(false);
+  // };
 
   return (
     <nav className="navbar">
@@ -74,7 +78,7 @@ const Navbar = () => {
         </Link>
       </div>
       <img src={menu} alt="Menu" className="mobMenu" onClick={() => setShowMenu(!showMenu)} />
-      <Fade right duration={300}>
+      
         <div className="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
           <Link activeClass="active" to="intro" spy={true} offset={-100} duration={500} smooth={true} onClick={() => setShowMenu(false)} className="listItem">
             Home
@@ -94,12 +98,12 @@ const Navbar = () => {
           <Link activeClass="active" to="contactus" spy={true} offset={-50} duration={500} smooth={true} onClick={() => setShowMenu(false)} className="listItem">
             Contact Us
           </Link>
-          <Link onClick={() => { setShowMenu(false); handleLogicSignUpClick(); }} className="listItem">
+          {/* <Link onClick={() => { setShowMenu(false); handleLogicSignUpClick(); }} className="listItem">
             Login/Signup
-          </Link>
+          </Link> */}
         </div>
-      </Fade>
-      {showLoginSignUp && <LoginSignUp onClose={handleCloseLoginSignUp} />}
+
+      {/* {showLoginSignUp && <LoginSignUp onClose={handleCloseLoginSignUp} />} */}
     </nav>
   );
 };
