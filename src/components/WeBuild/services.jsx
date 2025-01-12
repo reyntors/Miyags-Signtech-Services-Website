@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './services.css';
 import { Fade } from 'react-reveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faChevronLeft, faChevronRight, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {  faChevronLeft, faChevronRight, faTimes, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import LandingPage from '../../assets/Drawing/SignType/Landing Page2.jpg'
 
 
@@ -273,9 +273,9 @@ const Services = () => {
 )}
 
       <div className="learn-more-container">
-        {/* <button className="learn-more-btn">
+        <button className="learn-more-btn">
           Learn More <FontAwesomeIcon icon={faArrowRight} />
-        </button> */}
+        </button>
       </div>
  
     </section>

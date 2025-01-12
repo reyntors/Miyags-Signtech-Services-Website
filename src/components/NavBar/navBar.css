@@ -10,6 +10,7 @@
     position: sticky;
     top: 0;
     z-index: 5;
+    
 }
 
 .logo {
@@ -43,9 +44,10 @@
 }
 
 .desktopMenuListItem {
-    margin: 1rem;
+    margin: 1.5rem;
     cursor: pointer;
     justify-content: space-between;
+    color: white;
 }
 
 .desktopMenuListItem:hover {
@@ -82,6 +84,8 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
+    justify-content: space-between;
+    margin: 1rem;
 }
 
 
@@ -100,43 +104,64 @@
 /* Sub-menu dropdown */
 .sub-menus {
     position: absolute;
-    top: 100%; /* Position the submenu below the parent item */
+    top: 100%; 
     left: 0;
-    background: #212529; /* Dark background for submenu */
-    color: #ffffff;
+    background: #e9ecef; 
+    color: #212529;
     list-style: none;
     padding: 0;
     margin: 0;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease; /* Smooth transition for dropdown */
+    transition: all 0.3s ease; 
     z-index: 2;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-weight: 300;
+   
 }
 
 .desktopMenuListItem1:hover .sub-menus {
     opacity: 1;
-    max-height: 300px; /* Adjust based on the submenu content */
+    max-height: 800px; /* Adjust based on the submenu content */
     padding: 0.5rem 0;
+    padding-right: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .sub-menus li {
-    padding: 10px 20px;
+    padding: 10px 10px;
     white-space: nowrap;
+    position: relative;
 }
 
 .sub-menus li a {
     text-decoration: none;
-    color: white;
+    color: #212529;
     font-size: large;
+    display: block;
 }
+
 
 .sub-menus li:hover {
     background: #6c757d;
     color: #0f1013;
 }
+
+/* Styling the image */
+.sub-menus img {
+    position: absolute;
+    right: 3rem; /* Align image to the right */
+    top: 50%; /* Adjust based on where you want the image to appear vertically */
+    transform: translateY(-50%); /* Center vertically */
+    max-width: 50%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the image fits within the container while preserving aspect ratio */
+}
+
 
 /* Responsive adjustments */
 @media screen and (max-width: 937px) {
@@ -187,3 +212,4 @@
         width: 8rem;
     }
 }
+

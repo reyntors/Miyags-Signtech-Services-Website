@@ -1,0 +1,16 @@
+.scrollUpButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e44709;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .scrollUpButton:hover {
+    background-color: #d03e08;
+  }
