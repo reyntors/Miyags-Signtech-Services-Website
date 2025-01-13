@@ -140,7 +140,7 @@ const Services = () => {
 
   return (
     <section className="services">
-      <Fade left>
+      <Fade bottom>
       <section id="sign">
          
           
@@ -160,7 +160,8 @@ const Services = () => {
             href={LandingPage}  
             width="100%"  
             height="100%"  
-            pointer-events="none"
+            style={{ borderRadius: '10px' }}
+            
           />
         
       <path id="Signage15"  opacity="0.01" d="M3049.5 844L2303.5 797.5V733L2498.5 744L2507 535.5L2912 594V768L3049.5 778V844Z" fill="#D9D9D9" stroke="black" />

@@ -40,9 +40,9 @@ const ScrollUp = () => {
         borderRadius: '5px',
         cursor: 'pointer',
         zIndex: 1000,
-        opacity: isVisible ? 1 : 0, // Fade in or out
-        transition: 'opacity 0.5s ease-in-out', // Smooth fade effect
-        pointerEvents: isVisible ? 'auto' : 'none', // Prevent clicks when invisible
+        opacity: isVisible ? 1 : 0, 
+        transition: 'opacity 0.5s ease-in-out', 
+        pointerEvents: isVisible ? 'auto' : 'none', 
       }}
     >
       <FontAwesomeIcon icon={faArrowUp} style={{ marginRight: '8px' }} />

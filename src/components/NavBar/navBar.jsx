@@ -10,6 +10,8 @@ import './navBar.css';
 // import LoginSignUp from '../LoginSignUp/loginSignUp';
 // import { motion } from 'framer-motion';
 
+import { Fade } from 'react-reveal'
+
 const imagePaths = {
   OnTheShelf: require('../../assets/ShelfTalkers/shelf-talkers.png'),
   ClassicShelf: require('../../assets/ShelfTalkers/simple.png'),
@@ -25,12 +27,27 @@ const imagePaths = {
   // Add more mappings as needed
 };
 
+const imagePathsPointOfPurchase = {
+
+  thePackage:{
+    OnThePackage: require('../../assets/PointOfPurchase/OnThePackage/square-pic-1.jpg'),
+    BoxesAndPackaging: require('../../assets/PointOfPurchase/OnThePackage/Rectangle-Box.png'),
+    OnPackCoupons: require('../../assets/PointOfPurchase/OnThePackage/on-pack.png'),
+    CaseStickers: require('../../assets/PointOfPurchase/OnThePackage/case-sticker.png'),
+    BottleStickers: require('../../assets/PointOfPurchase/OnThePackage/sticker.png'),
+    LabelsDecalsAndStickers: require('../../assets/PointOfPurchase/OnThePackage/labels.png'),
+  },
+  
+  // Add more mappings as needed
+};
+
 
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false); // State for dropdown menu
+  const [showDropdown, setShowDropdown] = useState(false); 
   const [activeImage, setActiveImage] = useState(imagePaths.OnTheShelf);
+  const [activeImage2, setActiveImage2] = useState(imagePathsPointOfPurchase.OnTheShelf);
   // const [showLoginSignUp, setShowLoginSignUp] = useState(false);
 
   // const handleLogicSignUpClick = () => {
@@ -43,7 +60,7 @@ const Navbar = () => {
 
 
   const menuItems = [
-    { name: 'ON THE SHELF', image: imagePaths.OnTheShelf, link: '/' },
+    { name: 'On The Shelf', image: imagePaths.OnTheShelf, link: '/' },
     { name: 'Classic Shelf Talkers', image: imagePaths.ClassicShelf, link: '/classic' },
     { name: 'Quick Ship > Classic', image: imagePaths.QuickClassicShelf, link: '/quick-classic' },
     { name: 'Pop-Up Shelf Talkers', image: imagePaths.PopUpShelf, link: '/popup' },
@@ -56,10 +73,31 @@ const Navbar = () => {
     { name: 'Shop All Shelf Talkers', image: imagePaths.OnTheShelf, link: '/shop-all' },
   ];
 
+  const PointOfPurchaseItems = [
+    {
+      thePackage: [
+
+        { name: 'On The Package', image: imagePathsPointOfPurchase.thePackage.OnThePackage, link: '/' },
+        { name: 'Boxes & Packaging', image: imagePathsPointOfPurchase.thePackage.BoxesAndPackaging, link: '/classic' },
+        { name: 'On-Pack Coupons (IRC’s)', image: imagePathsPointOfPurchase.thePackage.OnPackCoupons, link: '/quick-classic' },
+        { name: 'Case Stickers', image: imagePathsPointOfPurchase.thePackage.CaseStickers, link: '/popup' },
+        { name: 'Bottle Stickers', image: imagePathsPointOfPurchase.thePackage.BottleStickers, link: '/padded' },
+        { name: 'Labels, Decals, & Stickers', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+       
+      ],
+
+    }
+  ];
+
+  
 
    // Function to handle hover and change image dynamically
    const handleHover = (image) => {
     setActiveImage(image);
+  };
+
+  const handleHover2 = (image) => {
+    setActiveImage2(image);
   };
 
   return (
@@ -77,9 +115,11 @@ const Navbar = () => {
         Shelf Talkers
           <FaChevronDown className="dropdown-icon" />
           {showDropdown && (
-            
+            <Fade  duration={500} smooth={true}>
             <ul className="sub-menus">
+              
                <img src={activeImage} alt="Dropdown Visual" />
+              
                {menuItems.map((item, index) => (
                 <li key={index}>
                   <RouterLink
@@ -91,52 +131,9 @@ const Navbar = () => {
                   </RouterLink>
                 </li>
               ))}
-              {/* <li>
-                <RouterLink activeClass="active2"  className="sublist1">
-                Classic Shelf Talkers
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active2" to="packagingPrinting"  className="sublist2">
-                Pop-Up Shelf Talkers
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active2" to="/servicesPage/TarpPrinting/"  className="sublist3">
-                Padded Shelf Talkers
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active2" to="stickerPrinting" spy={true} offset={-110} duration={500} smooth={true} className="sublist3">
-                Floating Shelf Talkers
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active2" to="stickerPrinting" spy={true} offset={-110} duration={500} smooth={true} className="sublist3">
-                Snap-In Talkers
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active2" to="stickerPrinting" spy={true} offset={-110} duration={500} smooth={true} className="sublist3">
-                Shelf Wobblers
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active2" to="stickerPrinting" spy={true} offset={-110} duration={500} smooth={true} className="sublist3">
-                Aisle Flags
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active2" to="stickerPrinting" spy={true} offset={-110} duration={500} smooth={true} className="sublist3">
-                Shelf Strips
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active2" to="stickerPrinting" spy={true} offset={-110} duration={500} smooth={true} className="sublist3">
-                Shop All Shelf Talkers
-                </RouterLink>
-              </li> */}
+            
             </ul>
+            </Fade>
           )}
         </div>
 
@@ -148,30 +145,30 @@ const Navbar = () => {
         Point of Purchase
           <FaChevronDown className="dropdown-icon" />
           {showDropdown && (
+            <Fade  duration={500} smooth={true}>
             <ul className="sub-menus">
-              <li>
-                <RouterLink activeClass="active2" to="signFabrication" spy={true} offset={-50} duration={500} smooth={true} className="sublist1">
-                  Sign Fabrication
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active2" to="packagingPrinting" spy={true} offset={-50} duration={500} smooth={true} className="sublist2">
-                  Packaging Printing
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active" to="/servicesPage/TarpPrinting"  className="sublist3">
-                  Tarp Printing
-                </RouterLink>
-              </li>
-              <li>
-                <RouterLink activeClass="active" to="stickerPrinting" spy={true} offset={-110} duration={500} smooth={true} className="sublist3">
-                  Paper Printing
-                </RouterLink>
-              </li>
+              
+               <img src={activeImage2} alt="Dropdown Visual" />
+              
+               {PointOfPurchaseItems[0].thePackage.map((item, index) => (
+                    <li key={index}>
+                      <RouterLink
+                        to={item.link}  // Use `to` for navigation
+                        activeClass="active2"
+                        className="sublist1"
+                        onMouseEnter={() => handleHover2(item.image)} 
+                      >
+                        {item.name}
+                      </RouterLink>
+                    </li>
+                  ))}
+            
             </ul>
+            </Fade>
           )}
         </div>
+
+       
 
         <RouterLink activeClass="active" to="shopAll" spy={true} offset={-50} duration={500} smooth={true} className="desktopMenuListItem">
           Shop All

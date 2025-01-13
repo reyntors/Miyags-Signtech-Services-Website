@@ -12,26 +12,26 @@ import { useEffect, useState } from "react";
 import ScrollUp from "./components/ScrollUp/scrollUp"; // Import ScrollUp component
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [showChatBot, setShowChatBot] = useState(false);
 
-  useEffect(() => {
-    const loadingTimer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+  // useEffect(() => {
+  //   const loadingTimer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
 
-    return () => clearTimeout(loadingTimer);
-  }, []);
+  //   return () => clearTimeout(loadingTimer);
+  // }, []);
 
   useEffect(() => {
-    if (!loading) {
+    // if (!loading) {
       const chatBotTimer = setTimeout(() => {
         setShowChatBot(true);
       }, 3000);
 
       return () => clearTimeout(chatBotTimer);
-    }
-  }, [loading]);
+    // }
+  }, []);
 
   return (
     <Router>
