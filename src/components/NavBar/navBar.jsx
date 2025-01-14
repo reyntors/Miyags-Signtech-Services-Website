@@ -30,7 +30,7 @@ const imagePaths = {
 const imagePathsPointOfPurchase = {
 
   thePackage:{
-    OnThePackage: require('../../assets/PointOfPurchase/OnThePackage/square-pic-1.jpg'),
+    OnThePackage: require('../../assets/PointOfPurchase/OnThePackage/sticker.png'),
     BoxesAndPackaging: require('../../assets/PointOfPurchase/OnThePackage/Rectangle-Box.png'),
     OnPackCoupons: require('../../assets/PointOfPurchase/OnThePackage/on-pack.png'),
     CaseStickers: require('../../assets/PointOfPurchase/OnThePackage/case-sticker.png'),
