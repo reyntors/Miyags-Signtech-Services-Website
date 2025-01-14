@@ -186,7 +186,7 @@ const Navbar = () => {
                     <li key={index}>
                       <RouterLink
                         to={item.link}  // Use `to` for navigation
-                        activeClass="active2"
+                       
                         className="sublist1"
                         onMouseEnter={() => handleHover2(item.image)} 
                       >

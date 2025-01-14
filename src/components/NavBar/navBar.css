@@ -1,4 +1,6 @@
-
+* {
+    forced-color-adjust: auto;
+  }
 .navbar {
     background: #212529;
     height: 5.5rem;
