@@ -3,11 +3,16 @@ import './footer.css';
 import logo from '../../assets/miyags.png';
 import fb from '../../assets/facebook.png';
 import ig from '../../assets/instagram.png';
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
+import {motion} from 'framer-motion'
 
 const Footer = () => {
   return (
-    <Fade bottom>
+    <motion.footer
+       
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      >
       <footer className="footer">
         <div className="container">
           
@@ -59,7 +64,7 @@ const Footer = () => {
 
         <p>Copyright &#169; 2024 Miyags Signtech Services. All rights reserved.</p>
       </footer>
-    </Fade>
+    </motion.footer>
   );
 };
 

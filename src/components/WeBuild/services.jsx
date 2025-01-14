@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './services.css';
-import { Fade } from 'react-reveal';
+// import { Fade } from 'react-reveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faChevronLeft, faChevronRight, faTimes, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import LandingPage from '../../assets/Drawing/SignType/Landing Page2.jpg'
+import {motion } from 'framer-motion'
 
 
 const imagePaths = {
@@ -139,8 +140,13 @@ const Services = () => {
   };
 
   return (
+    <motion.section 
+       
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      >
     <section className="services">
-      <Fade bottom>
+      
       <section id="sign">
          
           
@@ -234,11 +240,11 @@ const Services = () => {
             )}
           </div>
         </section>
-      </Fade>
+        
            
       <h1 className="explore">EXPLORE</h1>
       <h2 className="services-title">Our Services</h2>
-      <Fade top>
+      
         <div className="services-marquee">
         
           <div className="marquee-content">
@@ -250,7 +256,7 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </Fade>
+     
 
       {isModalOpen && (
   <div className={`modal-overlay ${isModalOpen ? 'show' : ''}`} onClick={closeModal}>
@@ -280,6 +286,7 @@ const Services = () => {
       </div>
  
     </section>
+    </motion.section>
   );
 };
 

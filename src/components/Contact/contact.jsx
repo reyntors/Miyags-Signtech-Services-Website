@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './contact.css';
-import { Fade } from 'react-reveal';
+// import { Fade } from 'react-reveal';
 import { FaPhone, FaEnvelope, FaBuilding } from "react-icons/fa";
 import emailjs from 'emailjs-com'; 
+import { motion } from 'framer-motion';
 
 const Contact = () => {
 
@@ -50,8 +51,13 @@ const Contact = () => {
   };
 
   return (
+    <motion.section 
+    
+    initial={{ opacity: 0 }} 
+    animate={{ opacity: 1, transition: { duration: 0.5 } }}
+  >
     <section id="contactus">
-      <Fade bottom>
+       
         <h2 className="reachus">REACH US</h2>
         <span className="contactUsTitle">Contact Us</span>
 
@@ -76,11 +82,11 @@ const Contact = () => {
           For customers and potential customers, kindly use the form provided here. 
           We are eager to talk with you about what your company’s new signage or advertising might look like!
         </p>
-      </Fade>
+        
 
       <form onSubmit={handleSubmit} className="contactUs">
         <div className="contactLeft">
-          <Fade bottom>
+          
             <input
               type="text"
               className="fullname"
@@ -90,9 +96,9 @@ const Contact = () => {
               placeholder="Full Name"
               required
             />
-          </Fade>
+         
         </div>
-        <Fade bottom>
+       
           <input
             type="email"
             className="email"
@@ -102,8 +108,8 @@ const Contact = () => {
             placeholder="Email Address (required)"
             required
           />
-        </Fade>
-        <Fade bottom>
+       
+      
           <input
             type="text"
             className="subject"
@@ -113,8 +119,7 @@ const Contact = () => {
             placeholder="Subject"
             required
           />
-        </Fade>
-        <Fade bottom>
+      
           <input
             type="text"
             className="phone"
@@ -123,13 +128,13 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Phone Number"
           />
-        </Fade>
+      
 
         <div className="contactRight">
           {/* Add any additional content if needed */}
         </div>
 
-        <Fade bottom>
+     
           <textarea
             name="message"
             value={formData.message}
@@ -138,7 +143,7 @@ const Contact = () => {
             placeholder="How can Miyags Signtech help you? (Message Here)"
             rows="6"
           ></textarea>
-        </Fade>
+      
 
         <button type="submit" className="submitBtn" disabled={isSubmitting}>
           {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -147,6 +152,7 @@ const Contact = () => {
         {statusMessage && <p className="status-message">{statusMessage}</p>}
       </form>
     </section>
+    </motion.section>
   );
 };
 

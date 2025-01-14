@@ -90,6 +90,7 @@ const Chatbot = () => {
                 const intent = witResponse.intents?.[0]?.name;
 
                 let botResponse = '';
+
                 if (intent === 'get_location' || intent === 'get_address') {
                     botResponse = 'Lot#7 Jordan Street, Riverview Village, Bacaca, Davao City, Davao del Sur';
                 } else if (intent === 'greet') {
@@ -114,9 +115,9 @@ const Chatbot = () => {
 
         
         if (!hasMessageBeenShown) {
-          setHasMessageBeenShown(true); // Mark the message as shown
+          setHasMessageBeenShown(true); 
         }
-        setIsMinimized(!isMinimized); // Toggle the minimize state
+        setIsMinimized(!isMinimized); 
       };
     
 

@@ -8,9 +8,9 @@ import { FaChevronDown } from 'react-icons/fa'; // Import dropdown icon
 // import Fade from 'react-reveal/Fade';
 import './navBar.css';
 // import LoginSignUp from '../LoginSignUp/loginSignUp';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-import { Fade } from 'react-reveal'
+// import { Fade } from 'react-reveal'
 
 const imagePaths = {
   OnTheShelf: require('../../assets/ShelfTalkers/shelf-talkers.png'),
@@ -85,9 +85,31 @@ const Navbar = () => {
         { name: 'Labels, Decals, & Stickers', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
        
       ],
+      theStore: [
+
+        { name: 'On The Package', image: imagePathsPointOfPurchase.thePackage.OnThePackage, link: '/' },
+        { name: 'Boxes & Packaging', image: imagePathsPointOfPurchase.thePackage.BoxesAndPackaging, link: '/classic' },
+        { name: 'On-Pack Coupons (IRC’s)', image: imagePathsPointOfPurchase.thePackage.OnPackCoupons, link: '/quick-classic' },
+        { name: 'Case Stickers', image: imagePathsPointOfPurchase.thePackage.CaseStickers, link: '/popup' },
+        { name: 'Bottle Stickers', image: imagePathsPointOfPurchase.thePackage.BottleStickers, link: '/padded' },
+        { name: 'Labels, Decals, & Stickers', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+       
+      ],
+      onPremise: [
+
+        { name: 'On The Package', image: imagePathsPointOfPurchase.thePackage.OnThePackage, link: '/' },
+        { name: 'Boxes & Packaging', image: imagePathsPointOfPurchase.thePackage.BoxesAndPackaging, link: '/classic' },
+        { name: 'On-Pack Coupons (IRC’s)', image: imagePathsPointOfPurchase.thePackage.OnPackCoupons, link: '/quick-classic' },
+        { name: 'Case Stickers', image: imagePathsPointOfPurchase.thePackage.CaseStickers, link: '/popup' },
+        { name: 'Bottle Stickers', image: imagePathsPointOfPurchase.thePackage.BottleStickers, link: '/padded' },
+        { name: 'Labels, Decals, & Stickers', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+       
+      ],
 
     }
   ];
+
+  
 
   
 
@@ -99,6 +121,8 @@ const Navbar = () => {
   const handleHover2 = (image) => {
     setActiveImage2(image);
   };
+
+ 
 
   return (
     <nav className="navbar">
@@ -115,7 +139,11 @@ const Navbar = () => {
         Shelf Talkers
           <FaChevronDown className="dropdown-icon" />
           {showDropdown && (
-            <Fade  duration={500} smooth={true}>
+            <motion.ul 
+           
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1, transition: { duration: 0.5 } }}
+          >
             <ul className="sub-menus">
               
                <img src={activeImage} alt="Dropdown Visual" />
@@ -133,19 +161,23 @@ const Navbar = () => {
               ))}
             
             </ul>
-            </Fade>
+            </motion.ul>
           )}
         </div>
 
         <div
-        className="desktopMenuListItem1 dropdown-container"
+        className="desktopMenuListItem2 dropdown-container"
         onMouseEnter={() => setShowDropdown(true)}
         onMouseLeave={() => setShowDropdown(false)}
       >
         Point of Purchase
           <FaChevronDown className="dropdown-icon" />
           {showDropdown && (
-            <Fade  duration={500} smooth={true}>
+            <motion.ul 
+            
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1, transition: { duration: 0.5 } }}
+          >
             <ul className="sub-menus">
               
                <img src={activeImage2} alt="Dropdown Visual" />
@@ -164,13 +196,13 @@ const Navbar = () => {
                   ))}
             
             </ul>
-            </Fade>
+            </motion.ul>
           )}
         </div>
 
        
 
-        <RouterLink activeClass="active" to="shopAll" spy={true} offset={-50} duration={500} smooth={true} className="desktopMenuListItem">
+        <RouterLink  to="shopAll"   className="desktopMenuListItem">
           Shop All
         </RouterLink>
 
