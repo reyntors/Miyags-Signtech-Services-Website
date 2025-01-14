@@ -1,6 +1,4 @@
-* {
-    forced-color-adjust: auto;
-  }
+
 .navbar {
     background: #212529;
     height: 5.5rem;
@@ -94,6 +92,23 @@
     left: 3.5rem;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .desktopMenuListItem2 {
     position: relative;
     display: inline-block;
@@ -103,7 +118,86 @@
     padding: 2.2rem 0rem 2.2rem 0rem;
     left: 2rem;
     
+    
 }
+
+.desktopMenuListItem2:hover .list {
+    opacity: 1;
+    max-height: 900px; /* Adjust based on submenu content */
+    padding: 1rem;
+    flex-wrap: nowrap; /* Prevents wrapping of the `<ul>` elements */
+    gap: 1rem; /* Adds spacing between `<ul>` elements */
+    width: 70rem;
+    
+   
+    
+  
+}
+.list {
+    display: flex; /* Arranges the <ul> elements in a row */
+    gap: 1rem; /* Adds space between the <ul> elements */
+    top: 5.5rem; 
+    left: -40rem;
+    background: #ffffff; 
+    color: #212529;
+    list-style: none;
+    position: absolute;
+    margin: 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease; 
+    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-weight: 300;
+    
+  }
+  
+  .sub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sub-list li {
+    padding: 10px 0;
+    white-space: nowrap;
+  }
+  
+  .sub-list li a {
+    text-decoration: none;
+    color: #000;
+    font-size: large;
+    display: block;
+  }
+  
+  .sub-list li:hover {
+    background-color: #f0f0f0; /* Change on hover if needed */
+  }
+
+  .list img {
+    position: absolute;
+    right: 3rem; 
+    top: 50%; 
+    transform: translateY(-50%); /* Center vertically */
+    max-width: 50%;
+    height: auto; 
+    object-fit: contain; 
+}
+.bold-text {
+    font-weight: bold; /* Makes the text bold */
+  }
+  
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -128,7 +222,7 @@
     position: absolute;
     top: 100%; 
     left: 0;
-    background: #343a40; 
+    background: #ffffff; 
     color: #212529;
     list-style: none;
     padding: 0;
@@ -140,8 +234,11 @@
     z-index: 2;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     font-weight: 300;
+    flex: 1;
+    
    
 }
+
 
 .desktopMenuListItem1:hover .sub-menus {
     opacity: 1;
@@ -150,20 +247,16 @@
     padding-right: 400px;
     display: flex;
     flex-wrap: wrap;
-    
-    
+ 
 }
 
-.desktopMenuListItem2:hover .sub-menus {
-    opacity: 1;
-    max-height: 800px; /* Adjust based on the submenu content */
-    padding: 0.5rem 0;
-    padding-right: 250px;
-    display: flex;
-    flex-wrap: wrap;
-    
-    
-}
+
+
+
+
+
+
+
 
 .sub-menus li {
     padding: 10px 10px;
@@ -173,7 +266,7 @@
 
 .sub-menus li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-size: large;
     display: block;
 }
@@ -194,6 +287,30 @@
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensures the image fits within the container while preserving aspect ratio */
 }
+
+
+
+.sub-menus li {
+    padding: 10px 10px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.sub-menus li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: large;
+    display: block;
+}
+
+
+.sub-menus li:hover {
+    background: #6c757d;
+    color: #0f1013;
+}
+
+
+
 
 
 /* Responsive adjustments */

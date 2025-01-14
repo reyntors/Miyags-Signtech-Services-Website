@@ -37,6 +37,23 @@ const imagePathsPointOfPurchase = {
     BottleStickers: require('../../assets/PointOfPurchase/OnThePackage/sticker.png'),
     LabelsDecalsAndStickers: require('../../assets/PointOfPurchase/OnThePackage/labels.png'),
   },
+  inTheStore:{
+    OnThePackage: require('../../assets/PointOfPurchase/InTheStore/pop.jpg'),
+    BoxesAndPackaging: require('../../assets/PointOfPurchase/InTheStore/case-card.png'),
+    OnPackCoupons: require('../../assets/PointOfPurchase/InTheStore/case-card.png'),
+    CaseStickers: require('../../assets/PointOfPurchase/OnThePackage/case-sticker.png'),
+    BottleStickers: require('../../assets/PointOfPurchase/OnThePackage/sticker.png'),
+    LabelsDecalsAndStickers: require('../../assets/PointOfPurchase/OnThePackage/labels.png'),
+  },
+  onPremise:{
+    OnThePackage: require('../../assets/PointOfPurchase/OnThePackage/square-pic-1.jpg'),
+    BoxesAndPackaging: require('../../assets/PointOfPurchase/OnThePackage/Rectangle-Box.png'),
+    OnPackCoupons: require('../../assets/PointOfPurchase/OnThePackage/on-pack.png'),
+    CaseStickers: require('../../assets/PointOfPurchase/OnThePackage/case-sticker.png'),
+    BottleStickers: require('../../assets/PointOfPurchase/OnThePackage/sticker.png'),
+    LabelsDecalsAndStickers: require('../../assets/PointOfPurchase/OnThePackage/labels.png'),
+  },
+  
   
   // Add more mappings as needed
 };
@@ -87,22 +104,26 @@ const Navbar = () => {
       ],
       theStore: [
 
-        { name: 'On The Package', image: imagePathsPointOfPurchase.thePackage.OnThePackage, link: '/' },
-        { name: 'Boxes & Packaging', image: imagePathsPointOfPurchase.thePackage.BoxesAndPackaging, link: '/classic' },
-        { name: 'On-Pack Coupons (IRC’s)', image: imagePathsPointOfPurchase.thePackage.OnPackCoupons, link: '/quick-classic' },
-        { name: 'Case Stickers', image: imagePathsPointOfPurchase.thePackage.CaseStickers, link: '/popup' },
-        { name: 'Bottle Stickers', image: imagePathsPointOfPurchase.thePackage.BottleStickers, link: '/padded' },
-        { name: 'Labels, Decals, & Stickers', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+        { name: 'In The Store', image: imagePathsPointOfPurchase.thePackage.OnThePackage, link: '/' },
+        { name: 'Case Cards', image: imagePathsPointOfPurchase.thePackage.BoxesAndPackaging, link: '/classic' },
+        { name: 'Case Stackers', image: imagePathsPointOfPurchase.thePackage.OnPackCoupons, link: '/quick-classic' },
+        { name: 'Case Bins', image: imagePathsPointOfPurchase.thePackage.CaseStickers, link: '/popup' },
+        { name: 'Case Tuckers', image: imagePathsPointOfPurchase.thePackage.BottleStickers, link: '/padded' },
+        { name: 'Pallet Base Wraps', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+        { name: 'Cardboard Shelf Displays', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+        { name: 'Counter Displays', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+        { name: 'Coupons', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+
        
       ],
       onPremise: [
 
-        { name: 'On The Package', image: imagePathsPointOfPurchase.thePackage.OnThePackage, link: '/' },
-        { name: 'Boxes & Packaging', image: imagePathsPointOfPurchase.thePackage.BoxesAndPackaging, link: '/classic' },
-        { name: 'On-Pack Coupons (IRC’s)', image: imagePathsPointOfPurchase.thePackage.OnPackCoupons, link: '/quick-classic' },
-        { name: 'Case Stickers', image: imagePathsPointOfPurchase.thePackage.CaseStickers, link: '/popup' },
-        { name: 'Bottle Stickers', image: imagePathsPointOfPurchase.thePackage.BottleStickers, link: '/padded' },
-        { name: 'Labels, Decals, & Stickers', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+        { name: 'On Premise', image: imagePathsPointOfPurchase.thePackage.OnThePackage, link: '/' },
+        { name: 'Coasters', image: imagePathsPointOfPurchase.thePackage.BoxesAndPackaging, link: '/classic' },
+        { name: 'Table Tents', image: imagePathsPointOfPurchase.thePackage.OnPackCoupons, link: '/quick-classic' },
+        { name: 'Wall & Window Graphics', image: imagePathsPointOfPurchase.thePackage.CaseStickers, link: '/popup' },
+        { name: 'Floor Graphics', image: imagePathsPointOfPurchase.thePackage.BottleStickers, link: '/padded' },
+        { name: 'Expo & Event Displays', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
        
       ],
 
@@ -151,11 +172,13 @@ const Navbar = () => {
                {menuItems.map((item, index) => (
                 <li key={index}>
                   <RouterLink
-                    activeClass="active2"
+                  
                     className="sublist1"
                     onMouseEnter={() => handleHover(item.image)} 
                   >
+                   
                     {item.name}
+                    
                   </RouterLink>
                 </li>
               ))}
@@ -166,39 +189,63 @@ const Navbar = () => {
         </div>
 
         <div
-        className="desktopMenuListItem2 dropdown-container"
-        onMouseEnter={() => setShowDropdown(true)}
-        onMouseLeave={() => setShowDropdown(false)}
-      >
-        Point of Purchase
-          <FaChevronDown className="dropdown-icon" />
-          {showDropdown && (
-            <motion.ul 
-            
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1, transition: { duration: 0.5 } }}
-          >
-            <ul className="sub-menus">
-              
-               <img src={activeImage2} alt="Dropdown Visual" />
-              
-               {PointOfPurchaseItems[0].thePackage.map((item, index) => (
-                    <li key={index}>
-                      <RouterLink
-                        to={item.link}  // Use `to` for navigation
-                       
-                        className="sublist1"
-                        onMouseEnter={() => handleHover2(item.image)} 
-                      >
-                        {item.name}
-                      </RouterLink>
-                    </li>
-                  ))}
-            
-            </ul>
-            </motion.ul>
-          )}
-        </div>
+                  className="desktopMenuListItem2"
+                  onMouseEnter={() => setShowDropdown(true)}
+                  onMouseLeave={() => setShowDropdown(false)}
+                >
+                  Point of Purchase
+                  <FaChevronDown className="dropdown-icon" />
+                  {showDropdown && (
+                    <motion.ul 
+                      initial={{ opacity: 0 }} 
+                      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+                    >
+                      <ul className="list">
+                        <ul className="sub-list">
+                        <img src={activeImage2} alt="Dropdown Visual" />
+                          {PointOfPurchaseItems[0].thePackage.map((item, index) => (
+                            <li key={index}>
+                              <RouterLink
+                                to={item.link}
+                                onMouseEnter={() => handleHover2(item.image)}
+                              >
+                                {item.name}
+                              </RouterLink>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <ul className="sub-list">
+                          {PointOfPurchaseItems[0].theStore.map((item, index) => (
+                            <li key={index}>
+                              <RouterLink
+                                to={item.link}
+                                onMouseEnter={() => handleHover2(item.image)}
+                              >
+                                {item.name}
+                              </RouterLink>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <ul className="sub-list">
+                          {PointOfPurchaseItems[0].onPremise.map((item, index) => (
+                            <li key={index}>
+                              <RouterLink
+                                to={item.link}
+                                onMouseEnter={() => handleHover2(item.image)}
+                              >
+                                {item.name}
+                              </RouterLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </ul>
+                    </motion.ul>
+                  )}
+                </div>
+
+
 
        
 
