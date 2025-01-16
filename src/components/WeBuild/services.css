@@ -89,7 +89,7 @@
 
 #sign .explore {
   font-size: 2.5rem; 
-  font-weight: bold;
+  font-weight: 300;
   color: #f7f6f6;
   margin-bottom: 1rem;
 }
@@ -286,7 +286,8 @@
 
 .prev-arrow:hover, .next-arrow:hover {
   opacity: 0.7;
-  background: orange;
+  background: rgb(17, 17, 17);
+  color: white;
 }
 
 /* Modal Close Effect (click outside the modal) */
@@ -380,6 +381,8 @@
     
   }
 }
+
+
 
 
 

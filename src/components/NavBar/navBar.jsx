@@ -8,7 +8,7 @@ import { FaChevronDown } from 'react-icons/fa'; // Import dropdown icon
 // import Fade from 'react-reveal/Fade';
 import './navBar.css';
 // import LoginSignUp from '../LoginSignUp/loginSignUp';
-import { motion } from 'framer-motion';
+import {  motion } from 'framer-motion';
 
 // import { Fade } from 'react-reveal'
 
@@ -157,7 +157,9 @@ const Navbar = () => {
         onMouseEnter={() => setShowDropdown(true)}
         onMouseLeave={() => setShowDropdown(false)}
       >
+        <RouterLink to="/ShelfTalkerPage/shelfTalker" className='shelf-talker'>
         Shelf Talkers
+        </RouterLink>
           <FaChevronDown className="dropdown-icon" />
           {showDropdown && (
             <motion.ul 

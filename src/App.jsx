@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavBar/navBar";
 import About from "./components/About/about";
-import Services from './components/WeBuild/services';
 import Footer from "./components/Footer/footer";
 // import LoadingScreen from "./components/LoadingScreen/loadingScreen";
 import Contact from "./components/Contact/contact";
 import ChatBot from "./components/ChatBot/bot";
-import TarpPrinting from "./components/ServicesPage/TarpPrinting/tarpPrinting"; 
 import 'font-awesome/css/font-awesome.min.css';
 import { useEffect, useState } from "react";
-import ScrollUp from "./components/ScrollUp/scrollUp"; // Import ScrollUp component
+import ScrollUp from "./components/ScrollUp/scrollUp";
+import ShelfTalker from "./components/ShelfTalkerPage/shelfTalker";
+import Services from "./components/WeBuild/services"
 
 function App() {
   // const [loading, setLoading] = useState(true);
@@ -45,18 +45,20 @@ function App() {
             <Routes>
               <Route path="/" element={
                 <>
-                  <Services />
+                  <Services/>
                   <About />
                   <Contact />
-                  <Footer />
+                  
                 </>
               } 
               />
-              <Route path="/ServicesPage/TarpPrinting" element={<TarpPrinting />} />
+              <Route path="/ShelfTalkerPage/shelfTalker" element={<ShelfTalker />} />
+              
             </Routes>
             <ScrollUp /> {/* Add ScrollUp button here */}
           </>
         {/* )} */}
+        <Footer />
       </div>
     </Router>
   );
