@@ -53,8 +53,10 @@ const Contact = () => {
   return (
     <motion.section 
     
-    initial={{ opacity: 0 }} 
-    animate={{ opacity: 1, transition: { duration: 0.5 } }}
+    initial={{ opacity: 0, x: -100 }}  
+     whileInView={{ opacity: 1, x: 0 }} 
+     viewport={{ once: true, amount: 0.5 }} 
+     transition={{ duration: 0.5 }}
   >
     <section id="contactus">
        

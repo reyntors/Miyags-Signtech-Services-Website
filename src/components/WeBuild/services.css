@@ -2,7 +2,19 @@
 .services {
   padding: 2rem;
   text-align: center;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.services-container {
+  top: 3rem;
+  position: relative;
+  text-align: center;
   background-color: #495057;
+  width: 100vw;
+  right: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
 }
 
 
@@ -46,7 +58,7 @@
   margin-top: 1rem;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #e9ecef;
+  color: #fdfdfd;
 }
 
 
@@ -90,13 +102,13 @@
 #sign .explore {
   font-size: 2.5rem; 
   font-weight: 300;
-  color: #f7f6f6;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
 #sign .weBuildTitle {
   font-size: 1.5rem; 
-  color: #f3f3f3;
+  color: #000000;
   display: block;
   margin-bottom: 2rem;
 }
@@ -104,7 +116,7 @@
 
 #sign .signDesc p {
   font-size: 1rem; 
-  color: #f0f0f0;
+  color: #000000;
   line-height: 1.6;
   max-width: 800px; 
   margin: 0 auto 2rem; 

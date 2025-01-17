@@ -141,15 +141,25 @@ const Services = () => {
 
   return (
     <motion.section 
-       
-        initial={{ opacity: 0 }} 
-        animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      >
+  iinitial={{ opacity: 0, x: 100 }}  
+  whileInView={{ opacity: 1, x: 0 }} 
+  viewport={{ once: true, amount: 0.5 }} 
+  transition={{ duration: 0.5 }}
+>
     <section className="services">
       
       <section id="sign">
          
-          
+      <h1 className="explore">GUIDE TO BASIC SIGN TYPES</h1>
+          <span className="weBuildTitle">Different Types of Signs</span>
+          <div className="signDesc">
+            <p>
+              This drawing helps you illustrate some basic types of signs that
+              assist businesses and organizations in communicating effectively,
+              offering insights into selecting the ideal signage solution for
+              various needs.
+            </p>
+          </div>
           <div className="signtype-container">
           
           <svg
@@ -220,16 +230,7 @@ const Services = () => {
       />
    
       </svg>
-      <h1 className="explore">GUIDE TO BASIC SIGN TYPES</h1>
-          <span className="weBuildTitle">Different Types of Signs</span>
-          <div className="signDesc">
-            <p>
-              This drawing helps you illustrate some basic types of signs that
-              assist businesses and organizations in communicating effectively,
-              offering insights into selecting the ideal signage solution for
-              various needs.
-            </p>
-          </div>
+      
 
 
             {hoveredImage && (
@@ -241,50 +242,50 @@ const Services = () => {
           </div>
         </section>
         
-           
-      <h1 className="explore">EXPLORE</h1>
-      <h2 className="services-title">Our Services</h2>
-      
-        <div className="services-marquee">
-        
-          <div className="marquee-content">
-            {servicesData.map((service, index) => (
-              <div className="service-item" key={index} onClick={() => openModal(service.img, index)}>
-                <img src={service.img} alt={service.name} className="service-image" />
-                <p className="service-name">{service.name}</p>
-              </div>
-            ))}
+   <div className="services-container">     
+              <h1 className="explore">EXPLORE</h1>
+              <h2 className="services-title">Our Services</h2>
+              
+                <div className="services-marquee">
+                
+                  <div className="marquee-content">
+                    {servicesData.map((service, index) => (
+                      <div className="service-item" key={index} onClick={() => openModal(service.img, index)}>
+                        <img src={service.img} alt={service.name} className="service-image" />
+                        <p className="service-name">{service.name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+            
+
+              {isModalOpen && (
+          <div className={`modal-overlay ${isModalOpen ? 'show' : ''}`} onClick={closeModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            
+              <button className="close-button" onClick={closeModal}>
+                <FontAwesomeIcon icon={faTimes} />
+              </button>
+              
+          
+              <button className="prev-arrow" onClick={(e) => { e.stopPropagation(); goToPrevious(); }}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </button>
+              <img src={selectedImage} alt="Large View" className="modal-image" />
+              
+              <button className="next-arrow" onClick={(e) => { e.stopPropagation(); goToNext(); }}>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </button>
+            </div>
           </div>
-        </div>
-     
+        )}
 
-      {isModalOpen && (
-  <div className={`modal-overlay ${isModalOpen ? 'show' : ''}`} onClick={closeModal}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-    
-      <button className="close-button" onClick={closeModal}>
-        <FontAwesomeIcon icon={faTimes} />
-      </button>
-      
-   
-      <button className="prev-arrow" onClick={(e) => { e.stopPropagation(); goToPrevious(); }}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </button>
-      <img src={selectedImage} alt="Large View" className="modal-image" />
-      
-      <button className="next-arrow" onClick={(e) => { e.stopPropagation(); goToNext(); }}>
-        <FontAwesomeIcon icon={faChevronRight} />
-      </button>
-    </div>
-  </div>
-)}
-
-      <div className="learn-more-container">
-        <button className="learn-more-btn">
-          Learn More <FontAwesomeIcon icon={faArrowRight} />
-        </button>
-      </div>
- 
+              <div className="learn-more-container">
+                <button className="learn-more-btn">
+                  Learn More <FontAwesomeIcon icon={faArrowRight} />
+                </button>
+              </div>
+      </div>   
     </section>
     </motion.section>
   );

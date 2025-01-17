@@ -1,6 +1,6 @@
 import React from "react";
 import './shelfTalker.css';
-import ShelfTalkerImg from '../../assets/ShelfTalkers/shelf-talker.webp'
+import ShelfTalkerImg from '../../assets/ShelfTalkers/shelf-talkerhead.jpg'
 import classic from '../../assets/ShelfTalkers/simple.png'
 import popup from '../../assets/ShelfTalkers/FIP-necker_talker-shapes-38.png'
 import snapin from '../../assets/ShelfTalkers/snap-in.png'
@@ -8,11 +8,13 @@ import floating from '../../assets/ShelfTalkers/floating.png'
 import stickyflag from '../../assets/ShelfTalkers/sticky-flag.png'
 import snapInFlag from '../../assets/ShelfTalkers/aisle-flag.png'
 import wobblers from '../../assets/ShelfTalkers/wobbler.png'
+import {motion} from 'framer-motion'
 
 
 
 function ShelfTalker() {
   return (
+    
     <section id="shelf-talker">
         <img src={ShelfTalkerImg} alt="" className="image-shelf" />
         <div className="shelf-container">
@@ -23,6 +25,12 @@ function ShelfTalker() {
 
             <br/>Enjoy hassle-free online ordering? Shop now below!</p>
             </div>
+            <motion.div 
+            initial={{ opacity: 0, x: 100 }}  
+            whileInView={{ opacity: 1, x: 0 }} 
+            viewport={{ once: true, amount: 0.5 }} 
+            transition={{ duration: 0.5 }}>
+
       <div className="choose-shelf">
         
         <h1>CHOOSE A STYLE TO VIEW PRICING</h1>
@@ -92,8 +100,10 @@ function ShelfTalker() {
                               
                                        
      </div>  
-             
+     </motion.div>   
     </section>
+    
+    
     
   );
 }
