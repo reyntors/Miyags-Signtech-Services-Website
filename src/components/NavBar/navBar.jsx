@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import logo from '../../assets/miyags.png';
 // import { useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
@@ -11,6 +11,16 @@ import './navBar.css';
 import {  motion } from 'framer-motion';
 
 // import { Fade } from 'react-reveal'
+
+
+const handleScrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+
+
+
+
 
 const imagePaths = {
   OnTheShelf: require('../../assets/ShelfTalkers/shelf-talkers.png'),
@@ -74,6 +84,8 @@ const Navbar = () => {
   // const handleCloseLoginSignUp = () => {
   //   setShowLoginSignUp(false);
   // };
+
+  
 
 
   const menuItems = [
@@ -147,7 +159,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <RouterLink to="/">
+      <RouterLink to="/" onClick={handleScrollToTop}>
     <img src={logo} alt="Logo" className="logo" />
     </RouterLink>
     <div className="desktopMenu">
@@ -157,7 +169,7 @@ const Navbar = () => {
         onMouseEnter={() => setShowDropdown(true)}
         onMouseLeave={() => setShowDropdown(false)}
       >
-        <RouterLink to="/ShelfTalkerPage/shelfTalker" className='shelf-talker'>
+        <RouterLink to="/ShelfTalkerPage/shelfTalker" className='shelf-talker' onClick={handleScrollToTop}>
         Shelf Talkers
         </RouterLink>
           <FaChevronDown className="dropdown-icon" />
