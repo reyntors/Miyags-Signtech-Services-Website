@@ -59,7 +59,7 @@ const Contact = () => {
      transition={{ duration: 0.5 }}
   >
     <section id="contactus">
-       
+    <div className="contact-content">
         <h2 className="reachus">REACH US</h2>
         <span className="contactUsTitle">Contact Us</span>
 
@@ -153,6 +153,9 @@ const Contact = () => {
 
         {statusMessage && <p className="status-message">{statusMessage}</p>}
       </form>
+     </div>
+      
+     <div/>
     </section>
     </motion.section>
   );

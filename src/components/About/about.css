@@ -1,6 +1,6 @@
 #about {
     position: relative;
-    display: flex; /* Arrange children side-by-side */
+   
     align-items: flex-start;
     justify-content: space-between;
     width: 100vw;
@@ -11,12 +11,10 @@
   }
   
   .about-content {
-    flex: 1; /* Take up half the space */
-    padding-right: 1rem;
    justify-content: center;
    align-items: center;
    text-align: center;
-    gap: 5rem;
+
   }
   
  .aboutTitle {
@@ -30,7 +28,7 @@
     margin-top: 1rem;
     font-weight: 300;
     font-size: 1rem;
-    line-height: 3;
+    line-height: 4;
   }
   
   .connect-btn-container {
@@ -52,16 +50,9 @@
     background-color: #adb5bd;
   }
   
-  .map-container {
-    flex: 1; /* Take up half the space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
-  .map-container iframe {
-    width: 100%;
-    height: 450px;
-    border: 0;
+
+  .miyags{
+    font-weight: 400;
   }
   
