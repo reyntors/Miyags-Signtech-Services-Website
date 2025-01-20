@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import logo from '../../assets/miyags.png';
 // import { useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
@@ -16,6 +16,7 @@ import {  motion } from 'framer-motion';
 const handleScrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
 
 
 
@@ -75,6 +76,21 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false); 
   const [activeImage, setActiveImage] = useState(imagePaths.OnTheShelf);
   const [activeImage2, setActiveImage2] = useState(imagePathsPointOfPurchase.OnTheShelf);
+
+  useEffect(() => {
+    
+    const hash = window.location.hash;
+    if (hash === "#about") {
+      setTimeout(() => {
+        ScrollLink.scrollTo('about', {  
+          offset: -87,
+          duration: 500,
+          smooth: true,
+        });
+      }, 300); 
+    }
+  }, []);
+  
   // const [showLoginSignUp, setShowLoginSignUp] = useState(false);
 
   // const handleLogicSignUpClick = () => {
@@ -267,12 +283,17 @@ const Navbar = () => {
           Shop All
         </RouterLink>
 
-        <ScrollLink activeClass="active" to="about" spy={true} offset={-87} duration={500} smooth={true} className="desktopMenuListItem">
+        <RouterLink
+         
+            to="/about" 
+            
+            className="desktopMenuListItem"
+            >
           About Us
-        </ScrollLink>
-        <ScrollLink activeClass="active" to="contactus" spy={true} offset={-87} duration={500} smooth={true} className="desktopMenuListItem">
+        </RouterLink>
+        <RouterLink  to="/contact"  className="desktopMenuListItem">
           Contact Us
-        </ScrollLink>
+        </RouterLink>
       </div>
       <img src={menu} alt="Menu" className="mobMenu" onClick={() => setShowMenu(!showMenu)} />
       

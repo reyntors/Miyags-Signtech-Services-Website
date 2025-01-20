@@ -1,9 +1,9 @@
 #about {
     position: relative;
-    display: flex; /* Arrange children side-by-side */
+    display: flex; 
     align-items: flex-start;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     padding: 2rem;
     background: #343a40;
     color: #fff;
@@ -17,6 +17,7 @@
    align-items: center;
    text-align: center;
     gap: 5rem;
+
   }
   
  .aboutTitle {

@@ -101,21 +101,15 @@
 
 #sign .explore {
   font-size: 2.5rem; 
-  font-weight: 300;
+  font-weight: 600;
   color: #000000;
   margin-bottom: 1rem;
 }
 
-#sign .weBuildTitle {
-  font-size: 1.5rem; 
-  color: #000000;
-  display: block;
-  margin-bottom: 2rem;
-}
 
 
 #sign .signDesc p {
-  font-size: 1rem; 
+  font-size: 1.2rem; 
   color: #000000;
   line-height: 1.6;
   max-width: 800px; 
@@ -370,7 +364,7 @@
 
 /* Apply zoom effect on the image */
 .hover-overlay img {
-  margin-bottom: 30rem;
+  margin-bottom: 10rem;
   max-width: 50%;
   max-height: 50%;
   object-fit: contain;
@@ -393,6 +387,19 @@
     
   }
 }
+
+.aboutCompany{
+  position: relative;
+  display: flexbox;
+  
+}
+
+
+.aboutCompany img{
+  width: 100%;
+}
+
+
 
 
 

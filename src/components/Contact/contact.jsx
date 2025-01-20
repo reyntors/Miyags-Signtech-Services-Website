@@ -153,6 +153,7 @@ const Contact = () => {
 
         {statusMessage && <p className="status-message">{statusMessage}</p>}
       </form>
+      
     </section>
     </motion.section>
   );

@@ -3,8 +3,9 @@ import './services.css';
 // import { Fade } from 'react-reveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faChevronLeft, faChevronRight, faTimes, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import LandingPage from '../../assets/Drawing/SignType/Landing Page2.jpg'
+import LandingPage from '../../assets/Drawing/SignType/Landing Page3.jpg'
 import {motion } from 'framer-motion'
+import MonumentImg from '../../assets/monument signage.jpg'
 
 
 const imagePaths = {
@@ -151,7 +152,6 @@ const Services = () => {
       <section id="sign">
          
       <h1 className="explore">GUIDE TO BASIC SIGN TYPES</h1>
-          <span className="weBuildTitle">Different Types of Signs</span>
           <div className="signDesc">
             <p>
               This drawing helps you illustrate some basic types of signs that
@@ -162,14 +162,20 @@ const Services = () => {
           </div>
           <div className="signtype-container">
           
-          <svg
+          {/* <svg
           className="responsive-svg"
           viewBox="0 0 4096 2858"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          width="100%"  // Set width to 100% to make it responsive
-            // Maintain aspect ratio
-        >
+          width="100%" 
+          
+        > */}
+        <svg 
+        width="90%" 
+        // height="2458" 
+        viewBox="0 0 4096 2458" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg" >
 
           <image
             id="LandingPage2"
@@ -180,7 +186,7 @@ const Services = () => {
             
           />
         
-      <path id="Signage15"  opacity="0.01" d="M3049.5 844L2303.5 797.5V733L2498.5 744L2507 535.5L2912 594V768L3049.5 778V844Z" fill="#D9D9D9" stroke="black" />
+      {/* <path id="Signage15"  opacity="0.01" d="M3049.5 844L2303.5 797.5V733L2498.5 744L2507 535.5L2912 594V768L3049.5 778V844Z" fill="#D9D9D9" stroke="black" />
       <path id="Signage14" opacity="0.01" d="M3966 442.5V764.5L3366 794.5V514.5L3966 442.5Z" fill="#D9D9D9" stroke="black" />
       <path id="Signage13" opacity="0.01" d="M3510.5 1695L3478.5 1715L3445 1700.5V1205L3287.5 1225.5L3249 1186.5L3287.5 1139.5L3445 1122.5V1000H3510.5V1186.5L3700.5 1205L3739.5 1250.5L3700.5 1292.5L3504 1267.5L3510.5 1695Z" fill="#D9D9D9" stroke="black" />
       <path 
@@ -189,7 +195,7 @@ const Services = () => {
       d="M3232.5 1802L2675.5 1683V1395L2776.5 1407.5C2848.67 1349.83 3026.9 1278.8 3162.5 1456L3232.5 1464.5V1802Z" 
       fill="#D9D9D9" 
       stroke="black"
-      onMouseEnter={() => handleMouseEnter('MonumentSignage')}  // Dynamically pass the path key
+      onMouseEnter={() => handleMouseEnter('MonumentSignage')} 
           onMouseLeave={handleMouseLeave}
       />
       <path id="Signage11"  opacity="0.01" d="M2420.5 1858.5L2264 1803V1772L2228.5 1759.5L2296.5 1533.5L2481 1587.5L2420.5 1858.5Z" fill="#D9D9D9" stroke="black"/>
@@ -206,7 +212,7 @@ const Services = () => {
           d="M1462.5 459.5L1467.5 551L880 683.5V607L1462.5 459.5Z" 
           fill="#D9D9D9" 
           stroke="black"
-          onMouseEnter={() => handleMouseEnter('RoofSignage')}  // Dynamically pass the path key
+          onMouseEnter={() => handleMouseEnter('RoofSignage')}  
           onMouseLeave={handleMouseLeave}
       />
       <path id="Signage1" 
@@ -214,7 +220,7 @@ const Services = () => {
           d="M1711.5 220L1712 825L1534.5 822V201.5L1711.5 220Z" 
           fill="#D9D9D9" 
           stroke="black"
-          onMouseEnter={() => handleMouseEnter('Signage')}  // Dynamically pass the path key
+          onMouseEnter={() => handleMouseEnter('Signage')}  
           onMouseLeave={handleMouseLeave}
       />
       <path id="Awnings" opacity="0.01" d="M1694 909V1049L761 1014V964.5L844.5 924L1694 909Z" fill="#D9D9D9" stroke="black"/>
@@ -225,8 +231,148 @@ const Services = () => {
           d="M1607.5 1997L689 1821L696.5 1381L1561.5 1314L1607.5 1997Z" 
           fill="#D9D9D9" 
           stroke="black" 
-          onMouseEnter={() => handleMouseEnter('Vehicle')}  // Dynamically pass the path key
+          onMouseEnter={() => handleMouseEnter('Vehicle')}  
           onMouseLeave={handleMouseLeave}
+      /> */}
+
+
+
+<path 
+      id="signage16" 
+      opacity="0.01" 
+      d="M449.5 1598V1685.5L247 1598V1519.5L449.5 1598Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      />
+<path 
+      id="signage15" 
+      opacity="0.01" 
+      d="M631.5 1659.5L478 1601.5V1586.5L462 1581L467 1458L625 1524L631.5 1659.5Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      />
+<path 
+      id="signage14" 
+      opacity="0.01" 
+      d="M839.5 1344L783 1600L633 1546V1521L599 1502.5L663.5 1294L839.5 1344Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      />
+<path 
+      id="banners" 
+      opacity="0.01" 
+      d="M1582.5 1333.5V1459.5L930 1355.5V1274.5L1582.5 1333.5Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      />
+<path 
+      id="signage13" 
+      opacity="0.01" 
+      d="M603 1162.5V1248H767V1162.5H603Z" 
+      fill="#D9D9D9" 
+      stroke="black"/>
+<path 
+      id="signage12" 
+      opacity="0.01" 
+      d="M450.5 1189H122.5V992H450.5V1189Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+/>
+<path 
+      id="signage11" 
+      opacity="0.01" 
+      d="M1415.5 1781L978.5 1814V1613L1415.5 1592V1781Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+/>
+<path 
+      id="signage10" 
+      opacity="0.01" 
+      d="M2269 1702L2260.5 2027.5L2354.5 2051.5V2080.5L2197 2154L1704 1979.5V1953.5L1769 1919.5V1657.5L1798 1645.5L1843 1651C1902.67 1605 2050.4 1547.6 2164 1686L2269 1702Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      onMouseEnter={() => handleMouseEnter('MonumentSignage')} 
+      onMouseLeave={handleMouseLeave}
+/>
+<path 
+      id="vehicle" 
+      opacity="0.01" 
+      d="M3328.5 1707.5L3268 1757.5C3265.17 1810.33 3236.2 1898.1 3143 1826.5L2863 1925.5C2853.17 1969.17 2806.4 2040 2698 1974L2614 1991.5L2315 1897.5L2301.5 1847.5L2278 1800L2301.5 1778L2315 1722L2601 1630.5L2743.5 1521.5L2956 1499.5L3124 1521.5L3184 1564.5L3275.5 1576V1600L3300.5 1610L3317 1675L3328.5 1707.5Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      onMouseEnter={() => handleMouseEnter('Vehicle')}  
+          onMouseLeave={handleMouseLeave}
+/>
+<path 
+      id="signage9" 
+      opacity="0.01" 
+      d="M3473.5 1857L3371 1885.5L3295 1843L3350 1829.5V1391L3205 1408.5L3166.5 1376L3194 1323.5L3350 1310V1202.5H3407.5V1376L3592 1391L3626 1436L3584.5 1472.5L3401 1448.5L3407.5 1829.5L3473.5 1857Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+/>
+<path 
+      id="signage8" 
+      opacity="0.01" d="M1821.5 1228V1498.5L2373 1462.5V1236L1821.5 1228Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+/>
+<path 
+      id="signage7" 
+      opacity="0.01" 
+      d="M1694.5 1108.5V1244.5L810.5 1211.5V1162.5L892.5 1126L1694.5 1108.5Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      />
+<path 
+      id="signage6" 
+      opacity="0.01" 
+      d="M3272.5 738.5L3840 669V972.5L3272.5 998V738.5Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      />
+<path 
+      id="signage5" 
+      opacity="0.01" 
+      d="M2260 723V1005.5L2997.5 1054.5V833.5L2260 723Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      />
+<path 
+      id="signage4" 
+      opacity="0.01" 
+      d="M887.5 966V1071L688 1075.5L687 963L887.5 966Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      />
+<path 
+      id="signage3" 
+      opacity="0.01" 
+      d="M910.5 972V1079L1520 1048.5V879L910.5 972Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      />
+<path 
+      id="signage2" 
+      opacity="0.01" 
+      d="M1474 679V770L922.5 897V822L1474 679Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      onMouseEnter={() => handleMouseEnter('RoofSignage')}  
+          onMouseLeave={handleMouseLeave}
+      />
+<path 
+      id="billboard" 
+      opacity="0.01" 
+      d="M920.5 311.5V709H342V311.5H920.5Z" 
+      fill="#D9D9D9" 
+      stroke="black"
+      />
+<path 
+      id="signage1" 
+      opacity="0.01" 
+      d="M1710.5 1029H1544.5V444.5L1710.5 460V1029Z" 
+      fill="#D9D9D9" 
+      stroke="black"
       />
    
       </svg>
@@ -241,8 +387,19 @@ const Services = () => {
             )}
           </div>
         </section>
-        
-   <div className="services-container">     
+      
+   <div className="services-container">  
+
+        <div className="aboutCompany">
+                  <h1>Professional Advertising Solutions to ELEVATE Your Business</h1>
+                  <p>Proudly serving Davao City, Mindanao, and beyond, Miyags Signtech Services is your trusted partner for exceptional signage and advertising needs. From concept to completion, all our services are handled in-house to ensure quality and precision. We specialize in custom-made signage, billboard advertising, and a wide range of marketing solutions to help your brand stand out. With our innovative designs, reliable service, and expert craftsmanship, we ensure your business makes a bold statement and connects with your target audience. Get in touch with us today to bring your vision to life!</p>
+            <div className="companyImg">
+             <img src={MonumentImg}  alt="" />
+            </div>
+        </div>    
+
+
+
               <h1 className="explore">EXPLORE</h1>
               <h2 className="services-title">Our Services</h2>
               

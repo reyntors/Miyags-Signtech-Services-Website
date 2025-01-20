@@ -22,20 +22,15 @@ const Footer = () => {
           <div className="leftFooter">
             <img src={logo} alt="Miyags Signtech" className="footerImg" />
             <p>At Miyags Signtech, our team is ready to handle projects of any size. With years of experience, we specialize in bringing your ideas to life and promoting businesses.</p>
-            <div className="iconImgs">
-              <img src={fb} alt="Facebook" className="iconImg" />
-              <img src={ig} alt="Instagram" className="iconImg" />
-            </div>
-            <h2>Head Office</h2>
-            <p>Lot 7 Yangzte St. Riverview Village Brgy. 19-B, Bacaca, Davao City, Davao del Sur, Philippines 8000</p>
-            <div className="contactNumber">
-              <h3>Telephone Number</h3>
-              <p>(082) 221-0918</p>
-              <h3>Cellphone Number</h3>
-              <p>+63917-717-0415</p>
-              <h3>Email</h3>
-              <p>sales@miyagssigntech.com</p>
-            </div>
+           
+            <div className="contact-details">
+                <h3>Telephone Number</h3>
+                <p>(082) 221-0918</p>
+                <h3>Cellphone Number</h3>
+                <p>+63917-717-0415</p>
+                <h3>Email</h3>
+                <p>sales@miyagssigntech.com</p>
+              </div>
           </div>
 
           {/* Middle Section */}
@@ -62,7 +57,30 @@ const Footer = () => {
             </ul>
           </div>
 
+          <div className="map-container">
+              <h2>Head Office</h2>
+              <p>
+                Lot 7 Yangzte St. Riverview Village Brgy. 19-B, Bacaca, Davao City, 
+                Davao del Sur, Philippines 8000
+              </p>
+              
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.2724896527347!2d125.60131537481122!3d7.0943809929088255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f96d53b7a437a5%3A0xffee75d8ccbea006!2sMiyags%20Signtech%20Services!5e0!3m2!1sen!2sph!4v1737120579966!5m2!1sen!2sph"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Miyags Signtech Services Location"
+              ></iframe>
+              <div className="icon-images">
+                <img src={fb} alt="Facebook" className="icon-img" />
+                <img src={ig} alt="Instagram" className="icon-img" />
+              </div>
+            </div>
+
+
         </div>
+        
 
         <p>Copyright &#169; 2024 Miyags Signtech Services. All rights reserved.</p>
       </footer>

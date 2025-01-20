@@ -11,6 +11,7 @@ import ScrollUp from "./components/ScrollUp/scrollUp";
 import ShelfTalker from "./components/ShelfTalkerPage/shelfTalker";
 import Services from "./components/WeBuild/services"
 
+
 function App() {
   // const [loading, setLoading] = useState(true);
   const [showChatBot, setShowChatBot] = useState(false);
@@ -46,14 +47,15 @@ function App() {
               <Route path="/" element={
                 <>
                   <Services/>
-                  <About />
-                  <Contact />
+               
+                  
                   
                 </>
               } 
               />
               <Route path="/ShelfTalkerPage/shelfTalker" element={<ShelfTalker />} />
-              
+              <Route path="/About" element={<About />}/>
+              <Route path="/Contact" element={<Contact />}/>
             </Routes>
             <ScrollUp /> {/* Add ScrollUp button here */}
           </>
