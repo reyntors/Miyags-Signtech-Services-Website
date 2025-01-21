@@ -1,13 +1,13 @@
 #about {
-    position: relative;
-    display: flex; /* Arrange children side-by-side */
-    align-items: flex-start;
-    justify-content: space-between;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 2rem;
+    padding: 5rem;
     background: #343a40;
     color: #fff;
-    text-align: left;
+    text-align: center;
+
   }
   
   .about-content {
@@ -22,13 +22,16 @@
     font-size: 2.5rem;
     font-weight: 600;
     color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   
   .aboutDesc {
     margin-top: 1rem;
     font-weight: 300;
     font-size: 1rem;
-    line-height: 4;
+    line-height: 2;
   }
   
   .connect-btn-container {
@@ -54,5 +57,11 @@
 
   .miyags{
     font-weight: 400;
+  }
+
+  .about-content h1{
+    position: relative;
+    top: 1rem;
+    font-size: 2rem;
   }
   

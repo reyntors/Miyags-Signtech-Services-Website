@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import ScrollUp from "./components/ScrollUp/scrollUp";
 import ShelfTalker from "./components/ShelfTalkerPage/shelfTalker";
 import Services from "./components/WeBuild/services"
+import Feedbacks from "./components/Feedbacks/feedbacks"
 
 
 function App() {
@@ -47,8 +48,9 @@ function App() {
               <Route path="/" element={
                 <>
                   <Services/>
-               
-                  
+                  <About />
+                  <Feedbacks/>
+
                   
                 </>
               } 

@@ -1,0 +1,82 @@
+#feedbacks{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 5rem;
+    height: 70rem;
+    background: #212529;
+}
+
+.feedback-container{
+    display: flex;
+    position: relative;
+    top: 2rem;
+    gap: 1rem;
+    line-height: 2;
+}
+
+.feedback1 ,.feedback2 , .feedback3{
+    background: white;
+    color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+.feedback-sub{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.project-container{
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    margin-top: 1rem;
+    gap: 10rem;
+}
+
+.founded h1 , .clients h1, .projects h1{
+    font-weight: 400;
+}
+
+.founded p , .clients p, .projects p{
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.light-up{
+    padding: 3rem;
+    background: white;
+    color: #212529;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.light-up h1{
+    font-size: 3.5rem;
+}
+
+.light-up p{
+    margin-top: 1rem;
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.light-up button{
+    margin-top: 4rem;
+    background: #212529;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.light-up button:hover{
+    transform: scale(1.2);
+    background: #4a4a4b;
+}

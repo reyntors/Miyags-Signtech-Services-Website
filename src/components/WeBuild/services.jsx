@@ -9,6 +9,11 @@ import signFabrication from '../../assets/signFabrication.jpg'
 import billboard from '../../assets/billboard.jpg'
 import tarpPrinting from '../../assets/tarp-printing.jpg'
 import stickerPrinting from '../../assets/sticker-printing.jpg'
+import {  Link as RouterLink } from "react-router-dom";
+
+const handleScrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
 
 const imagePaths = {
@@ -103,6 +108,8 @@ const Services = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  
 
   // Open modal with selected image
   const openModal = (image, index) => {
@@ -363,7 +370,13 @@ const Services = () => {
                     and expert craftsmanship, we ensure your business makes a bold statement and connects with your target
                      audience. Get in touch with us today to bring your vision to life!</p>
                 </motion.p>
-                     <button className='qoutation'>Request Free Qoutation <FontAwesomeIcon icon={faChevronRight} /></button>
+                <RouterLink to="/contact"  onClick={handleScrollToTop}>
+                     <button 
+                     className='qoutation'>
+                      Request Free Qoutation 
+                      <FontAwesomeIcon icon={faChevronRight} />
+                      </button>
+                      </RouterLink>
                </div>
                <motion.div 
                   initial={{ opacity: 0, x: 100 }}  
@@ -383,7 +396,7 @@ const Services = () => {
                   viewport={{ once: true, amount: 0.5 }} 
                   transition={{ duration: 1 }}
                   >
-              <div className="text-content">
+              <div className="text-content2">
 
                   <h1 className="explore">EVERYTHING YOU NEED</h1>
                   <h2 className="services-title">OUR SERVICES</h2>
@@ -408,7 +421,7 @@ const Services = () => {
                       <div className="billboard">
                       <img src={billboard} alt="" />
                           <h1>BILLBOARD ADVERTISING</h1>
-                          <p>Maximize your brand’s visibility with our impactful billboard advertising solutions. We craft bold, attention-grabbing designs that captivate audiences and leave a lasting impression. Using premium materials and strategic placements, we ensure your message reaches the right people at the right time.</p>
+                          <p>We want all of our clients to experience the impressive level of skill and professionalism of our designers when working with Miyags Signtech Services. All of our services, especially this one, exist to make your life more beautiful. You can trust us to provide everything you need in order to produce truly exceptional designs.</p>
                           <button> <FontAwesomeIcon icon={faArrowRight} /></button>
                       </div>
                      
@@ -432,7 +445,7 @@ const Services = () => {
                 </motion.div>
 
                 <div className="services-marquee">
-                
+                  <h1>SEE THE EXAMPLE  ILLUSTRATIONS</h1>
                   <div className="marquee-content">
                     {servicesData.map((service, index) => (
                       <div className="service-item" key={index} onClick={() => openModal(service.img, index)}>

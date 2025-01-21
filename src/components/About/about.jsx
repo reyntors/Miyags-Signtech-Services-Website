@@ -25,8 +25,12 @@ const About = () => {
               advertising needs, and we would love the opportunity to become a
               trusted supplier to your company.
             </p>
+            <br/>
+            <p>Every project will benefit from our creative team of highly experienced professionals who will work one on one with you from the initial concept through completion of your project! Look no farther, we are here for you with expert custom signage and billboard advertising for your business. Let us show you what our team can do for you
+            and your brand.</p>
+            <h1>WE OFFER  FREE QOUTATIONS!</h1>
             <div className="connect-btn-container">
-              
+              <button className='connect-btn'>Learn More About Us</button>
             </div>
           </div>
         </motion.div>
