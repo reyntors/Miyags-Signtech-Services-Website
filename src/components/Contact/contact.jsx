@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './contact.css';
-// import { Fade } from 'react-reveal';
 import { FaPhone, FaEnvelope, FaBuilding } from "react-icons/fa";
 import emailjs from 'emailjs-com'; 
 import { motion } from 'framer-motion';
@@ -152,12 +151,10 @@ const Contact = () => {
         </button>
 
         {statusMessage && <p className="status-message">{statusMessage}</p>}
-      </form>
-     </div>
-      
-     <div/>
-    </section>
-    </motion.section>
+    </form>
+  </div>
+  </section>
+</motion.section>
   );
 };
 

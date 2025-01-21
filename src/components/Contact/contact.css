@@ -238,8 +238,8 @@
 
   .map-container {
     flex: 1; /* Take up half the space */
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
   }
   
   .map-container iframe {
@@ -248,9 +248,9 @@
     border: 0;
   }
 
-  .map-container h1{
-    font-weight: 300;
-    justify-content: center;
+  .map-container h2{
+    font-weight: 500;
+    justify-content: left;
     display: flex;
   }
 

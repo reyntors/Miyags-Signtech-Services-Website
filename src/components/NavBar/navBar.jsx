@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import logo from '../../assets/miyags.png';
 // import { useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import { useLocation, Link as RouterLink } from "react-router-dom";
+import {  Link as RouterLink } from "react-router-dom";
 import menu from '../../assets/menu.png';
 import { FaChevronDown } from 'react-icons/fa'; // Import dropdown icon
 // import Fade from 'react-reveal/Fade';
@@ -17,6 +17,7 @@ import {  motion } from 'framer-motion';
 const handleScrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
 
 
 
@@ -76,10 +77,6 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false); 
   const [activeImage, setActiveImage] = useState(imagePaths.OnTheShelf);
   const [activeImage2, setActiveImage2] = useState(imagePathsPointOfPurchase.OnTheShelf);
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
-
-
   // const [showLoginSignUp, setShowLoginSignUp] = useState(false);
 
   // const handleLogicSignUpClick = () => {
@@ -271,42 +268,13 @@ const Navbar = () => {
         <RouterLink  to="shopAll"   className="desktopMenuListItem">
           Shop All
         </RouterLink>
-        {isHomePage ? (
-  <>
-    <ScrollLink
-      activeClass="active"
-      to="about"
-      spy={true}
-      offset={-87}
-      duration={500}
-      smooth={true}
-      className="desktopMenuListItem"
-    >
-      About Us
-    </ScrollLink>
-    <ScrollLink
-      activeClass="active"
-      to="contactus"
-      spy={true}
-      offset={-87}
-      duration={500}
-      smooth={true}
-      className="desktopMenuListItem"
-    >
-      Contact Us
-    </ScrollLink>
-  </>
-) : (
-  <>
-    <RouterLink to="/" className="desktopMenuListItem">
-      About Us
-    </RouterLink>
-    <RouterLink to="/" className="desktopMenuListItem">
-      Contact Us
-    </RouterLink>
-  </>
-)}
 
+        <RouterLink  to="/about"  className="desktopMenuListItem">
+          About Us
+        </RouterLink>
+        <RouterLink  to="/contact"  className="desktopMenuListItem">
+          Contact Us
+        </RouterLink>
       </div>
       <img src={menu} alt="Menu" className="mobMenu" onClick={() => setShowMenu(!showMenu)} />
       
