@@ -21,6 +21,7 @@ const imagePaths = {
   Signage: require('../../assets/Drawing/Signage 3.jpg'),
   RoofSignage: require('../../assets/Drawing/Signage 1.jpg'),
   MonumentSignage: require('../../assets/Drawing/Signage 2.jpg'),
+  Billboard: require('../../assets/Drawing/billboard.jpg'),
   // Add more mappings as needed
 };
 
@@ -306,6 +307,8 @@ const Services = () => {
       d="M920.5 311.5V709H342V311.5H920.5Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('Billboard')}  
+          onMouseLeave={handleMouseLeave}
       />
 <path 
       id="signage1" 

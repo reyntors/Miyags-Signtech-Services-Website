@@ -15,6 +15,10 @@
   right: 2rem;
   padding-bottom: 2rem;
   padding-top: 1rem;
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+  border-top: 5px solid rgb(247, 92, 2);
+  
 }
 
 
@@ -486,7 +490,7 @@
   width: 30%;
   border-radius: 1rem;
   height: 40rem;
-  border-top: 7px solid #1cddff;
+  border-top: 7px solid rgb(247, 92, 2);
   transform: scale(1);
   transition: transform 0.3s ease;
   
@@ -539,7 +543,7 @@
   width: 30%;
   border-radius: 1rem;
   height: 40rem;
-  border-top: 7px solid #1cddff;
+  border-top: 7px solid rgb(247, 92, 2);
 
   transform: scale(1);
   transition: transform 0.3s ease;
@@ -591,7 +595,7 @@
   width: 30%;
   border-radius: 1rem;
   height: 40rem;
-  border-top: 7px solid #1cddff;
+  border-top: 7px solid rgb(247, 92, 2);;
 
   transform: scale(1);
   transition: transform 0.3s ease;
@@ -643,7 +647,7 @@
   width: 30%;
   border-radius: 1rem;
   height: 40rem;
-  border-top: 7px solid #1cddff;
+  border-top: 7px solid rgb(247, 92, 2);
 
   transform: scale(1);
   transition: transform 0.3s ease;

@@ -28,7 +28,7 @@ return(
                 <div className="feedback-container">
 
                         <div className="feedback1">
-                       <p> “Been using sign tech as long as I can remember! Always friendly, great services and honest pricing.”   </p>
+                       <p> “Been using Miyags Signtech  as long as I can remember! Always friendly, great services and honest pricing.”   </p>
                        <h3>- Customer 1</h3>
                         </div>
 
