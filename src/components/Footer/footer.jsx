@@ -4,17 +4,11 @@ import logo from '../../assets/miyags.png';
 import fb from '../../assets/facebook.png';
 import ig from '../../assets/instagram.png';
 // import Fade from 'react-reveal/Fade';
-import {motion} from 'framer-motion'
+// import {motion} from 'framer-motion'
 
 const Footer = () => {
   return (
-    <motion.footer
-       
-    initial={{ opacity: 0, y: 100 }}  
-    whileInView={{ opacity: 1, y: 0 }} 
-    viewport={{ once: true, amount: 0.5 }} 
-    transition={{ duration: 0.5 }}
-      >
+    
       <footer className="footer">
         <div className="container">
           
@@ -31,6 +25,10 @@ const Footer = () => {
                 <h3>Email</h3>
                 <p>sales@miyagssigntech.com</p>
               </div>
+              <div className="icon-images">
+                <img src={fb} alt="Facebook" className="icon-img" />
+                <img src={ig} alt="Instagram" className="icon-img" />
+              </div>
           </div>
 
           {/* Middle Section */}
@@ -42,6 +40,15 @@ const Footer = () => {
               <span className="servicesDesc">Tarp Printing</span>
               <span className="servicesDesc">Paper Printing</span>
             </div>
+            <br/>
+            <h2>Shelf Talkers</h2>
+            <div className="weBuild">
+              <span className="weBuildTitles">On the Shelf</span>
+              <span className="servicesDesc">Classic Shelf Talkers</span>
+              <span className="servicesDesc">Pop-Up Shelf Talkers</span>
+              <span className="servicesDesc">Padded Shelf Talkers</span>
+            </div>
+            
           </div>
 
           {/* Right Section */}
@@ -54,6 +61,16 @@ const Footer = () => {
               <li><a href="#contact">Contact</a></li>
               <li><a href="#contact">Careers</a></li>
               <li><a href="#contact">Projects</a></li>
+            </ul>
+            <br/>
+            <h2>Point of Purchase</h2>
+            <ul className="companyLinks">
+              <li><a href="#home">On the Package</a></li>
+              <li><a href="#services">Boxes & Packaging</a></li>
+              <li><a href="#about">Case Stickers</a></li>
+              <li><a href="#contact">Bottle Stickers</a></li>
+              <li><a href="#contact">Labels, Decals, & Stickers</a></li>
+            
             </ul>
           </div>
         
@@ -73,10 +90,7 @@ const Footer = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Miyags Signtech Services Location"
               ></iframe>
-              <div className="icon-images">
-                <img src={fb} alt="Facebook" className="icon-img" />
-                <img src={ig} alt="Instagram" className="icon-img" />
-              </div>
+             
             </div>
 
 
@@ -85,7 +99,7 @@ const Footer = () => {
 
         <p>Copyright &#169; 2024 Miyags Signtech Services. All rights reserved.</p>
       </footer>
-    </motion.footer>
+   
   );
 };
 

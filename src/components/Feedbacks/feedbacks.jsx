@@ -1,92 +1,152 @@
 import './feedbacks.css';
-import React from 'react';
-import {  Link as RouterLink } from "react-router-dom";
-import {motion } from 'framer-motion'
-
+import React, { useState, useRef, useEffect } from 'react';
+import { Link as RouterLink } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const feedbacks = [
+    { id: 1, text: "Been using Miyags Signtech as long as I can remember! Always friendly, great services and honest pricing.", author: "John Doe" },
+    { id: 2, text: "I’ve had MIYAGS SIGNTECH do 3 projects for my business. Each time, they’ve delivered a quality product for a fair price. Definitely recommend.", author: "Jane Smith" },
+    { id: 3, text: "FAST!!!! Friendly people that got 3 back windows done in 15 minutes easy. HIGHLY RECOMMENDED!!!", author: "Mike Johnson" },
+    { id: 4, text: "Outstanding service! They truly go above and beyond to make their customers happy.", author: "Sarah Brown" },
+    { id: 5, text: "Quality and professionalism at its best. I will always choose Miyags Signtech for my projects.", author: "Emily Davis" },
+  ];
+
+const Feedbacks = () => {
+  const [clientsCount, setClientsCount] = useState(0);
+  const [projectsCount, setProjectsCount] = useState(0);
+  const [hasCounted, setHasCounted] = useState(false);
+  const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeedbackIndex((prevIndex) =>
+        prevIndex === feedbacks.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change feedback every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, 
+)
+
+  const projectContainerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasCounted) {
+          setHasCounted(true);
+          startCounting();
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the element is visible
+    );
+
+    if (projectContainerRef.current) {
+      observer.observe(projectContainerRef.current);
+    }
+
+    
+  }, [hasCounted]);
+
+  const startCounting = () => {
+    let clientsInterval = setInterval(() => {
+      setClientsCount((prev) => {
+        if (prev < 2000) {
+          return prev + 10;
+        }
+        clearInterval(clientsInterval);
+        return 2467;
+      });
+    }, 10);
+
+    let projectsInterval = setInterval(() => {
+      setProjectsCount((prev) => {
+        if (prev < 1000) {
+          return prev + 5;
+        }
+        clearInterval(projectsInterval);
+        return 3257;
+      });
+    }, 10);
   };
 
-
-
-
-const Feedbacks = () =>{
-
-return(
-    <motion.section 
-      initial={{ opacity: 0, x: 100 }}  
-      whileInView={{ opacity: 1, x: 0 }} 
-      viewport={{ once: true, amount: 0.5 }} 
-      transition={{ duration: 0.5 }}
-      >
-    <section id="feedbacks">
-
+  return (
+   
+      <section id="feedbacks">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1 }}
+        >
         <h1>CUSTOMER FEEDBACKS</h1>
-        <h2 className='feedback-sub'>Don’t Just Take Our Word For It!</h2>
+        <h2 className="feedback-sub">Don’t Just Take Our Word For It!</h2>
+        </motion.div>
+        <div className="feedback-container">
+        {feedbacks.map((feedback, index) => (
+          <div
+            key={feedback.id}
+            className={`feedback ${
+              index === currentFeedbackIndex ? "active" : "hidden"
+            }`}
+          >
+            <p>{feedback.text}</p>
+            <h3>- {feedback.author}</h3>
+          </div>
+        ))}
+      </div>
 
-                <div className="feedback-container">
+        <motion.div
+          ref={projectContainerRef}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="project-container">
+            <div className="founded">
+              <h1>FOUNDED</h1>
+              <p>2017</p>
+            </div>
+            <div className="clients">
+              <h1>CLIENTS</h1>
+              <p>{clientsCount.toLocaleString()}K</p>
+            </div>
+            <div className="projects">
+              <h1>PROJECTS</h1>
+              <p>{projectsCount.toLocaleString()}K</p>
+            </div>
+          </div>
+        </motion.div>
 
-                        <div className="feedback1">
-                       <p> “Been using Miyags Signtech  as long as I can remember! Always friendly, great services and honest pricing.”   </p>
-                       <h3>- Customer 1</h3>
-                        </div>
-
-                        <div className="feedback2">
-                       <p> “I’ve had MIYAGS SIGNTECH do 3 projects for my business. Each time, they’ve delivered a quality product for a fair price. Definitely recommend.”   </p>
-                       <h3>- Customer 2</h3>
-                        </div>
-
-                        <div className="feedback3">
-                       <p> “FAST!!!! Friendly people that got 3 back windows done in 15 minutes easy. HIGHLY RECOMMENDED!!!”  </p>
-                       <h3>- Customer 3</h3>
-                        </div>
-
-                        
-                </div>
-                 <motion.div 
-                                        initial={{ opacity: 0, y: 100 }}  
-                                        whileInView={{ opacity: 1, y: 0 }} 
-                                        viewport={{ once: true, amount: 0.5 }} 
-                                        transition={{ duration: 1 }}
-                                        >
-                    <div className="project-container">
-                    <div className="founded">
-                            <h1>FOUNDED</h1>
-                            <p>2017</p>
-                        </div>
-                        <div className="clients">
-                            <h1>ACTIVE CLIENTS</h1>
-                            <p>20</p>
-                        </div>
-                        <div className="projects">
-                            <h1>PROJECTS</h1>
-                            <p>1K+</p>
-                        </div>
-                     </div>
-                     </motion.div>
-                     <motion.div 
-                                        initial={{ opacity: 0, x: 100 }}  
-                                        whileInView={{ opacity: 1, x: 0 }} 
-                                        viewport={{ once: true, amount: 0.5 }} 
-                                        transition={{ duration: 1 }}
-                                        >
-                     <div className="light-up">
-                        <h1>BRIGHTEN YOUR BRAND TODAY!</h1>
-                        <p>Elevate your business’ visibility with our striking signs and billboards. Here at SIGN-TECH.com, we provide inventive, high-quality services that are designed to make an impact. Get in touch today to get started!</p>
-                        <RouterLink to='/contact' onClick={handleScrollToTop}>
-                        <button>Let's Get Started</button>
-                        </RouterLink>
-                     </div>
-                     </motion.div>
-
-    </section>
-    </motion.section>
-
-
-);
-
-
-}
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="light-up">
+            <h1>BRIGHTEN YOUR BRAND TODAY!</h1>
+            <p>
+              Elevate your business’ visibility with our striking signs and billboards. Here at Miyags Signtech Services,
+              we provide inventive, high-quality services that are designed to make an impact. Get in touch today to get
+              started!
+            </p>
+            <RouterLink to="/contact" onClick={handleScrollToTop}>
+              <button>Let's Get Started!</button>
+            </RouterLink>
+          </div>
+        </motion.div>
+      </section>
+   
+  );
+};
 
 export default Feedbacks;

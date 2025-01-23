@@ -48,7 +48,7 @@ function App() {
               <Route path="/" element={
                 <>
                   <Services/>
-                  <About />
+                  {/* <About /> */}
                   <Feedbacks/>
 
                   

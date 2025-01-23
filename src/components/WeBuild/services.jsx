@@ -407,8 +407,8 @@ const Services = () => {
               </div>
               </motion.div>
               <motion.div 
-                        initial={{ opacity: 0, y: 100 }}  
-                        whileInView={{ opacity: 1, y: 0 }} 
+                        initial={{ opacity: 0, x: -100 }}  
+                        whileInView={{ opacity: 1, x: 0 }} 
                         viewport={{ once: true, amount: 0.5 }} 
                         transition={{ duration: 1 }}
                         >
@@ -446,9 +446,9 @@ const Services = () => {
 
                 </div>
                 </motion.div>
-
+                <h1>Explore Our Services</h1>
                 <div className="services-marquee">
-                  <h1>SEE THE EXAMPLE  ILLUSTRATIONS</h1>
+                  
                   <div className="marquee-content">
                     {servicesData.map((service, index) => (
                       <div className="service-item" key={index} onClick={() => openModal(service.img, index)}>
@@ -481,11 +481,11 @@ const Services = () => {
           </div>
         )}
 
-              <div className="learn-more-container">
+              {/* <div className="learn-more-container">
                 <button className="learn-more-btn">
                   Learn More <FontAwesomeIcon icon={faArrowRight} />
                 </button>
-              </div>
+              </div> */}
       </div>   
     </section>
     

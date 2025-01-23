@@ -49,19 +49,24 @@
 .middleFooter {
     display: flex;
     flex-direction: column;
-    align-items: center;
+   position: relative;
+   left: 3rem;
 }
 
 .middleFooter h2 {
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .weBuild {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    text-align: center;
+    text-align: left;
+   
 }
+
+
 
 .rightFooter {
     display: flex;
@@ -71,6 +76,7 @@
 
 .rightFooter h2 {
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .companyLinks {
@@ -156,7 +162,7 @@
   .map-container iframe {
     width: 100%;
     max-width: 800px;
-    height: 50vh;
+    height: 30vh;
     border: 0;
   }
   

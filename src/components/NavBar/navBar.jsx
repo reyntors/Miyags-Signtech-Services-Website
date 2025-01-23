@@ -164,13 +164,17 @@ const Navbar = () => {
       <RouterLink to="/" onClick={handleScrollToTop}>
     <img src={logo} alt="Logo" className="logo" />
     </RouterLink>
+   
     <div className="desktopMenu">
-    
+    <RouterLink to="/" onClick={handleScrollToTop} className=" desktopMenuListItem desktopMenuListItem1">
+        Home
+        </RouterLink>
       <div
         className="desktopMenuListItem1 dropdown-container"
         onMouseEnter={() => setShowDropdown(true)}
         onMouseLeave={() => setShowDropdown(false)}
       >
+       
         <RouterLink to="/ShelfTalkerPage/shelfTalker" className='shelf-talker' onClick={handleScrollToTop}>
         Shelf Talkers
         </RouterLink>
@@ -269,10 +273,10 @@ const Navbar = () => {
           Shop All
         </RouterLink>
 
-        <RouterLink  to="/about"  className="desktopMenuListItem">
+        <RouterLink  to="/about"  onClick={handleScrollToTop} className="desktopMenuListItem">
           About Us
         </RouterLink>
-        <RouterLink  to="/contact"  className="desktopMenuListItem">
+        <RouterLink  to="/contact" onClick={handleScrollToTop} className="desktopMenuListItem">
           Contact Us
         </RouterLink>
       </div>

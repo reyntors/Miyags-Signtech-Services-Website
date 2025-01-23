@@ -14,13 +14,14 @@
 }
 
 .shelf-container{
-    background: #6c757d;
+    background: #ffffff;
+    color: black;
 }
 
 .shelf-container h1 {
     padding: 4rem;
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 800;
 
 }
 
@@ -36,12 +37,13 @@
 
 .choose-shelf{
     width: 100%;
-    background: #adb5bd;
+    background: #ebebeb;
     padding: 5rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
     object-fit: contain;
+    color: black;
 }
 
 .choose-shelf h1{

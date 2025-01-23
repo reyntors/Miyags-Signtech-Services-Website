@@ -5,7 +5,8 @@
     width: 100%;
     padding: 5rem;
     height: 70rem;
-    background: #212529;
+    background: #ebebeb;
+    color: black;
 }
 
 .feedback-container{
@@ -16,24 +17,40 @@
     line-height: 2;
 }
 
-.feedback1 ,.feedback2 , .feedback3{
-    background: white;
-    color: black;
-    border-radius: 1rem;
-    padding: 1rem;
-    text-align: left;
-}
 
 .feedback-sub{
     font-size: 3rem;
     font-weight: 600;
+    color: black;
 }
+
+
+.feedback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-align: center;
+  }
+  
+  .feedback.active {
+    opacity: 1;
+    border: none
+  }
+  
+  .feedback.hidden {
+    opacity: 0;
+  }
+
+
 
 .project-container{
     display: flex;
     justify-content: center;
     padding: 5rem;
-    margin-top: 1rem;
+    margin-top: 10rem;
     gap: 10rem;
 }
 
@@ -47,8 +64,8 @@
 }
 
 .light-up{
+ 
     padding: 3rem;
-    background: white;
     color: #212529;
     width: 100%;
     border-radius: 10px;
