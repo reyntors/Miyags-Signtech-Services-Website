@@ -5,7 +5,7 @@ import {  faChevronLeft, faChevronRight, faTimes, faArrowRight } from '@fortawes
 import LandingPage from '../../assets/Drawing/SignType/Landing Page3.jpg'
 import {motion } from 'framer-motion'
 import MonumentImg from '../../assets/monument signage.jpg'
-import signFabrication from '../../assets/signFabrication.jpg'
+import signFabrication from '../../assets/signFabrication.webp'
 import billboard from '../../assets/billboard.jpg'
 import tarpPrinting from '../../assets/tarp-printing.jpg'
 import stickerPrinting from '../../assets/sticker-printing.jpg'
@@ -377,7 +377,7 @@ const Services = () => {
                      <button 
                      className='qoutation'>
                       Request Free Qoutation 
-                      <FontAwesomeIcon icon={faChevronRight} />
+                     
                       </button>
                       </RouterLink>
                </div>

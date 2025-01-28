@@ -33,7 +33,7 @@ const ScrollUp = () => {
         position: 'fixed',
         bottom: '20px',
         left: '20px',
-        backgroundColor: '#000000',
+        backgroundColor: '#35979C',
         color: 'white',
         border: 'none',
         padding: '10px 15px',
