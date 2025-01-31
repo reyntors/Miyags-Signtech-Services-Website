@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import logo from '../../assets/miyags.png';
 // import { useLocation } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+// import { Link as ScrollLink } from 'react-scroll';
 import {  Link as RouterLink } from "react-router-dom";
 import menu from '../../assets/menu.png';
 import { FaChevronDown } from 'react-icons/fa'; // Import dropdown icon
@@ -284,21 +284,27 @@ const Navbar = () => {
       
         <div className="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
         
-          <ScrollLink activeClass="active" to="about" spy={true} offset={-50} duration={500} smooth={true} onClick={() => setShowMenu(false)} className="listItem">
+          <RouterLink  to="/" onClick={() => setShowMenu(false)} className="listItem">
+            Home
+          </RouterLink>
+          <RouterLink  to="/ShelfTalkerPage/shelfTalker"  onClick={() => setShowMenu(false)} className="listItem">
+            Shelf Talkers
+          </RouterLink>
+          
+          <RouterLink  to="clients" onClick={() => setShowMenu(false)} className="listItem">
+            Point of Purchase
+          </RouterLink>
+
+          <RouterLink  to="/ShelfTalkerPage/shelfTalker"  onClick={() => setShowMenu(false)} className="listItem">
+            Shop All
+          </RouterLink>
+
+          <RouterLink  to="/about"  onClick={() => setShowMenu(false)} className="listItem">
             About
-          </ScrollLink>
-          <ScrollLink activeClass="active" to="works" spy={true} offset={-50} duration={500} smooth={true} onClick={() => setShowMenu(false)} className="listItem">
-            Services
-          </ScrollLink>
-          <ScrollLink activeClass="active" to="clients" spy={true} offset={-50} duration={500} smooth={true} onClick={() => setShowMenu(false)} className="listItem">
-            Projects
-          </ScrollLink>
-          <ScrollLink activeClass="active" to="clients" spy={true} offset={-50} duration={500} smooth={true} onClick={() => setShowMenu(false)} className="listItem">
-            Careers
-          </ScrollLink>
-          <ScrollLink activeClass="active" to="contactus" spy={true} offset={-50} duration={500} smooth={true} onClick={() => setShowMenu(false)} className="listItem">
+          </RouterLink>
+          <RouterLink  to="/contact"  onClick={() => setShowMenu(false)} className="listItem">
             Contact Us
-          </ScrollLink>
+          </RouterLink>
           {/* <Link onClick={() => { setShowMenu(false); handleLogicSignUpClick(); }} className="listItem">
             Login/Signup
           </Link> */}
