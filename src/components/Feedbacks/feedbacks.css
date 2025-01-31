@@ -83,7 +83,7 @@
 
 .light-up button{
     margin-top: 4rem;
-    background: #35979C;
+    background: #000000;
     border: none;
     padding: 20px;
     border-radius: 5px;
@@ -97,3 +97,24 @@
     transform: scale(1.2);
     background: #4a4a4b;
 }
+
+.loading-bar-container {
+    width: 10%;
+    height: 4px;
+    background: #ddd;
+    position: relative;
+    overflow: hidden;
+    margin: 10px auto; 
+    
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading-bar {
+    height: 100%;
+    width: 0%;
+    background: #000000;
+    transition: width 0.5s linear;
+  }
+  
+  

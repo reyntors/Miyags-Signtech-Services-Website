@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faChevronLeft, faChevronRight, faTimes, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import LandingPage from '../../assets/Drawing/SignType/Landing Page3.jpg'
 import {motion } from 'framer-motion'
-import MonumentImg from '../../assets/monument signage.jpg'
-import signFabrication from '../../assets/signFabrication.webp'
-import billboard from '../../assets/billboard.jpg'
-import tarpPrinting from '../../assets/tarp-printing.jpg'
-import stickerPrinting from '../../assets/sticker-printing.jpg'
+import billboard2 from '../../assets/Drawing/billBoards/billboards.jpg'
+import signFabrication from '../../assets/Drawing/signFabrication2.webp'
+// import billboard from '../../assets/billboard.jp/g'
+import tarpPrinting from '../../assets/Drawing/tarpPrinting.jpg'
+// import stickerPrinting from '../../assets/sticker-printing.jpg'
 import {  Link as RouterLink } from "react-router-dom";
 
 const handleScrollToTop = () => {
@@ -19,9 +19,12 @@ const handleScrollToTop = () => {
 const imagePaths = {
   Vehicle: require('../../assets/Drawing/Vehicle Graphics Sticker.jpg'),
   Signage: require('../../assets/Drawing/Signage 3.jpg'),
-  RoofSignage: require('../../assets/Drawing/Signage 1.jpg'),
-  MonumentSignage: require('../../assets/Drawing/Signage 2.jpg'),
-  Billboard: require('../../assets/Drawing/billboard.jpg'),
+  RoofSignage: require('../../assets/Drawing/new/roofSignage.jpg'),
+  MonumentSignage: require('../../assets/Drawing/new/monumentSignage.jpg'),
+  Billboard: require('../../assets/Drawing/billBoards/billboards.jpg'),
+  wallSignage: require('../../assets/Drawing/new/wallSignage.jpg'),
+  verticalSignage: require('../../assets/Drawing/new/verticalSignage.jpg'),
+  buildUpSignage: require('../../assets/Drawing/new/build-upSignage.jpg'),
   // Add more mappings as needed
 };
 
@@ -33,7 +36,7 @@ const imagePaths = {
 const servicesData = [
   {
     name: 'Column Ads',
-    img: require('../../assets/Drawing/Column ads.jpg'),
+    img: require('../../assets/Drawing/new/column ads 2.jpg'),
   },
   {
     name: 'Vehicle Graphics',
@@ -41,35 +44,35 @@ const servicesData = [
   },
   {
     name: 'Gondola Shelves Dress-up',
-    img: require('../../assets/Drawing/End Cap Gondola Dress-up.jpg'),
+    img: require('../../assets/Drawing/new/End Cap Gondola.jpg'),
   },
   {
     name: 'Pylon',
-    img: require('../../assets/Drawing/Pylon.jpg'),
+    img: require('../../assets/Drawing/new/pylon.jpg'),
   },
   {
     name: 'Escalator Sticker Ads',
-    img: require('../../assets/Drawing/Elevator ads.jpg'),
+    img: require('../../assets/Drawing/new/elevator.jpg'),
   },
   {
     name: 'Wall Signage',
-    img: require('../../assets/Drawing/Signage 1.jpg'),
+    img: require('../../assets/Drawing/new/wallSignage.jpg'),
   },
   {
     name: 'Monument Sign',
-    img: require('../../assets/Drawing/Signage 2.jpg'),
+    img: require('../../assets/Drawing/new/monumentSignage.jpg'),
   },
   {
     name: 'Flag Banner',
-    img: require('../../assets/Drawing/Flag Banner.jpg'),
+    img: require('../../assets/Drawing/new/flagBanner.jpg'),
   },
   {
     name: 'Island Display Shelves Dress-up',
-    img: require('../../assets/Drawing/Island Display Dress-up.jpg'),
+    img: require('../../assets/Drawing/new/Island Display.jpg'),
   },
   {
     name: 'Build-up Signages',
-    img: require('../../assets/Drawing/Signage 3.jpg'),
+    img: require('../../assets/Drawing/new/signage-build.jpg'),
   },
   {
     name: 'Ads Standee',
@@ -81,11 +84,11 @@ const servicesData = [
   },
   {
     name: 'Display Sticker',
-    img: require('../../assets/Drawing/Sticker 2.jpg'),
+    img: require('../../assets/Drawing/new/sticker2.jpg'),
   },
   {
     name: 'Tarp Printing',
-    img: require('../../assets/Drawing/Tarpaulin.jpg'),
+    img: require('../../assets/Drawing/tarpPrinting.jpg'),
   },
   {
     name: 'Trophy',
@@ -277,6 +280,8 @@ const Services = () => {
       d="M2260 723V1005.5L2997.5 1054.5V833.5L2260 723Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('wallSignage')} 
+      onMouseLeave={handleMouseLeave}
       />
 <path 
       id="signage4" 
@@ -291,6 +296,8 @@ const Services = () => {
       d="M910.5 972V1079L1520 1048.5V879L910.5 972Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('buildUpSignage')}  
+          onMouseLeave={handleMouseLeave}
       />
 <path 
       id="signage2" 
@@ -316,6 +323,8 @@ const Services = () => {
       d="M1710.5 1029H1544.5V444.5L1710.5 460V1029Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('verticalSignage')} 
+      onMouseLeave={handleMouseLeave}
       />
    
       </svg>
@@ -357,7 +366,7 @@ const Services = () => {
                   viewport={{ once: true, amount: 0.5 }} 
                   transition={{ duration: 1 }}
                   >
-                  <h1>PROFESSIONAL ADVERTISING SOLUTIONS <br/> TO ELEVATE YOUR BUSINESS</h1>
+                  PROFESSIONAL ADVERTISING SOLUTIONS <br/> TO ELEVATE YOUR BUSINESS
                  </motion.h1>
                  <motion.p 
                   initial={{ opacity: 0, y: 100 }}  
@@ -365,13 +374,13 @@ const Services = () => {
                   viewport={{ once: true, amount: 0.5 }} 
                   transition={{ duration: 1 }}
                   >
-                  <p>Proudly serving Davao City, Mindanao, and beyond, Miyags Signtech Services 
+                  Proudly serving Davao City, Mindanao, and beyond, Miyags Signtech Services 
                     is your trusted partner for exceptional signage and advertising needs. <br/>
                     From concept to completion, all our services are handled in-house to ensure quality and precision. 
                     We specialize in custom-made signage, billboard advertising, and a wide range of marketing 
                     solutions to help your brand stand out. With our innovative designs, reliable service, 
                     and expert craftsmanship, we ensure your business makes a bold statement and connects with your target
-                     audience. Get in touch with us today to bring your vision to life!</p>
+                     audience. Get in touch with us today to bring your vision to life!
                 </motion.p>
                 <RouterLink to="/contact"  onClick={handleScrollToTop}>
                      <button 
@@ -388,7 +397,7 @@ const Services = () => {
                   transition={{ duration: 1 }}
                   >
             <div className="companyImg">
-             <img src={MonumentImg}  alt="" />
+             <img src={billboard2}  alt="" />
             </div>
             </motion.div>
         </div>    
@@ -422,7 +431,7 @@ const Services = () => {
                       </div>
                      
                       <div className="billboard">
-                      <img src={billboard} alt="" />
+                      <img src={billboard2} alt="" />
                           <h1>BILLBOARD ADVERTISING</h1>
                           <p>We want all of our clients to experience the impressive level of skill and professionalism of our designers when working with Miyags Signtech Services. All of our services, especially this one, exist to make your life more beautiful. You can trust us to provide everything you need in order to produce truly exceptional designs.</p>
                           <button> <FontAwesomeIcon icon={faArrowRight} /></button>
@@ -435,7 +444,7 @@ const Services = () => {
                           <button> <FontAwesomeIcon icon={faArrowRight} /></button>
                       </div>
                       <div className="sticker-printing">
-                      <img src={stickerPrinting} alt="" />
+                      <img src={servicesData[0].img} alt="" />
                           <h1>STICKER PRINTING</h1>
                           <p>Create a lasting impression with our premium sticker printing services. Whether for branding, packaging, or personal use, we deliver vibrant, durable, and customizable stickers that bring your ideas to life. From sleek finishes to bold designs, we ensure your stickers stand out wherever they’re applied.</p>
                           <button> <FontAwesomeIcon icon={faArrowRight} /></button>

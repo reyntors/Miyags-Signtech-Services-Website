@@ -20,17 +20,28 @@ const Feedbacks = () => {
   const [projectsCount, setProjectsCount] = useState(0);
   const [hasCounted, setHasCounted] = useState(false);
   const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(0);
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeedbackIndex((prevIndex) =>
         prevIndex === feedbacks.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change feedback every 5 seconds
+      setLoadingProgress(0); // Reset loading bar on change
+    }, 6000); // Change feedback every 5 seconds
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, 
-)
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const progressInterval = setInterval(() => {
+      setLoadingProgress((prev) => (prev < 100 ? prev + 2 : 100));
+    }, 100);
+
+    return () => clearInterval(progressInterval);
+  }, [currentFeedbackIndex]);
+
 
   const projectContainerRef = useRef(null);
 
@@ -96,9 +107,14 @@ const Feedbacks = () => {
           >
             <p>{feedback.text}</p>
             <h3>- {feedback.author}</h3>
+                <div className="loading-bar-container">
+                  <div className="loading-bar" style={{ width: `${loadingProgress}%` }}></div>
+              </div>
+        
           </div>
         ))}
       </div>
+      
 
         <motion.div
           ref={projectContainerRef}
