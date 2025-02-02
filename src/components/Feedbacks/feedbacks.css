@@ -7,6 +7,7 @@
     height: 70rem;
     background: #ebebeb;
     color: black;
+    padding-bottom: 1rem;
 }
 
 .feedback-container{
@@ -19,7 +20,7 @@
 
 
 .feedback-sub{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     color: black;
 }
@@ -43,6 +44,10 @@
   .feedback.hidden {
     opacity: 0;
   }
+
+@media (min-width: 1024px) {
+
+
 
 
 
@@ -98,7 +103,89 @@
     background: #4a4a4b;
 }
 
-.loading-bar-container {
+
+}
+
+  @media (max-width: 768px) {
+    
+    .project-container{
+        position: relative;
+        top: 8rem;
+        display: block;
+        justify-content: center;
+        padding: 5rem;
+        gap: 10rem;
+    }
+
+    .founded h1 , .clients h1, .projects h1{
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .founded p , .clients p, .projects p{
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .light-up{
+    
+        color: #212529;
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 4rem;
+    }
+
+    .light-up h1{
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .light-up p{
+        
+        margin-top: 1rem;
+        line-height: 1.2;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .light-up button{
+        margin-top: 1rem;
+        background: #000000;
+        border: none;
+        padding: 20px;
+        border-radius: 5px;
+        color: white;
+        font-weight: 400;
+        transform: scale(1);
+        transition: transform 0.3s ease;
+    }
+
+    .light-up button:hover{
+        transform: scale(1.2);
+        background: #4a4a4b;
+    }
+
+    .loading-bar-container {
+        width: 10%;
+        height: 4px;
+        background: #ddd;
+        position: relative;
+        overflow: hidden;
+        margin: 10px auto; 
+        
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .loading-bar {
+        height: 100%;
+        width: 0%;
+        background: #000000;
+        transition: width 0.5s linear;
+    }         
+  }
+  
+  .loading-bar-container {
     width: 10%;
     height: 4px;
     background: #ddd;
@@ -116,5 +203,4 @@
     background: #000000;
     transition: width 0.5s linear;
   }
-  
   

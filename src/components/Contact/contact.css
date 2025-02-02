@@ -254,5 +254,151 @@
     display: flex;
   }
 
+  @media (max-width: 768px) {
+    #contactus {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background: #25282c;
+      padding: 1rem; /* Add padding for better spacing */
+  }
+  
+  .contactUsTitle {
+      font-size: 2rem; /* Reduce font size for mobile */
+      font-weight: 600;
+      margin-top: 1rem; /* Adjust margin */
+      color: white;
+      border-bottom: 1px solid #e9ecef;
+      text-align: center; /* Center align title */
+  }
+  
+  .contactUsDesc {
+      font-size: 0.9rem; /* Reduce font size for mobile */
+      font-weight: 300;
+      max-width: 90%; /* Adjust width for mobile */
+      margin-top: 1.5rem; /* Adjust margin */
+      color: white;
+      text-align: left; /* Center align description */
+      padding: 1rem;
+  }
+  
+  .contactUs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.5rem; /* Adjust margin */
+      width: 100%; /* Full width for mobile */
+  }
+  
+  .contactLeft,
+  .contactRight {
+      display: flex;
+      flex-direction: column; /* Stack inputs vertically on mobile */
+      width: 100%; /* Full width for mobile */
+      align-items: center; /* Center align inputs */
+  }
+  
+  .fullname,
+  .lastname,
+  .company,
+  .jobTitle,
+  .phone,
+  .email,
+  .fblink,
+  .subject,
+  .message2 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem; /* Reduce margin for mobile */
+      text-align: center;
+      padding: 0.5rem 1rem; /* Adjust padding for mobile */
+      border: none;
+      color: white;
+      font-weight: 300;
+      border-bottom: 1px solid #e9ecef;
+      outline: none;
+      width: 90%; /* Full width for mobile */
+  }
+  
+  .message2 {
+      padding: 1rem; /* Adjust padding for textarea */
+      border-radius: 0.5rem; /* Reduce border radius for mobile */
+      background: #e9ecef;
+      color: rgb(10, 10, 10);
+      width: 90%; /* Full width for mobile */
+  }
+  
+  .submitBtn {
+      border-radius: 0.5rem;
+      padding: 0.5rem 2rem;
+      background: #e9ecef;
+      border: none;
+      margin-bottom: 1rem;
+      width: 90%; /* Full width for mobile */
+  }
+  
+  .submitBtn:hover {
+      background: #495057;
+  }
+  
+  .reachus {
+      margin-top: 1rem;
+      font-size: 1.5rem; /* Reduce font size for mobile */
+      font-weight: bold;
+      text-align: center;
+      color: #807f7f;
+  }
+  
+  .contactDetailsContainer {
+      display: flex;
+      flex-direction: column; /* Stack contact details vertically on mobile */
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem; /* Adjust padding for mobile */
+  }
+  
+  .contactDetail {
+      width: 90%; /* Full width for mobile */
+      max-width: 300px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      padding: 1rem; /* Adjust padding for mobile */
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+  }
+  
+  .contactDetail h1 {
+      font-size: 1.25rem; /* Reduce font size for mobile */
+      color: #333;
+      margin-bottom: 0.5rem;
+  }
+  
+  .detailDesc {
+      font-size: 0.9rem; /* Reduce font size for mobile */
+      color: #666;
+      margin: 0;
+  }
+  
+  .map-container {
+      width: 100%; /* Full width for mobile */
+  }
+  
+  .map-container h2 {
+      font-size: 1.5rem; /* Reduce font size for mobile */
+      font-weight: 500;
+      text-align: center; /* Center align heading */
+  }
+  
+  .map-container iframe {
+      width: 100%;
+      height: 400px; /* Reduce height for mobile */
+      border: 0;
+      border-radius: 10px; /* Add border radius */
+  }
+  }
+
 
  

@@ -365,8 +365,9 @@ const Services = () => {
                   whileInView={{ opacity: 1, x: 0 }} 
                   viewport={{ once: true, amount: 0.5 }} 
                   transition={{ duration: 1 }}
+                  
                   >
-                  PROFESSIONAL ADVERTISING SOLUTIONS <br/> TO ELEVATE YOUR BUSINESS
+                 <span className='title'>PROFESSIONAL</span> ADVERTISING SOLUTIONS  <br/> TO ELEVATE YOUR BUSINESS
                  </motion.h1>
                  <motion.p 
                   initial={{ opacity: 0, y: 100 }}  
@@ -382,10 +383,10 @@ const Services = () => {
                     and expert craftsmanship, we ensure your business makes a bold statement and connects with your target
                      audience. Get in touch with us today to bring your vision to life!
                 </motion.p>
-                <RouterLink to="/contact"  onClick={handleScrollToTop}>
+                <RouterLink to="/Contact"  onClick={handleScrollToTop}>
                      <button 
                      className='qoutation'>
-                      Request Free Qoutation 
+                      Contact Us 
                      
                       </button>
                       </RouterLink>
