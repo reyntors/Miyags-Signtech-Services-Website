@@ -416,12 +416,7 @@ const Services = () => {
                   
               </div>
               </motion.div>
-              <motion.div 
-                        initial={{ opacity: 0, x: -100 }}  
-                        whileInView={{ opacity: 1, x: 0 }} 
-                        viewport={{ once: true, amount: 0.5 }} 
-                        transition={{ duration: 1 }}
-                        >
+            
                 <div className="advertising">
                      
                       <div className="sign-fabrication">
@@ -455,7 +450,7 @@ const Services = () => {
 
 
                 </div>
-                </motion.div>
+               
                 <h1>Explore Our Services</h1>
                 <div className="services-marquee">
                   

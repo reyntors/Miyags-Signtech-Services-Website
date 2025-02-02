@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './contact.css';
 import { FaPhone, FaEnvelope, FaBuilding } from "react-icons/fa";
 import emailjs from 'emailjs-com'; 
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 const Contact = () => {
 
@@ -50,13 +50,7 @@ const Contact = () => {
   };
 
   return (
-    <motion.section 
-    
-    initial={{ opacity: 0, x: -100 }}  
-     whileInView={{ opacity: 1, x: 0 }} 
-     viewport={{ once: true, amount: 0.5 }} 
-     transition={{ duration: 0.5 }}
-  >
+  
     <section id="contactus">
     <div className="contact-content">
         <h2 className="reachus">REACH US</h2>
@@ -162,7 +156,7 @@ const Contact = () => {
         ></iframe>
     </div>
   </section>
-</motion.section>
+
   );
 };
 
