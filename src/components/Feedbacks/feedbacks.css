@@ -2,12 +2,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 100vw;
     padding: 5rem;
     height: 70rem;
     background: #ebebeb;
     color: black;
-    padding-bottom: 1rem;
 }
 
 .feedback-container{
@@ -20,7 +19,7 @@
 
 
 .feedback-sub{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
     color: black;
 }
@@ -45,20 +44,6 @@
     opacity: 0;
   }
 
-@media screen and (min-width: 1024px) {
-
-
-    #feedbacks{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        padding: 5rem;
-        height: 70rem;
-        background: #ebebeb;
-        color: black;
-        padding-bottom: 1rem;
-    }
 
 
 .project-container{
@@ -113,100 +98,7 @@
     background: #4a4a4b;
 }
 
-
-}
-
-  @media screen and (max-width: 768px) {
-    #feedbacks{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        padding: 5rem;
-        height: 70rem;
-        background: #ebebeb;
-        color: black;
-        padding-bottom: 1rem;
-    }
-    
-    .project-container{
-        position: relative;
-        top: 8rem;
-        display: block;
-        justify-content: center;
-        padding: 5rem;
-        gap: 10rem;
-    }
-
-    .founded h1 , .clients h1, .projects h1{
-        font-weight: 600;
-        font-size: 1rem;
-    }
-
-    .founded p , .clients p, .projects p{
-        font-weight: 600;
-        font-size: 2rem;
-    }
-
-    .light-up{
-    
-        color: #212529;
-        width: 100%;
-        border-radius: 10px;
-        margin-top: 4rem;
-    }
-
-    .light-up h1{
-        font-size: 2rem;
-        width: 100%;
-    }
-
-    .light-up p{
-        
-        margin-top: 1rem;
-        line-height: 1.2;
-        font-size: 1rem;
-        text-align: left;
-    }
-
-    .light-up button{
-        margin-top: 1rem;
-        background: #000000;
-        border: none;
-        padding: 20px;
-        border-radius: 5px;
-        color: white;
-        font-weight: 400;
-        transform: scale(1);
-        transition: transform 0.3s ease;
-    }
-
-    .light-up button:hover{
-        transform: scale(1.2);
-        background: #4a4a4b;
-    }
-
-    .loading-bar-container {
-        width: 10%;
-        height: 4px;
-        background: #ddd;
-        position: relative;
-        overflow: hidden;
-        margin: 10px auto; 
-        
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .loading-bar {
-        height: 100%;
-        width: 0%;
-        background: #000000;
-        transition: width 0.5s linear;
-    }         
-  }
-  
-  .loading-bar-container {
+.loading-bar-container {
     width: 10%;
     height: 4px;
     background: #ddd;
@@ -224,224 +116,158 @@
     background: #000000;
     transition: width 0.5s linear;
   }
- 
-  
+  @media (max-width: 768px) {
 
-  @media screen and (max-width: 480px) {
     #feedbacks{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        padding: 5rem;
-        height: 70rem;
-        background: #ebebeb;
-        color: black;
-        padding-bottom: 1rem;
+        height: 100%;
     }
-    
-    .project-container{
+   .feedback-sub{
+        width: 100vw;
+        font-size: 2rem;
+        line-height: 2rem;
         position: relative;
-        top: 8rem;
-        display: block;
-        justify-content: center;
-        padding: 5rem;
-        gap: 10rem;
+        right: 5.5rem;
+       
     }
 
-    .founded h1 , .clients h1, .projects h1{
-        font-weight: 600;
+    .project-container{
+        display: block;
+        width: 100%;
+        top: 4rem;
+        position: relative;
+        
+        justify-items: center;
+    }
+
+    .project-container h1{
         font-size: 1rem;
     }
-
-    .founded p , .clients p, .projects p{
-        font-weight: 600;
+    .project-container p{
         font-size: 2rem;
-    }
-
-    .light-up{
-    
-        color: #212529;
         width: 100%;
-        border-radius: 10px;
-        margin-top: 4rem;
+    }
+    .light-up{
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        position: relative;
+        right: 5rem;
     }
 
     .light-up h1{
         font-size: 2rem;
-        width: 100%;
+        width: 100vw;
+        position: relative;
+        right: 1rem;
     }
-
     .light-up p{
-        
-        margin-top: 1rem;
-        line-height: 1.2;
+        width: 100%;
         font-size: 1rem;
-        text-align: left;
-    }
-
-    .light-up button{
-        margin-top: 1rem;
-        background: #000000;
-        border: none;
-        padding: 20px;
-        border-radius: 5px;
-        color: white;
-        font-weight: 400;
-        transform: scale(1);
-        transition: transform 0.3s ease;
-    }
-
-    .light-up button:hover{
-        transform: scale(1.2);
-        background: #4a4a4b;
-    }
-
-    .loading-bar-container {
-        width: 10%;
-        height: 4px;
-        background: #ddd;
-        position: relative;
-        overflow: hidden;
-        margin: 10px auto; 
-        
-        justify-content: center;
-        align-items: center;
     }
     
-    .loading-bar {
-        height: 100%;
-        width: 0%;
-        background: #000000;
-        transition: width 0.5s linear;
-    }         
-  }
-  
-  .loading-bar-container {
-    width: 10%;
-    height: 4px;
-    background: #ddd;
-    position: relative;
-    overflow: hidden;
-    margin: 10px auto; 
+    }
     
-    justify-content: center;
-    align-items: center;
-  }
   
-  .loading-bar {
-    height: 100%;
-    width: 0%;
-    background: #000000;
-    transition: width 0.5s linear;
-  }
-  
-
-  
-  @media screen and (min-width: 360px) {
+  @media  (max-width: 480px) {
     #feedbacks{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        padding: 2rem;
         height: 100%;
-        background: #ebebeb;
-        color: black;
-        
     }
-    .project-container{
+   .feedback-sub{
+        width: 100vw;
+        font-size: 2rem;
+        line-height: 2rem;
         position: relative;
-        top: 8rem;
-        display: block;
-        justify-content: center;
-        padding: 5rem;
-        gap: 10rem;
+        right: 5.5rem;
+       
     }
 
-    .founded h1 , .clients h1, .projects h1{
-        font-weight: 600;
+    .project-container{
+        display: block;
+        width: 100%;
+        top: 4rem;
+        position: relative;
+        
+        justify-items: center;
+    }
+
+    .project-container h1{
         font-size: 1rem;
     }
-
-    .founded p , .clients p, .projects p{
-        font-weight: 600;
+    .project-container p{
         font-size: 2rem;
-    }
-
-    .light-up{
-    
-        color: #212529;
         width: 100%;
-        border-radius: 10px;
-        margin-top: 4rem;
+    }
+    .light-up{
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        position: relative;
+        right: 5rem;
     }
 
     .light-up h1{
         font-size: 2rem;
+        width: 100vw;
+        position: relative;
+        right: 1rem;
+    }
+    .light-up p{
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+  }
+  
+  
+  @media  (max-width: 360px) {
+    #feedbacks{
+        height: 100%;
+    }
+   .feedback-sub{
+        width: 100vw;
+        font-size: 2rem;
+        line-height: 2rem;
+        position: relative;
+        right: 5.5rem;
+       
+    }
+
+    .project-container{
+        display: block;
+        width: 100%;
+        top: 4rem;
+        position: relative;
+        
+        justify-items: center;
+    }
+
+    .project-container h1{
+        font-size: 1rem;
+    }
+    .project-container p{
+        font-size: 2rem;
         width: 100%;
     }
-
-    .light-up p{
-        
-        margin-top: 1rem;
-        line-height: 1.2;
-        font-size: 1rem;
-        text-align: left;
-    }
-
-    .light-up button{
-        margin-top: 1rem;
-        background: #000000;
-        border: none;
-        padding: 20px;
-        border-radius: 5px;
-        color: white;
-        font-weight: 400;
-        transform: scale(1);
-        transition: transform 0.3s ease;
-    }
-
-    .light-up button:hover{
-        transform: scale(1.2);
-        background: #4a4a4b;
-    }
-
-    .loading-bar-container {
-        width: 10%;
-        height: 4px;
-        background: #ddd;
-        position: relative;
-        overflow: hidden;
-        margin: 10px auto; 
-        
+    .light-up{
+        width: 100vw;
         justify-content: center;
         align-items: center;
+        text-align: left;
+        position: relative;
+        right: 5rem;
+    }
+
+    .light-up h1{
+        font-size: 2rem;
+        width: 100vw;
+        position: relative;
+        right: 1rem;
+    }
+    .light-up p{
+        width: 100%;
+        font-size: 1rem;
     }
     
-    .loading-bar {
-        height: 100%;
-        width: 0%;
-        background: #000000;
-        transition: width 0.5s linear;
-    }         
-  }
-  
-  .loading-bar-container {
-    width: 10%;
-    height: 4px;
-    background: #ddd;
-    position: relative;
-    overflow: hidden;
-    margin: 10px auto; 
-    
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .loading-bar {
-    height: 100%;
-    width: 0%;
-    background: #000000;
-    transition: width 0.5s linear;
   }

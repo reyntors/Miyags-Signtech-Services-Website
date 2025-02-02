@@ -505,6 +505,7 @@
   transform: scale(1);
   transition: transform 0.3s ease;
   
+  
 }
 
 .sign-fabrication:hover{
@@ -759,22 +760,37 @@
 
 }
 
+@media (max-width: 360px) {
 
-
-.explore {
-  font-size: 2rem; 
-  font-weight: 600;
-  color: #e9ecef; 
-  margin-top: 1rem;
+  .sign-fabrication{
+    width: 200%;
+    position: relative;
+    right: 5.2rem;
+    padding: 1rem;
+  }
+  .billboard{
+    top: 5rem;
+    width: 200%;
+    position: relative;
+    right: 5.2rem;
+    padding: 1rem;
+  }
+  .tarp-printing{
+    top: 10rem;
+    width: 200%;
+    position: relative;
+    right: 5.2rem;
+    padding: 1rem;
+  }
+  .sticker-printing{
+    top: 15rem;
+    width: 200%;
+    position: relative;
+    right: 5.2rem;
+    padding: 1rem;
+  }
 }
 
-
-.services-title {
-  font-size: 3rem; 
-  color: #e9ecef;
-  margin-bottom: 2rem;
-  font-weight: 400;
-}
 
 
 
