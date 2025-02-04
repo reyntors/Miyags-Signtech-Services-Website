@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.css';
-import logo from '../../assets/miyags.png';
+import logo from '../../assets/miyags-logo2.png';
 import fb from '../../assets/facebook.png';
 import ig from '../../assets/instagram.png';
 // import Fade from 'react-reveal/Fade';

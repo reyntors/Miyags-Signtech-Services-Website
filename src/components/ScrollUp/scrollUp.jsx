@@ -33,10 +33,10 @@ const ScrollUp = () => {
         position: 'fixed',
         bottom: '20px',
         left: '20px',
-        backgroundColor: '#35979C',
+        backgroundColor: '#000000',
         color: 'white',
         border: 'none',
-        padding: '10px 15px',
+        padding: '5px 10px 5px 10px',
         borderRadius: '5px',
         cursor: 'pointer',
         zIndex: 1000,
@@ -45,8 +45,8 @@ const ScrollUp = () => {
         pointerEvents: isVisible ? 'auto' : 'none', 
       }}
     >
-      <FontAwesomeIcon icon={faArrowUp} style={{ marginRight: '8px' }} />
-      Scroll to Top
+      <FontAwesomeIcon icon={faArrowUp} style={{ marginRight: '3px' }} />
+    
     </button>
   );
 };

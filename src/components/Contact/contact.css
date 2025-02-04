@@ -29,7 +29,8 @@
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-}
+    width: 100%;
+  }
 
 .contactLeft {
     display: flex;
@@ -236,10 +237,24 @@
     margin: 0;
   }
 
+ 
+.form-container {
+    display: flex;
+    flex-direction: row; /* Align children side by side */
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    gap: 2rem; /* Space between form and map */
+  }
+  
+  .form-fields {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between form inputs */
+  }
+  
   .map-container {
-    flex: 1; /* Take up half the space */
-    justify-content: left;
-    align-items: left;
+    flex: 1; /* Take up equal space */
   }
   
   .map-container iframe {
@@ -247,6 +262,8 @@
     height: 400px;
     border: 0;
   }
+
+
 
   .map-container h2{
     font-weight: 500;
@@ -382,22 +399,25 @@
       margin: 0;
   }
   
-  .map-container {
-      width: 100%; /* Full width for mobile */
+  .form-container {
+    flex-direction: column; /* Align children side by side */
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    gap: 2rem; /* Space between form and map */
   }
   
-  .map-container h2 {
-      font-size: 1.5rem; /* Reduce font size for mobile */
-      font-weight: 500;
-      text-align: center; /* Center align heading */
+  .form-fields {
+    flex: 1; /* Take up remaining space */
+    flex-direction: column;
+    gap: 1rem; /* Space between form inputs */
   }
   
   .map-container iframe {
-      width: 100%;
-      height: 400px; /* Reduce height for mobile */
-      border: 0;
-      border-radius: 10px; /* Add border radius */
+    width: 100%;
+    height: 400px;
+    border: 0;
   }
+
   }
 
 

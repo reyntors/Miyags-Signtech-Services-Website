@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import logo from '../../assets/miyags.png';
+import logo from '../../assets/miyags-logo.png';
 // import { useLocation } from 'react-router-dom';
 // import { Link as ScrollLink } from 'react-scroll';
 import {  Link as RouterLink } from "react-router-dom";

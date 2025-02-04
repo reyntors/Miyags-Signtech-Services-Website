@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './services.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faChevronLeft, faChevronRight, faTimes, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {  faChevronLeft, faChevronRight, faTimes, faArrowRight} from '@fortawesome/free-solid-svg-icons';
 import LandingPage from '../../assets/Drawing/SignType/Landing Page3.jpg'
 import {motion } from 'framer-motion'
 import billboard2 from '../../assets/Drawing/billBoards/billboards.jpg'
@@ -25,6 +25,8 @@ const imagePaths = {
   wallSignage: require('../../assets/Drawing/new/wallSignage.jpg'),
   verticalSignage: require('../../assets/Drawing/new/verticalSignage.jpg'),
   buildUpSignage: require('../../assets/Drawing/new/build-upSignage.jpg'),
+  awnings: require('../../assets/Drawing/new/awnings.jpg'),
+  poleSign: require('../../assets/Drawing/new/pole-sign.jpg'),
   // Add more mappings as needed
 };
 
@@ -266,6 +268,8 @@ const Services = () => {
       d="M1694.5 1108.5V1244.5L810.5 1211.5V1162.5L892.5 1126L1694.5 1108.5Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('awnings')}  
+          onMouseLeave={handleMouseLeave}
       />
 <path 
       id="signage6" 
@@ -273,6 +277,8 @@ const Services = () => {
       d="M3272.5 738.5L3840 669V972.5L3272.5 998V738.5Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('poleSign')} 
+      onMouseLeave={handleMouseLeave}
       />
 <path 
       id="signage5" 

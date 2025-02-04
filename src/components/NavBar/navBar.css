@@ -313,9 +313,10 @@
 /* Responsive adjustments */
 @media screen and (max-width: 937px) {
     .navbar {
-        background: #0f1013;
+        background: #ffffff;
     }
-
+   
+    
     .listItem {
         display: flex;
         text-align: center;
@@ -360,4 +361,13 @@
     }
 }
 
+
+@media  (max-width: 360px) {
+    
+    .logo {
+        object-fit: cover;
+        height: 4rem;
+        width: 8rem;
+    }
+}
 
