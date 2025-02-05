@@ -27,6 +27,14 @@ const imagePaths = {
   buildUpSignage: require('../../assets/Drawing/new/build-upSignage.jpg'),
   awnings: require('../../assets/Drawing/new/awnings.jpg'),
   poleSign: require('../../assets/Drawing/new/pole-sign.jpg'),
+  postSign: require('../../assets/Drawing/new/post-sign.webp'),
+  reflectiveSign: require('../../assets/Drawing/new/reflectiveSign.jpg'),
+  banner: require('../../assets/Drawing/new/bannerSign.jpg'),
+  portableSign: require('../../assets/Drawing/new/portableSign.jpg'),
+  frame: require('../../assets/Drawing/new/frame.jpg'),
+  lawn: require('../../assets/Drawing/new/lawn.jpg'),
+  enterExit: require('../../assets/Drawing/new/ExitEnter.jpg'),
+
   // Add more mappings as needed
 };
 
@@ -189,6 +197,8 @@ const Services = () => {
       d="M449.5 1598V1685.5L247 1598V1519.5L449.5 1598Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('enterExit')}  
+      onMouseLeave={handleMouseLeave}
       />
 <path 
       id="signage15" 
@@ -196,6 +206,8 @@ const Services = () => {
       d="M631.5 1659.5L478 1601.5V1586.5L462 1581L467 1458L625 1524L631.5 1659.5Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('lawn')}  
+      onMouseLeave={handleMouseLeave}
       />
 <path 
       id="signage14" 
@@ -203,6 +215,8 @@ const Services = () => {
       d="M839.5 1344L783 1600L633 1546V1521L599 1502.5L663.5 1294L839.5 1344Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('frame')}  
+      onMouseLeave={handleMouseLeave}
       />
 <path 
       id="banners" 
@@ -210,6 +224,8 @@ const Services = () => {
       d="M1582.5 1333.5V1459.5L930 1355.5V1274.5L1582.5 1333.5Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('banner')}  
+          onMouseLeave={handleMouseLeave}
       />
 <path 
       id="signage13" 
@@ -223,6 +239,8 @@ const Services = () => {
       d="M450.5 1189H122.5V992H450.5V1189Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('reflectiveSign')}  
+          onMouseLeave={handleMouseLeave}
 />
 <path 
       id="signage11" 
@@ -230,6 +248,8 @@ const Services = () => {
       d="M1415.5 1781L978.5 1814V1613L1415.5 1592V1781Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('portableSign')}  
+          onMouseLeave={handleMouseLeave}
 />
 <path 
       id="signage10" 
@@ -255,6 +275,8 @@ const Services = () => {
       d="M3473.5 1857L3371 1885.5L3295 1843L3350 1829.5V1391L3205 1408.5L3166.5 1376L3194 1323.5L3350 1310V1202.5H3407.5V1376L3592 1391L3626 1436L3584.5 1472.5L3401 1448.5L3407.5 1829.5L3473.5 1857Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('postSign')} 
+      onMouseLeave={handleMouseLeave}
 />
 <path 
       id="signage8" 
