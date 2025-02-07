@@ -138,6 +138,20 @@
     margin-top: 1rem;
 }
 
+.copyright{
+    background: #3b3b3b;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0rem 2rem 0rem;
+    height: 1rem;
+
+}
+.copyright p{
+    
+    position: relative;
+}
+
 /* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
     .container {

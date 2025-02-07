@@ -36,9 +36,9 @@ const Footer = () => {
             <h2>Our Services</h2>
             <div className="weBuild">
               <span className="weBuildTitles">Sign Fabrication</span>
-              <span className="servicesDesc">Packaging Printing</span>
+              <span className="servicesDesc">Billboard Advertising</span>
               <span className="servicesDesc">Tarp Printing</span>
-              <span className="servicesDesc">Paper Printing</span>
+              <span className="servicesDesc">Sticker Printing</span>
             </div>
             <br/>
             <h2>Shelf Talkers</h2>
@@ -96,8 +96,9 @@ const Footer = () => {
 
         </div>
         
-
-        <p>Copyright &#169; 2024 Miyags Signtech Services. All rights reserved.</p>
+        <div className="copyright">
+        <p>Copyright &#169; 2025 Miyags Signtech Services. All rights reserved.</p>
+        </div>
       </footer>
    
   );

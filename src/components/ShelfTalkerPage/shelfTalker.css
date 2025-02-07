@@ -16,6 +16,7 @@
 .shelf-container{
     background: #ffffff;
     color: black;
+    padding: 1rem;
 }
 
 .shelf-container h1 {
@@ -96,3 +97,16 @@
     padding: rem;
 }  
 
+@media  (max-width: 360px) {
+    .choose-shelf h1{
+        text-align: center;
+        color: black;
+      position: relative;
+        
+    }
+ 
+    .choose-shelf{
+        display: block;
+    }
+    
+}

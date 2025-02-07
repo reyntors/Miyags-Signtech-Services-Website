@@ -34,6 +34,8 @@ const imagePaths = {
   frame: require('../../assets/Drawing/new/frame.jpg'),
   lawn: require('../../assets/Drawing/new/lawn.jpg'),
   enterExit: require('../../assets/Drawing/new/ExitEnter.jpg'),
+  windowSign: require('../../assets/Drawing/new/windowSign.jpg'),
+  projectingSign: require('../../assets/Drawing/new/projectingSigns.jpg'),
 
   // Add more mappings as needed
 };
@@ -283,6 +285,8 @@ const Services = () => {
       opacity="0.01" d="M1821.5 1228V1498.5L2373 1462.5V1236L1821.5 1228Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('windowSign')}  
+      onMouseLeave={handleMouseLeave}
 />
 <path 
       id="signage7" 
@@ -317,6 +321,8 @@ const Services = () => {
       d="M887.5 966V1071L688 1075.5L687 963L887.5 966Z" 
       fill="#D9D9D9" 
       stroke="black"
+      onMouseEnter={() => handleMouseEnter('projectingSign')}  
+          onMouseLeave={handleMouseLeave}
       />
 <path 
       id="signage3" 

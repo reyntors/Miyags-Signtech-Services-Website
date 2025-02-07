@@ -42,7 +42,7 @@ const imagePaths = {
 const imagePathsPointOfPurchase = {
 
   thePackage:{
-    OnThePackage: require('../../assets/PointOfPurchase/OnThePackage/sticker.png'),
+    OnThePackage: require('../../assets/PointOfPurchase/OnThePackage/onThePackage.jpg'),
     BoxesAndPackaging: require('../../assets/PointOfPurchase/OnThePackage/Rectangle-Box.png'),
     OnPackCoupons: require('../../assets/PointOfPurchase/OnThePackage/on-pack.png'),
     CaseStickers: require('../../assets/PointOfPurchase/OnThePackage/case-sticker.png'),
@@ -50,12 +50,15 @@ const imagePathsPointOfPurchase = {
     LabelsDecalsAndStickers: require('../../assets/PointOfPurchase/OnThePackage/labels.png'),
   },
   inTheStore:{
-    OnThePackage: require('../../assets/PointOfPurchase/InTheStore/pop.jpg'),
-    BoxesAndPackaging: require('../../assets/PointOfPurchase/InTheStore/case-card.png'),
-    OnPackCoupons: require('../../assets/PointOfPurchase/InTheStore/case-card.png'),
-    CaseStickers: require('../../assets/PointOfPurchase/OnThePackage/case-sticker.png'),
-    BottleStickers: require('../../assets/PointOfPurchase/OnThePackage/sticker.png'),
-    LabelsDecalsAndStickers: require('../../assets/PointOfPurchase/OnThePackage/labels.png'),
+    inTheStore: require('../../assets/PointOfPurchase/InTheStore/inTheStore.jpg'),
+    caseCards: require('../../assets/PointOfPurchase/InTheStore/case-card.png'),
+    caseStackers: require('../../assets/PointOfPurchase/InTheStore/case-stacker.png'),
+    caseBins: require('../../assets/PointOfPurchase/InTheStore/case-stacker.png'),
+    caseTuckers: require('../../assets/PointOfPurchase/InTheStore/case-tucker.png'),
+    palletBaseWraps: require('../../assets/PointOfPurchase/InTheStore/case-tucker.png'),
+    cardboardShelfDisplays: require('../../assets/PointOfPurchase/InTheStore/shelf-display.png'),
+    counterDisplays: require('../../assets/PointOfPurchase/InTheStore/counter.png'),
+    coupons: require('../../assets/PointOfPurchase/InTheStore/coupon.png'),
   },
   onPremise:{
     OnThePackage: require('../../assets/PointOfPurchase/OnThePackage/square-pic-1.jpg'),
@@ -118,15 +121,15 @@ const Navbar = () => {
       ],
       theStore: [
 
-        { name: 'In The Store', image: imagePathsPointOfPurchase.thePackage.OnThePackage, link: '/' },
-        { name: 'Case Cards', image: imagePathsPointOfPurchase.thePackage.BoxesAndPackaging, link: '/classic' },
-        { name: 'Case Stackers', image: imagePathsPointOfPurchase.thePackage.OnPackCoupons, link: '/quick-classic' },
-        { name: 'Case Bins', image: imagePathsPointOfPurchase.thePackage.CaseStickers, link: '/popup' },
-        { name: 'Case Tuckers', image: imagePathsPointOfPurchase.thePackage.BottleStickers, link: '/padded' },
-        { name: 'Pallet Base Wraps', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
-        { name: 'Cardboard Shelf Displays', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
-        { name: 'Counter Displays', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
-        { name: 'Coupons', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+        { name: 'In The Store', image: imagePathsPointOfPurchase.inTheStore.inTheStore, link: '/' },
+        { name: 'Case Cards', image: imagePathsPointOfPurchase.inTheStore.caseCards, link: '/' },
+        { name: 'Case Stackers', image: imagePathsPointOfPurchase.inTheStore.caseStackers, link: '/quick-classic' },
+        { name: 'Case Bins', image: imagePathsPointOfPurchase.inTheStore.caseBins, link: '/popup' },
+        { name: 'Case Tuckers', image: imagePathsPointOfPurchase.inTheStore.caseTuckers, link: '/padded' },
+        { name: 'Pallet Base Wraps', image: imagePathsPointOfPurchase.inTheStore.palletBaseWraps, link: '/floating' },
+        { name: 'Cardboard Shelf Displays', image: imagePathsPointOfPurchase.inTheStore.cardboardShelfDisplays, link: '/floating' },
+        { name: 'Counter Displays', image: imagePathsPointOfPurchase.inTheStore.counterDisplays, link: '/floating' },
+        { name: 'Coupons', image: imagePathsPointOfPurchase.inTheStore.coupons, link: '/floating' },
 
        
       ],
@@ -290,6 +293,7 @@ const Navbar = () => {
           <RouterLink  to="/ShelfTalkerPage/shelfTalker"  onClick={() => setShowMenu(false)} className="listItem">
             Shelf Talkers
           </RouterLink>
+          
           
           <RouterLink  to="clients" onClick={() => setShowMenu(false)} className="listItem">
             Point of Purchase
