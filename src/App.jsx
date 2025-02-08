@@ -11,19 +11,13 @@ import ScrollUp from "./components/ScrollUp/scrollUp";
 import ShelfTalker from "./components/ShelfTalkerPage/shelfTalker";
 import Services from "./components/WeBuild/services"
 import Feedbacks from "./components/Feedbacks/feedbacks"
+import ServicesPage from "./components/ServicesPage/servicesPage";
 
 
 function App() {
   // const [loading, setLoading] = useState(true);
   const [showChatBot, setShowChatBot] = useState(false);
 
-  // useEffect(() => {
-  //   const loadingTimer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 2000);
-
-  //   return () => clearTimeout(loadingTimer);
-  // }, []);
 
   useEffect(() => {
     // if (!loading) {
@@ -38,9 +32,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* {loading ? (
-          <LoadingScreen />
-        ) : ( */}
+      
           <>
             {showChatBot && <ChatBot />}
             <Navbar />
@@ -56,12 +48,13 @@ function App() {
               } 
               />
               <Route path="/ShelfTalkerPage/shelfTalker" element={<ShelfTalker />} />
+              <Route path="/ServicesPage/servicesPage" element={<ServicesPage/>}/>
               <Route path="/About" element={<About />}/>
               <Route path="/Contact" element={<Contact />}/>
             </Routes>
             <ScrollUp /> {/* Add ScrollUp button here */}
           </>
-        {/* )} */}
+     
         <Footer />
       </div>
     </Router>

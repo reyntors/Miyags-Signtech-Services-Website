@@ -39,6 +39,14 @@ const imagePaths = {
   // Add more mappings as needed
 };
 
+const servicesImagePaths = {
+  signFabrication: require('../../assets/Drawing/signFabrication2.webp'),
+  billboardAdvertising: require('../../assets/Drawing/billBoards/billboards.jpg'),
+  tarpPrinting: require('../../assets/Drawing/tarpPrinting.jpg'),
+  paperPrinting: require('../../assets/Drawing/new/column ads 2.jpg'),
+  // Add more mappings as needed
+};
+
 const imagePathsPointOfPurchase = {
 
   thePackage:{
@@ -80,6 +88,7 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false); 
   const [activeImage, setActiveImage] = useState(imagePaths.OnTheShelf);
   const [activeImage2, setActiveImage2] = useState(imagePathsPointOfPurchase.OnTheShelf);
+  const [activeImage3, setActiveImage3] = useState(servicesImagePaths.billboardAdvertising);
   // const [showLoginSignUp, setShowLoginSignUp] = useState(false);
 
   // const handleLogicSignUpClick = () => {
@@ -147,7 +156,12 @@ const Navbar = () => {
     }
   ];
 
-  
+  const ServicesmenuItems = [
+    { name: 'Sign Fabrication', image: servicesImagePaths.signFabrication, link: '/' },
+    { name: 'Billboard Advertising', image: servicesImagePaths.billboardAdvertising, link: '/classic' },
+    { name: 'Tarp Printing', image: servicesImagePaths.tarpPrinting, link: '/quick-classic' },
+    { name: 'Sticker Printing', image: servicesImagePaths.paperPrinting, link: '/popup' },
+  ];
 
   
 
@@ -159,6 +173,11 @@ const Navbar = () => {
   const handleHover2 = (image) => {
     setActiveImage2(image);
   };
+
+  const handleHover3 = (image) => {
+    setActiveImage3(image);
+  };
+
 
  
 
@@ -239,6 +258,7 @@ const Navbar = () => {
                         </ul>
 
                         <ul className="sub-list">
+                        <img src={activeImage2} alt="Dropdown Visual" />
                           {PointOfPurchaseItems[0].theStore.map((item, index) => (
                             <li key={index}>
                               <RouterLink
@@ -252,6 +272,7 @@ const Navbar = () => {
                         </ul>
 
                         <ul className="sub-list">
+                        <img src={activeImage2} alt="Dropdown Visual" />
                           {PointOfPurchaseItems[0].onPremise.map((item, index) => (
                             <li key={index}>
                               <RouterLink
@@ -275,11 +296,54 @@ const Navbar = () => {
         <RouterLink  to="shopAll"   className="desktopMenuListItem">
           Shop All
         </RouterLink>
+        <div
+            className="desktopMenuListItem1 dropdown-container"
+            onMouseEnter={() => setShowDropdown(true)}
+            onMouseLeave={() => setShowDropdown(false)}
+          >
+
+            <RouterLink to="/ServicesPage/servicesPage" className="ourservices " onClick={handleScrollToTop} >
+              Our Services <FaChevronDown className="dropdown-icon" />
+            </RouterLink>
+
+            {showDropdown && (
+            <motion.ul 
+           
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1, transition: { duration: 0.5 } }}
+          >
+            <ul className="sub-menus2">
+              
+               <img src={activeImage3} alt="Dropdown Visual" />
+              
+               {ServicesmenuItems.map((item, index) => (
+                <li key={index}>
+                  <RouterLink
+                  
+                    className="sublist2"
+                    onMouseEnter={() => handleHover3(item.image)} 
+                  >
+                   
+                    {item.name}
+                    
+                  </RouterLink>
+                </li>
+              ))}
+            
+            </ul>
+            </motion.ul>
+          )}
+          </div>
+
+
+        <RouterLink  to="/gallery"   className="desktopMenuListItem">
+          Our Project Gallery
+        </RouterLink>
 
         <RouterLink  to="/about"  onClick={handleScrollToTop} className="desktopMenuListItem">
           About Us
         </RouterLink>
-        <RouterLink  to="/contact" onClick={handleScrollToTop} className="desktopMenuListItem">
+        <RouterLink  to="/contact" onClick={handleScrollToTop} className="desktopMenuListItemContact">
           Contact Us
         </RouterLink>
       </div>
@@ -302,11 +366,17 @@ const Navbar = () => {
           <RouterLink  to="/ShelfTalkerPage/shopAll"  onClick={() => setShowMenu(false)} className="listItem">
             Shop All
           </RouterLink>
+          <RouterLink  to="/ServicesPage/servicesPage"  onClick={() => setShowMenu(false)} className="listItem">
+            Our Services
+          </RouterLink>
+          <RouterLink  to="/ShelfTalkerPage/shopAll"  onClick={() => setShowMenu(false)} className="listItem">
+            Our Project Gallery
+          </RouterLink>
 
           <RouterLink  to="/about"  onClick={() => setShowMenu(false)} className="listItem">
             About
           </RouterLink>
-          <RouterLink  to="/contact"  onClick={() => setShowMenu(false)} className="listItem">
+          <RouterLink  to="/contact"  onClick={() => setShowMenu(false)} className="listItem contactus">
             Contact Us
           </RouterLink>
           {/* <Link onClick={() => { setShowMenu(false); handleLogicSignUpClick(); }} className="listItem">
