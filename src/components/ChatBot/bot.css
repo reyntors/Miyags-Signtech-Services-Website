@@ -284,9 +284,14 @@ h2{
 @media (max-width: 360px) {
     
     
-   .chatbot-container{
+   .spam{
     display: none;
    } 
+
+   .chat-box{
+    position: fixed;
+    left: 1rem;
+   }
    
 
     

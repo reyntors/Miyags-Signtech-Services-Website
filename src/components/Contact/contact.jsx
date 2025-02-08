@@ -56,7 +56,7 @@ const Contact = () => {
     <section id="contactus">
     <div className="contact-content">
         <h2 className="reachus">REACH US</h2>
-        <span className="contactUsTitle">Contact Us</span>
+        <span className="contactUsTitle">Contact </span>
 
         <div className="contactDetailsContainer">
           <div className="contactDetail">

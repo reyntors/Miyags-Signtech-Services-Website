@@ -43,9 +43,9 @@
     border: none;
     color: #212529;
     font-size: 1.2rem;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     transition: background-color 0.3s ease;
   }
   
@@ -63,5 +63,14 @@
     position: relative;
     top: 1rem;
     font-size: 2rem;
+  }
+
+
+  @media (max-width: 360px) {
+
+    .connect-btn{
+      padding: 0.5rem 1rem;
+    }
+    
   }
   

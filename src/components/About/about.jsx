@@ -1,21 +1,19 @@
 import React from 'react';
 import './about.css';
 import { motion } from 'framer-motion';
+import {  Link as RouterLink } from "react-router-dom";
+
 
 const About = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, x: 100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.5 }}
-      id="about"
-    >
+   
+      <section id="about">
       <div className="about-content">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 0.5 } }}
-        >
+         <motion.div 
+                                initial={{ opacity: 0, x: -100 }}  
+                                whileInView={{ opacity: 1, x: 0 }} 
+                                viewport={{ once: true, amount: 0.5 }} 
+                                transition={{ duration: 0.5 }}>
           <span className="aboutTitle">About Us</span>
           <div className="aboutDesc">
             <p>
@@ -30,13 +28,15 @@ const About = () => {
             and your brand.</p>
             <h1>WE OFFER  FREE ESTIMATE!</h1>
             <div className="connect-btn-container">
-              <button className='connect-btn'>Learn More About Us</button>
+              <RouterLink to='/contact'>
+              <button className='connect-btn'>Contact Us</button>
+              </RouterLink>
             </div>
           </div>
         </motion.div>
       </div>
-     
-    </motion.section>
+      </section>
+   
   );
 };
 

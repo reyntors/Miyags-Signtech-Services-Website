@@ -61,12 +61,12 @@ const imagePathsPointOfPurchase = {
     coupons: require('../../assets/PointOfPurchase/InTheStore/coupon.png'),
   },
   onPremise:{
-    OnThePackage: require('../../assets/PointOfPurchase/OnThePackage/square-pic-1.jpg'),
-    BoxesAndPackaging: require('../../assets/PointOfPurchase/OnThePackage/Rectangle-Box.png'),
-    OnPackCoupons: require('../../assets/PointOfPurchase/OnThePackage/on-pack.png'),
-    CaseStickers: require('../../assets/PointOfPurchase/OnThePackage/case-sticker.png'),
-    BottleStickers: require('../../assets/PointOfPurchase/OnThePackage/sticker.png'),
-    LabelsDecalsAndStickers: require('../../assets/PointOfPurchase/OnThePackage/labels.png'),
+    onPremise: require('../../assets/PointOfPurchase/OnPremise/on-premise.jpg'),
+    coasters: require('../../assets/PointOfPurchase/OnPremise/coasters.png'),
+    tableTents: require('../../assets/PointOfPurchase/OnPremise/table-tent.png'),
+    wallWindowGraphics: require('../../assets/PointOfPurchase/OnPremise/wall-window.png'),
+    floorGraphics: require('../../assets/PointOfPurchase/OnPremise/coasters.png'),
+    expoEventDisplays: require('../../assets/PointOfPurchase/OnPremise/event-displays.png'),
   },
   
   
@@ -135,12 +135,12 @@ const Navbar = () => {
       ],
       onPremise: [
 
-        { name: 'On Premise', image: imagePathsPointOfPurchase.thePackage.OnThePackage, link: '/' },
-        { name: 'Coasters', image: imagePathsPointOfPurchase.thePackage.BoxesAndPackaging, link: '/classic' },
-        { name: 'Table Tents', image: imagePathsPointOfPurchase.thePackage.OnPackCoupons, link: '/quick-classic' },
-        { name: 'Wall & Window Graphics', image: imagePathsPointOfPurchase.thePackage.CaseStickers, link: '/popup' },
-        { name: 'Floor Graphics', image: imagePathsPointOfPurchase.thePackage.BottleStickers, link: '/padded' },
-        { name: 'Expo & Event Displays', image: imagePathsPointOfPurchase.thePackage.LabelsDecalsAndStickers, link: '/floating' },
+        { name: 'On Premise', image: imagePathsPointOfPurchase.onPremise.onPremise, link: '/' },
+        { name: 'Coasters', image: imagePathsPointOfPurchase.onPremise.coasters, link: '/classic' },
+        { name: 'Table Tents', image: imagePathsPointOfPurchase.onPremise.tableTents, link: '/quick-classic' },
+        { name: 'Wall & Window Graphics', image: imagePathsPointOfPurchase.onPremise.wallWindowGraphics, link: '/popup' },
+        { name: 'Floor Graphics', image: imagePathsPointOfPurchase.onPremise.floorGraphics, link: '/padded' },
+        { name: 'Expo & Event Displays', image: imagePathsPointOfPurchase.onPremise.expoEventDisplays, link: '/floating' },
        
       ],
 
@@ -295,11 +295,11 @@ const Navbar = () => {
           </RouterLink>
           
           
-          <RouterLink  to="clients" onClick={() => setShowMenu(false)} className="listItem">
+          <RouterLink  to="" onClick={() => setShowMenu(false)} className="listItem">
             Point of Purchase
           </RouterLink>
 
-          <RouterLink  to="/ShelfTalkerPage/shelfTalker"  onClick={() => setShowMenu(false)} className="listItem">
+          <RouterLink  to="/ShelfTalkerPage/shopAll"  onClick={() => setShowMenu(false)} className="listItem">
             Shop All
           </RouterLink>
 
