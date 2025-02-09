@@ -131,7 +131,7 @@
     display: flex; /* Arranges the <ul> elements in a row */
     gap: 1rem; /* Adds space between the <ul> elements */
     top: 5.5rem; 
-    left: -40rem;
+    left: -20rem;
     background: #ffffff; 
     color: #212529;
     list-style: none;

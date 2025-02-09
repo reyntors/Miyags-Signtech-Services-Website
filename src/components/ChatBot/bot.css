@@ -281,17 +281,29 @@ h2{
 }
 
 
-@media (max-width: 360px) {
+@media (max-width: 320px) {
     
     
    .spam{
     display: none;
    } 
 
-   .chat-box{
+   .chat-box.minimized {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
     position: fixed;
-    left: 1rem;
-   }
+    bottom: 20px;
+    right: 3rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-container{
+    width: 80%;
+    right: 3.5rem;
+    
+}
    
 
     

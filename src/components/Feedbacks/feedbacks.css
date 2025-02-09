@@ -63,7 +63,7 @@
     font-size: 3rem;
 }
 
-.light-up{
+.light{
  
     padding: 3rem;
     color: #212529;
@@ -71,17 +71,17 @@
     border-radius: 10px;
 }
 
-.light-up h1{
+.light h1{
     font-size: 3.5rem;
 }
 
-.light-up p{
+.light p{
     margin-top: 1rem;
     line-height: 2;
     font-size: 1.2rem;
 }
 
-.light-up button{
+.light button{
     margin-top: 4rem;
     background: #000000;
     border: none;
@@ -93,7 +93,7 @@
     transition: transform 0.3s ease;
 }
 
-.light-up button:hover{
+.light button:hover{
     transform: scale(1.2);
     background: #4a4a4b;
 }
@@ -146,7 +146,7 @@
         font-size: 2rem;
         width: 100%;
     }
-    .light-up{
+    .light{
         width: 100vw;
         justify-content: center;
         align-items: center;
@@ -155,13 +155,13 @@
         right: 5rem;
     }
 
-    .light-up h1{
+    .light h1{
         font-size: 2rem;
         width: 100vw;
         position: relative;
         right: 1rem;
     }
-    .light-up p{
+    .light p{
         width: 100%;
         font-size: 1rem;
     }
@@ -221,7 +221,7 @@
   }
   
   
-  @media  (min-width: 320px) {
+  @media  (max-width: 320px) {
     #feedbacks{
         height: 100%;
     }
@@ -255,7 +255,7 @@
     }
 
     .light h1{
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .light button{

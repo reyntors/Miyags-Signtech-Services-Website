@@ -3,6 +3,11 @@ import './about.css';
 import { motion } from 'framer-motion';
 import {  Link as RouterLink } from "react-router-dom";
 
+const handleScrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+
 
 const About = () => {
   return (
@@ -28,7 +33,7 @@ const About = () => {
             and your brand.</p>
             <h1>WE OFFER  FREE ESTIMATE!</h1>
             <div className="connect-btn-container">
-              <RouterLink to='/contact'>
+              <RouterLink to='/contact' onClick={handleScrollToTop}>
               <button className='connect-btn'>Contact Us</button>
               </RouterLink>
             </div>

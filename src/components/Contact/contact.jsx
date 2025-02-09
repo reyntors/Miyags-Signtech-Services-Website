@@ -6,6 +6,8 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { motion } from 'framer-motion';
 
+
+
 const Contact = () => {
 
   const [formData, setFormData] = useState({

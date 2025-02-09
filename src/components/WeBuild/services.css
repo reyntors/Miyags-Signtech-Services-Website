@@ -839,33 +839,34 @@
 
 }
 
-@media (min-width: 320px) {
+@media (max-width: 320px) {
 
   .sign-fabrication{
     width: 100vw;
-    position: relative;
-    right: 5.2rem;
     padding: 1rem;
+    position: relative;
+    right: 6rem;
   }
+
   .billboard{
     top: 8rem;
     width: 100vw;
     position: relative;
-    right: 5.2rem;
+    right: 6rem;
     padding: 1rem;
   }
   .tarp-printing{
     top: 20rem;
     width: 100vw;
     position: relative;
-    right: 5.2rem;
+    right: 6rem;
     padding: 1rem;
   }
   .sticker-printing{
     top: 30rem;
     width: 100vw;
     position: relative;
-    right: 5.2rem;
+    right: 6rem;
     padding: 1rem;
   }
 
@@ -903,16 +904,6 @@
     padding-bottom: 10rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 .modal-image {
