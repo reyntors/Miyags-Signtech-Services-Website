@@ -336,7 +336,7 @@ const Navbar = () => {
           </div>
 
 
-        <RouterLink  to="/gallery"   className="desktopMenuListItem">
+        <RouterLink  to="/ProjectsGallery/projects"   className="desktopMenuListItem">
           Our Project Gallery
         </RouterLink>
 
@@ -369,7 +369,7 @@ const Navbar = () => {
           <RouterLink  to="/ServicesPage/servicesPage"  onClick={() => setShowMenu(false)} className="listItem">
             Our Services
           </RouterLink>
-          <RouterLink  to="/ShelfTalkerPage/shopAll"  onClick={() => setShowMenu(false)} className="listItem">
+          <RouterLink  to="/ProjectsGallery/projects"  onClick={() => setShowMenu(false)} className="listItem">
             Our Project Gallery
           </RouterLink>
 

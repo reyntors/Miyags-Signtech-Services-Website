@@ -12,6 +12,7 @@ import ShelfTalker from "./components/ShelfTalkerPage/shelfTalker";
 import Services from "./components/WeBuild/services"
 import Feedbacks from "./components/Feedbacks/feedbacks"
 import ServicesPage from "./components/ServicesPage/servicesPage";
+import ProjectsGallery from "./components/ProjectsGallery/projects"
 
 
 function App() {
@@ -50,7 +51,10 @@ function App() {
               <Route path="/ShelfTalkerPage/shelfTalker" element={<ShelfTalker />} />
               <Route path="/ServicesPage/servicesPage" element={<ServicesPage/>}/>
               <Route path="/About" element={<About />}/>
-              <Route path="/Contact" element={<Contact />}/>
+              <Route path="/Contact" element={<Contact /> }/>
+              <Route path="/Gallery" element={<ProjectsGallery />}/>
+
+           
             </Routes>
             <ScrollUp /> {/* Add ScrollUp button here */}
           </>
