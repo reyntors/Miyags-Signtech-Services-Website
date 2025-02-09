@@ -95,7 +95,7 @@ const Feedbacks = () => {
           transition={{ duration: 1 }}
         >
         <h1>CUSTOMER FEEDBACKS</h1>
-        <h2 className="feedback-sub">Don’t Just Take Our Word For It!</h2>
+        <h2 >Don’t Just Take Our Word For It!</h2>
         </motion.div>
         <div className="feedback-container">
         {feedbacks.map((feedback, index) => (
@@ -148,7 +148,7 @@ const Feedbacks = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 1 }}
         >
-          <div className="light-up">
+          <div className="light">
             <h1>BRIGHTEN YOUR BRAND TODAY!</h1>
             <p>
               Elevate your business’ visibility with our striking signs and billboards. Here at Miyags Signtech Services,

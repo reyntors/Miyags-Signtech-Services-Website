@@ -839,38 +839,38 @@
 
 }
 
-@media (max-width: 360px) {
+@media (min-width: 320px) {
 
   .sign-fabrication{
-    width: 200%;
+    width: 100vw;
     position: relative;
     right: 5.2rem;
     padding: 1rem;
   }
   .billboard{
-    top: 5rem;
-    width: 200%;
+    top: 8rem;
+    width: 100vw;
     position: relative;
     right: 5.2rem;
     padding: 1rem;
   }
   .tarp-printing{
-    top: 10rem;
-    width: 200%;
+    top: 20rem;
+    width: 100vw;
     position: relative;
     right: 5.2rem;
     padding: 1rem;
   }
   .sticker-printing{
-    top: 15rem;
-    width: 200%;
+    top: 30rem;
+    width: 100vw;
     position: relative;
     right: 5.2rem;
     padding: 1rem;
   }
 
 
-  @media (max-width: 360px) {
+
     .modal-overlay.show {
       opacity: 1;
       visibility: visible;
@@ -880,8 +880,7 @@
       right: 0; /* Align with the viewport */
       
     }
-  }
-  
+    
   
   .modal-content {
     position: relative;
@@ -893,6 +892,15 @@
     overflow: hidden;
     animation: zoomInEffect 0.3s ease-in-out; 
     margin-top: 5rem;
+  }
+
+  .services-marquee{
+    position: relative;
+    top: 15rem;
+  }
+
+  .services{
+    padding-bottom: 10rem;
   }
 }
 

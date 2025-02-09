@@ -221,23 +221,20 @@
   }
   
   
-  @media  (max-width: 360px) {
+  @media  (min-width: 320px) {
     #feedbacks{
         height: 100%;
     }
-   .feedback-sub{
-        width: 100vw;
+    
+    #feedbacks h2{
         font-size: 2rem;
-        line-height: 2rem;
-        position: relative;
-        right: 5.5rem;
-       
+        font-weight: 400;
     }
 
     .project-container{
         display: block;
         width: 100%;
-        top: 4rem;
+        top: 7rem;
         position: relative;
         
         justify-items: center;
@@ -250,24 +247,34 @@
         font-size: 2rem;
         width: 100%;
     }
-    .light-up{
-        width: 100vw;
-        justify-content: center;
-        align-items: center;
-        text-align: left;
+
+    .light{
         position: relative;
-        right: 5rem;
+        top: 2rem;
+        text-align: left;
     }
 
-    .light-up h1{
+    .light h1{
         font-size: 2rem;
-        width: 100vw;
-        position: relative;
-        right: 1rem;
     }
-    .light-up p{
-        width: 100%;
-        font-size: 1rem;
+
+    .light button{
+        margin-top: 4rem;
+        background: #000000;
+        border: none;
+        padding: 20px;
+        border-radius: 5px;
+        color: white;
+        font-weight: 400;
+        transform: scale(1);
+        transition: transform 0.3s ease;
     }
+    
+    .light button:hover{
+        transform: scale(1.2);
+        background: #4a4a4b;
+    }
+    
+    
     
   }
