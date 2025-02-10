@@ -1,57 +1,126 @@
-#services-container{
+#services-container {
     background: white;
     height: 100%;
     padding-bottom: 10%;
 }
 
-.advertising button{
+.advertising button {
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.text-content{
+.text-content {
     color: black;
 }
 
-.feedbacks{
+.feedbacks {
+    margin-top: 2rem;
     text-align: center;
 }
 
+/* ========== MOBILE RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+    .machines {
+        flex-direction: column; /* Stack machines vertically */
+        gap: 20px;
+    }
 
+    .machine-gonzheng {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center; 
+        gap: 10px;
+    }
 
+    .text, .text2 {
+        text-align: center; /* Centers text */
+    }
 
+    .machine-gonzheng img {
+        width: 90%; /* Make images larger on small screens */
+        max-width: 250px; /* Prevents overly large images */
+    }
+}
 
+/* ========== FOR VERY SMALL SCREENS (320px - 360px) ========== */
 @media (max-width: 360px) {
-
-    .feedback-sub{
+    .feedback-sub, .light-up {
         text-align: center;
         position: relative;
         left: 0;
     }
-    .light-up {
-        text-align: center;
-        position: relative;
-        left: 0;
-     
-    }
 
-    .light-up h1{
+    .light-up h1 {
         text-align: center;
-        position: relative;
         justify-content: center;
         align-items: center;
-        right: 50px;
+        position: relative;
+        right: 0; /* Prevent shifting */
     }
 
-    
-.light-up button{
-   position: relative;
-   left: 0;
+    .light-up button {
+        position: relative;
+        left: 0;
+    }
+
+    .light-up button:hover {
+        transform: scale(1.2);
+        background: #4a4a4b;
+    }
 }
 
-.light-up button:hover{
-    transform: scale(1.2);
-    background: #4a4a4b;
+/* ========== GENERAL STYLES ========== */
+.machines-container {
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.machines-container h1 {
+    margin-bottom: 3rem;
+}
+
+.machines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.machine-gonzheng {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.text {
+    flex: 1;
+    text-align: right;
+}
+
+.text2 {
+    flex: 1;
+    text-align: left;
+}
+
+.machine-gonzheng img {
+    width: 80%;
+    max-width: 300px;
+    object-fit: contain;
+    border-radius: 2rem;
+}
+
+p {
+    font-weight: 300;
+}
+
+.machine-gonzheng:hover {
+    transform: translateX(-10px);
+    transition: transform 0.3s ease-in-out;
 }

@@ -7,6 +7,9 @@ import {  Link as RouterLink } from "react-router-dom";
 import billboard2 from '../../assets/Drawing/billBoards/billboards.jpg'
 import signFabrication from '../../assets/Drawing/signFabrication2.webp'
 import tarpPrinting from '../../assets/Drawing/tarpPrinting.jpg'
+import gonzheng from '../../assets/machines/gonzheng.jpg'
+import ucjv from '../../assets/machines/UCJV.jpg'
+import jv from '../../assets/machines/JV.jpg'
 
 const handleScrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -151,12 +154,60 @@ function ServicesPage() {
                       <p>Create a lasting impression with our premium sticker printing services. Whether for branding, packaging, or personal use, we deliver vibrant, durable, and customizable stickers that bring your ideas to life. From sleek finishes to bold designs, we ensure your stickers stand out wherever they’re applied.</p>
                       <button> <FontAwesomeIcon icon={faArrowRight} /></button>
                   </div>
+                  
+        </div>
+<div className="machines-container">
+    <h1>MACHINES USED FOR PRINTING</h1>
 
-
+    <div className="machines">
+    <motion.div 
+              initial={{ opacity: 0, x: 100 }}  
+              whileInView={{ opacity: 1, x: 0 }} 
+              viewport={{ once: true, amount: 0.5 }} 
+              transition={{ duration: 1 }}
+              >
+        <div className="machine-gonzheng">
+            <div className="text">
+                <h1>GONZHENG</h1>
+                <p>High-quality printing solutions with precision and efficiency. Experience professional-grade prints with advanced technology.</p>
+            </div>
+            <img src={gonzheng} alt="Gonzheng Machine" />
+        </div>
+        </motion.div>
+        <motion.div 
+              initial={{ opacity: 0, x: -100 }}  
+              whileInView={{ opacity: 1, x: 0 }} 
+              viewport={{ once: true, amount: 0.5 }} 
+              transition={{ duration: 1 }}
+              >
+        <div className="machine-gonzheng">
+            <img src={ucjv} alt="Gonzheng Machine" />
+            <div className="text2">
+                <h1>UCJV300-160</h1>
+                <p>Advanced print-and-cut technology, offering vibrant colors and high precision for a wide range of media. Perfect for high-volume printing and versatile applications.</p>
+            </div>
+        </div>
+        </motion.div>
+        <motion.div 
+              initial={{ opacity: 0, x: 100 }}  
+              whileInView={{ opacity: 1, x: 0 }} 
+              viewport={{ once: true, amount: 0.5 }} 
+              transition={{ duration: 1 }}
+              >
+        <div className="machine-gonzheng">
+            <div className="text">
+                <h1>JV330-160</h1>
+                <p>Versatile and high-performance wide-format printer with exceptional print quality. Ideal for banners, posters, and other large-format prints with high color accuracy and consistency.</p>
+            </div>
+            <img src={jv} alt="Gonzheng Machine" />
+        </div>
+        </motion.div>
+    </div>
 </div>
+
     <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 1 }}
             className='feedbacks'>

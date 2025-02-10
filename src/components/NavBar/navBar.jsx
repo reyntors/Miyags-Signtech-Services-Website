@@ -293,9 +293,9 @@ const Navbar = () => {
 
        
 
-        <RouterLink  to="shopAll"   className="desktopMenuListItem">
+        {/* <RouterLink  to="shopAll"   className="desktopMenuListItem">
           Shop All
-        </RouterLink>
+        </RouterLink> */}
         <div
             className="desktopMenuListItem1 dropdown-container"
             onMouseEnter={() => setShowDropdown(true)}
@@ -363,9 +363,9 @@ const Navbar = () => {
             Point of Purchase
           </RouterLink>
 
-          <RouterLink  to="/ShelfTalkerPage/shopAll"  onClick={() => setShowMenu(false)} className="listItem">
+          {/* <RouterLink  to="/ShelfTalkerPage/shopAll"  onClick={() => setShowMenu(false)} className="listItem">
             Shop All
-          </RouterLink>
+          </RouterLink> */}
           <RouterLink  to="/ServicesPage/servicesPage"  onClick={() => setShowMenu(false)} className="listItem">
             Our Services
           </RouterLink>

@@ -520,11 +520,13 @@ const Services = () => {
           </div>
         )}
 
-              {/* <div className="learn-more-container">
+             <div className="learn-more-container">
+              <RouterLink to="/servicesPage/servicesPage" onClick={handleScrollToTop}>
                 <button className="learn-more-btn">
                   Learn More <FontAwesomeIcon icon={faArrowRight} />
                 </button>
-              </div> */}
+                </RouterLink>
+              </div> 
       </div>   
     </section>
     
