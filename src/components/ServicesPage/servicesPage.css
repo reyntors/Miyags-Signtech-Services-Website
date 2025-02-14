@@ -1,17 +1,30 @@
+/* General Styles */
 #services-container {
     background: white;
-    height: 100%;
-    padding-bottom: 10%;
+    padding: 5% 10%;
+    height: auto;
 }
 
 .advertising button {
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.advertising button:hover {
+    background: #4a4a4b;
+    color: white;
 }
 
 .text-content {
     color: black;
+    text-align: center;
 }
 
 .feedbacks {
@@ -19,57 +32,6 @@
     text-align: center;
 }
 
-/* ========== MOBILE RESPONSIVENESS ========== */
-@media (max-width: 768px) {
-    .machines {
-        flex-direction: column; /* Stack machines vertically */
-        gap: 20px;
-    }
-
-    .machine-gonzheng {
-        flex-direction: column; /* Stack text and image vertically */
-        text-align: center; 
-        gap: 10px;
-    }
-
-    .text, .text2 {
-        text-align: center; /* Centers text */
-    }
-
-    .machine-gonzheng img {
-        width: 90%; /* Make images larger on small screens */
-        max-width: 250px; /* Prevents overly large images */
-    }
-}
-
-/* ========== FOR VERY SMALL SCREENS (320px - 360px) ========== */
-@media (max-width: 360px) {
-    .feedback-sub, .light-up {
-        text-align: center;
-        position: relative;
-        left: 0;
-    }
-
-    .light-up h1 {
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        right: 0; /* Prevent shifting */
-    }
-
-    .light-up button {
-        position: relative;
-        left: 0;
-    }
-
-    .light-up button:hover {
-        transform: scale(1.2);
-        background: #4a4a4b;
-    }
-}
-
-/* ========== GENERAL STYLES ========== */
 .machines-container {
     color: black;
     text-align: center;
@@ -79,48 +41,69 @@
 }
 
 .machines-container h1 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .machines {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     width: 100%;
 }
 
 .machine-gonzheng {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
+    text-align: center;
+    gap: 20px;
     width: 100%;
-    max-width: 1000px;
-}
-
-.text {
-    flex: 1;
-    text-align: right;
-}
-
-.text2 {
-    flex: 1;
-    text-align: left;
+    max-width: 500px;
 }
 
 .machine-gonzheng img {
-    width: 80%;
+    width: 100%;
     max-width: 300px;
     object-fit: contain;
-    border-radius: 2rem;
-}
-
-p {
-    font-weight: 300;
-}
-
-.machine-gonzheng:hover {
-    transform: translateX(-10px);
+    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
+}
+
+.machine-gonzheng:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .machines {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .machines-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .machine-gonzheng {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px) {
+    #services-container {
+        padding: 5% 5%;
+    }
+
+    .advertising button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .machines-container h1 {
+        font-size: 1.3rem;
+    }
 }

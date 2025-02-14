@@ -138,7 +138,7 @@
     margin-top: 1rem;
 }
 
-.copyright{
+/* .copyright{
     background: #3b3b3b;
     width: 100%;
     align-items: center;
@@ -150,7 +150,7 @@
 .copyright p{
     
     position: relative;
-}
+} */
 
 /* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
