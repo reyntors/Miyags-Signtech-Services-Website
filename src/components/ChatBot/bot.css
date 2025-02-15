@@ -295,13 +295,13 @@ h2{
     overflow: hidden;
     position: fixed;
     bottom: 20px;
-    right: 3rem;
+  
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .chatbot-container{
-    width: 80%;
-    right: 3.5rem;
+    width: 90%;
+   
     
 }
    

@@ -6,7 +6,7 @@ import {motion } from 'framer-motion'
 import {  Link as RouterLink } from "react-router-dom";
 import billboard2 from '../../assets/Drawing/billBoards/billboards.jpg'
 import signFabrication from '../../assets/Drawing/signFabrication2.webp'
-import tarpPrinting from '../../assets/Drawing/tarpPrinting.jpg'
+import tarpPrinting from '../../assets/Drawing/tarpPrinting.webp'
 import gonzheng from '../../assets/machines/gonzheng.jpg'
 import ucjv from '../../assets/machines/UCJV.jpg'
 import jv from '../../assets/machines/JV.jpg'
@@ -132,27 +132,27 @@ function ServicesPage() {
                     <img src={signFabrication} alt="" />
                       <h1>SIGN FABRICATION</h1>
                       <p>Transforming ideas into impactful visuals, our sign fabrication process combines precision craftsmanship with durable materials to create custom signage that elevates your brand and captures attention. From concept to completion, we ensure every sign is a perfect blend of innovation, quality, and style..</p>
-                      <button> <FontAwesomeIcon icon={faArrowRight} /></button>
+                      {/* <button> <FontAwesomeIcon icon={faArrowRight} /></button> */}
                   </div>
                  
                   <div className="billboard">
                   <img src={billboard2} alt="" />
                       <h1>BILLBOARD ADVERTISING</h1>
                       <p>We want all of our clients to experience the impressive level of skill and professionalism of our designers when working with Miyags Signtech Services. All of our services, especially this one, exist to make your life more beautiful. You can trust us to provide everything you need in order to produce truly exceptional designs.</p>
-                      <button> <FontAwesomeIcon icon={faArrowRight} /></button>
+                      {/* <button> <FontAwesomeIcon icon={faArrowRight} /></button> */}
                   </div>
                  
                   <div className="tarp-printing">
                   <img src={tarpPrinting} alt="" />
                       <h1>TARP PRINTING</h1>
                       <p>Delivering vibrant, high-quality tarp prints tailored to your needs, we specialize in creating eye-catching designs for events, promotions, and advertisements. With cutting-edge technology and durable materials, our tarpaulins are built to make a lasting impression, indoors or outdoors.</p>
-                      <button> <FontAwesomeIcon icon={faArrowRight} /></button>
+                      {/* <button> <FontAwesomeIcon icon={faArrowRight} /></button> */}
                   </div>
                   <div className="sticker-printing">
                   <img src={servicesData[0].img} alt="" />
                       <h1>STICKER PRINTING</h1>
                       <p>Create a lasting impression with our premium sticker printing services. Whether for branding, packaging, or personal use, we deliver vibrant, durable, and customizable stickers that bring your ideas to life. From sleek finishes to bold designs, we ensure your stickers stand out wherever they’re applied.</p>
-                      <button> <FontAwesomeIcon icon={faArrowRight} /></button>
+                      {/* <button> <FontAwesomeIcon icon={faArrowRight} /></button> */}
                   </div>
                   
         </div>

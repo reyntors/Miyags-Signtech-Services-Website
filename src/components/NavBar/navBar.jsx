@@ -42,7 +42,7 @@ const imagePaths = {
 const servicesImagePaths = {
   signFabrication: require('../../assets/Drawing/signFabrication2.webp'),
   billboardAdvertising: require('../../assets/Drawing/billBoards/billboards.jpg'),
-  tarpPrinting: require('../../assets/Drawing/tarpPrinting.jpg'),
+  tarpPrinting: require('../../assets/Drawing/tarpPrinting.webp'),
   paperPrinting: require('../../assets/Drawing/new/column ads 2.jpg'),
   // Add more mappings as needed
 };

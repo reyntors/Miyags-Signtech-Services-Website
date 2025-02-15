@@ -7,7 +7,7 @@ import {motion } from 'framer-motion'
 import billboard2 from '../../assets/Drawing/billBoards/billboards.jpg'
 import signFabrication from '../../assets/Drawing/signFabrication2.webp'
 // import billboard from '../../assets/billboard.jp/g'
-import tarpPrinting from '../../assets/Drawing/tarpPrinting.jpg'
+import tarpPrinting from '../../assets/Drawing/tarpPrinting.webp'
 // import stickerPrinting from '../../assets/sticker-printing.jpg'
 import {  Link as RouterLink } from "react-router-dom";
 
@@ -100,7 +100,7 @@ const servicesData = [
   },
   {
     name: 'Tarp Printing',
-    img: require('../../assets/Drawing/tarpPrinting.jpg'),
+    img: require('../../assets/Drawing/tarpPrinting.webp'),
   },
   {
     name: 'Trophy',
@@ -362,13 +362,10 @@ const Services = () => {
       />
    
       </svg>
-      <motion.section 
-      initial={{ opacity: 0, x: 100 }}  
-      whileInView={{ opacity: 1, x: 0 }} 
-      viewport={{ once: true, amount: 0.5 }} 
-      transition={{ duration: 0.5 }}
-      >
-      <h1 className="explore">GUIDE TO BASIC SIGN TYPES</h1>
+    
+      <div className="explore">
+        <h1 >GUIDE TO BASIC SIGN TYPES</h1>
+        </div>
           <div className="signDesc">
             <p>
               This drawing helps you illustrate some basic types of signs that
@@ -377,7 +374,7 @@ const Services = () => {
               various needs.
             </p>
           </div>
-          </motion.section>
+        
       
 
 
@@ -410,7 +407,7 @@ const Services = () => {
                   transition={{ duration: 1 }}
                   >
                   Proudly serving Davao City, Mindanao, and beyond, Miyags Signtech Services 
-                    is your trusted partner for exceptional signage and advertising needs. <br/>
+                    is your trusted partner for exceptional signage and advertising needs.
                     From concept to completion, all our services are handled in-house to ensure quality and precision. 
                     We specialize in custom-made signage, billboard advertising, and a wide range of marketing 
                     solutions to help your brand stand out. With our innovative designs, reliable service, 
@@ -457,27 +454,27 @@ const Services = () => {
                         <img src={signFabrication} alt="" />
                           <h1>SIGN FABRICATION</h1>
                           <p>Transforming ideas into impactful visuals, our sign fabrication process combines precision craftsmanship with durable materials to create custom signage that elevates your brand and captures attention. From concept to completion, we ensure every sign is a perfect blend of innovation, quality, and style..</p>
-                          <button> <FontAwesomeIcon icon={faArrowRight} /></button>
+                          {/* <button> <FontAwesomeIcon icon={faArrowRight} /></button> */}
                       </div>
                      
                       <div className="billboard">
                       <img src={billboard2} alt="" />
                           <h1>BILLBOARD ADVERTISING</h1>
                           <p>We want all of our clients to experience the impressive level of skill and professionalism of our designers when working with Miyags Signtech Services. All of our services, especially this one, exist to make your life more beautiful. You can trust us to provide everything you need in order to produce truly exceptional designs.</p>
-                          <button> <FontAwesomeIcon icon={faArrowRight} /></button>
+                          {/* <button> <FontAwesomeIcon icon={faArrowRight} /></button> */}
                       </div>
                      
                       <div className="tarp-printing">
                       <img src={tarpPrinting} alt="" />
                           <h1>TARP PRINTING</h1>
                           <p>Delivering vibrant, high-quality tarp prints tailored to your needs, we specialize in creating eye-catching designs for events, promotions, and advertisements. With cutting-edge technology and durable materials, our tarpaulins are built to make a lasting impression, indoors or outdoors.</p>
-                          <button> <FontAwesomeIcon icon={faArrowRight} /></button>
+                          {/* <button> <FontAwesomeIcon icon={faArrowRight} /></button> */}
                       </div>
                       <div className="sticker-printing">
                       <img src={servicesData[0].img} alt="" />
                           <h1>STICKER PRINTING</h1>
                           <p>Create a lasting impression with our premium sticker printing services. Whether for branding, packaging, or personal use, we deliver vibrant, durable, and customizable stickers that bring your ideas to life. From sleek finishes to bold designs, we ensure your stickers stand out wherever they’re applied.</p>
-                          <button> <FontAwesomeIcon icon={faArrowRight} /></button>
+                          {/* <button> <FontAwesomeIcon icon={faArrowRight} /></button> */}
                       </div>
 
 

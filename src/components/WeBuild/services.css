@@ -20,6 +20,30 @@
   bottom: 5rem;
 }
 
+.explore h1 {
+  overflow: hidden; 
+  border-right: .15em solid rgb(0, 0, 0); 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  width: 0; /* Start with zero width */
+  letter-spacing: .2rem;
+  animation: typing 2.5s steps(50, end) forwards, /* Add 'forwards' to keep the final state */
+             blink-caret 0.75s step-end infinite; /* Limit blinking to 4 times */
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 32%; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+
 
 
 /* Stop marquee on hover */
@@ -73,6 +97,25 @@
   object-fit: cover; 
 }
 
+.text-content{
+  justify-content: left;
+}
+
+
+.text-content h1 {
+  text-align: left;
+}
+
+.text-content p{
+  text-align: left;
+}
+
+.qoutation {
+  display: block; /* Makes the button respect text alignment */
+ 
+}
+
+
 
 @media (min-width: 1024px) {
   #sign {
@@ -95,6 +138,7 @@
     position: relative;
     display: flex;
     padding: 5rem;
+    
     
   }
   .advertising{
@@ -485,7 +529,7 @@
   }
   .title{
     font-size: 1.5rem;
-    padding-right: rem;
+    padding-right: 2rem;
     
   }
 
@@ -840,6 +884,32 @@
 }
 
 @media (max-width: 320px) {
+
+  .explore h1 {
+    overflow: hidden;
+    border-right: 0.15em solid rgb(0, 0, 0);
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 0; /* Start with zero width */
+    font-size: 1rem;
+    position: relative;
+    right: 1.8rem;
+    animation: typing 2.5s steps(50, end) forwards, 
+               blink-caret 0.75s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 200%; }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  }
+  
 
   .sign-fabrication{
     width: 100vw;
