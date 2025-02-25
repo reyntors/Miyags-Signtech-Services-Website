@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState,  useEffect } from 'react';
 import './servicesPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faArrowRight} from '@fortawesome/free-solid-svg-icons';
@@ -32,38 +32,38 @@ const servicesData = [
 ];
 
 
-// const feedbacks = [
-//   { id: 1, text: "Been using Miyags Signtech as long as I can remember! Always friendly, great services and honest pricing.", author: "John Doe" },
-//   { id: 2, text: "I’ve had MIYAGS SIGNTECH do 3 projects for my business. Each time, they’ve delivered a quality product for a fair price. Definitely recommend.", author: "Jane Smith" },
-//   { id: 3, text: "FAST!!!! Friendly people that got 3 back windows done in 15 minutes easy. HIGHLY RECOMMENDED!!!", author: "Mike Johnson" },
-//   { id: 4, text: "Outstanding service! They truly go above and beyond to make their customers happy.", author: "Sarah Brown" },
-//   { id: 5, text: "Quality and professionalism at its best. I will always choose Miyags Signtech for my projects.", author: "Emily Davis" },
-// ];
+const feedbacks = [
+  { id: 1, text: "Been using Miyags Signtech as long as I can remember! Always friendly, great services and honest pricing.", author: "John Doe" },
+  { id: 2, text: "I’ve had MIYAGS SIGNTECH do 3 projects for my business. Each time, they’ve delivered a quality product for a fair price. Definitely recommend.", author: "Jane Smith" },
+  { id: 3, text: "FAST!!!! Friendly people that got 3 back windows done in 15 minutes easy. HIGHLY RECOMMENDED!!!", author: "Mike Johnson" },
+  { id: 4, text: "Outstanding service! They truly go above and beyond to make their customers happy.", author: "Sarah Brown" },
+  { id: 5, text: "Quality and professionalism at its best. I will always choose Miyags Signtech for my projects.", author: "Emily Davis" },
+];
 
 function ServicesPage() {
   
-  // const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(0);
-  // const [loadingProgress, setLoadingProgress] = useState(0);
+  const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(0);
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
   
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentFeedbackIndex((prevIndex) =>
-  //       prevIndex === feedbacks.length - 1 ? 0 : prevIndex + 1
-  //     );
-  //     setLoadingProgress(0); // Reset loading bar on change
-  //   }, 6000); // Change feedback every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeedbackIndex((prevIndex) =>
+        prevIndex === feedbacks.length - 1 ? 0 : prevIndex + 1
+      );
+      setLoadingProgress(0); // Reset loading bar on change
+    }, 6000); // Change feedback every 5 seconds
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, []);
 
-  // useEffect(() => {
-  //   const progressInterval = setInterval(() => {
-  //     setLoadingProgress((prev) => (prev < 100 ? prev + 2 : 100));
-  //   }, 100);
+  useEffect(() => {
+    const progressInterval = setInterval(() => {
+      setLoadingProgress((prev) => (prev < 100 ? prev + 2 : 100));
+    }, 100);
 
-  //   return () => clearInterval(progressInterval);
-  // }, [currentFeedbackIndex]);
+    return () => clearInterval(progressInterval);
+  }, [currentFeedbackIndex]);
 
 
   return (
@@ -205,7 +205,7 @@ function ServicesPage() {
     </div>
 </div>
 
-    {/* <motion.div
+    <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
@@ -232,7 +232,7 @@ function ServicesPage() {
             ))}
 
            
-          </div> */}
+          </div>
             </section>
   );
 }
