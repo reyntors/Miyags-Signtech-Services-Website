@@ -33,8 +33,8 @@ const About = () => {
             and your brand.</p>
             <h1>WE OFFER  FREE ESTIMATE!</h1>
             <div className="connect-btn-container">
-              <RouterLink to='/contact' onClick={handleScrollToTop}>
-              <button className='connect-btn'>Contact Us</button>
+              <RouterLink to='/Calculator/calculator' onClick={handleScrollToTop}>
+              <button className='connect-btn'>Click Here...</button>
               </RouterLink>
             </div>
           </div>
