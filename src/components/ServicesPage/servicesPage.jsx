@@ -213,7 +213,7 @@ function ServicesPage() {
             className='feedbacks'>
             <h1>CUSTOMER FEEDBACKS</h1>
             <h2 className="feedback-sub">Don’t Just Take Our Word For It!</h2>
-            </motion.div>
+           
             <div className="feedback-container">
             {feedbacks.map((feedback, index) => (
               <div
@@ -233,6 +233,7 @@ function ServicesPage() {
 
            
           </div>
+          </motion.div>
             </section>
   );
 }
