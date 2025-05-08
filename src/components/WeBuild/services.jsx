@@ -44,7 +44,6 @@ const imagePaths = {
 
 
 
-
 const servicesData = [
   {
     name: 'Column Ads',

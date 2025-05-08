@@ -4,7 +4,7 @@
     text-align: center;
     width: 100vw;
     padding: 5rem;
-    height: 70rem;
+    height: 100%;
     background: #ebebeb;
     color: black;
 }
@@ -277,4 +277,47 @@
     
     
     
+  }
+
+
+  .ourClients {
+    width: 100%;
+    padding: 2rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    
+    
+  }
+
+  .logoClient{
+
+    width: 15%;
+  }
+
+  .clients-grid{
+    display: flex;
+    justify-content: center;
+    animation: marquee 20s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0); 
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+
+  .client-image{
+    width: 15%;
+    object-fit: contain;
+    padding: 0.5rem;
+   
+   
+  }
+
+  .client-image:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out
   }

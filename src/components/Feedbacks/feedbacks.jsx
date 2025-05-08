@@ -2,10 +2,19 @@ import './feedbacks.css';
 import React, { useState, useRef, useEffect } from 'react';
 import { Link as RouterLink } from "react-router-dom";
 import { motion } from 'framer-motion';
+import logo from '../../assets/miyags-logo2.png'
 
 const handleScrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+function importAll(r) {
+  let images = {};
+  r.keys().forEach((item) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+
+const images = Object.values(importAll(require.context('../../assets/Ourclients', false, /\.(png|jpe?g|svg|webp)$/)));
 
 const feedbacks = [
     { id: 1, text: "Been using Miyags Signtech as long as I can remember! Always friendly, great services and honest pricing.", author: "John Doe" },
@@ -28,8 +37,8 @@ const Feedbacks = () => {
       setCurrentFeedbackIndex((prevIndex) =>
         prevIndex === feedbacks.length - 1 ? 0 : prevIndex + 1
       );
-      setLoadingProgress(0); // Reset loading bar on change
-    }, 6000); // Change feedback every 5 seconds
+      setLoadingProgress(0); 
+    }, 6000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -141,6 +150,33 @@ const Feedbacks = () => {
             </div>
           </div>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="ourClients">
+            <img src={logo} alt="" className="logoClient" />
+            <h1 className='our-Clients'>OUR VALUED CLIENTS</h1>
+          
+            <div className="clients-grid">
+                    {images.map((image, index) => (
+                        <img
+                            key={index}
+                            src={image}
+                            alt={`Project ${index + 1}`}
+                            className="client-image"
+                          
+                        />
+                    ))}
+               
+            </div>
+          </div>
+
+
+          </motion.div>
 
         <motion.div
           initial={{ opacity: 0, x: 100 }}

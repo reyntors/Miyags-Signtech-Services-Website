@@ -61,8 +61,9 @@ function App() {
             <ScrollUp /> {/* Add ScrollUp button here */}
           </>
      
-        <Footer />
+          <Footer />
       </div>
+     
     </Router>
   );
 }
