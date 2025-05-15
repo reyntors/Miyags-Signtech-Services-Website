@@ -138,19 +138,34 @@
     margin-top: 1rem;
 }
 
-/* .copyright{
-    background: #3b3b3b;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 0rem 2rem 0rem;
-    height: 1rem;
-
+.copyright {
+  width: 100%;
+  position: relative;
+  padding: 1rem 2rem 2rem;
+ 
 }
-.copyright p{
-    
-    position: relative;
-} */
+
+.copyright .center {
+  text-align: center;
+  margin: 0;
+}
+
+.copyright .right {
+  position: absolute;
+  left: 10rem;
+  bottom: 2rem;
+
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.copyright .powered {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
 
 /* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {

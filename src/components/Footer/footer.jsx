@@ -97,8 +97,10 @@ const Footer = () => {
         </div>
         
         <div className="copyright">
-        <p>Copyright &#169; 2025 Miyags Signtech Services. All rights reserved.</p>
-        </div>
+  <p className="center">Copyright &#169; 2025 Miyags Signtech Services. All rights reserved.</p>
+  <p className="right">Powered By <a href="https://resplendent-meringue-4c6dab.netlify.app/" className="powered">REYNT0RS</a> | Privacy Policy</p>
+</div>
+
       </footer>
    
   );
