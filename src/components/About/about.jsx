@@ -22,15 +22,43 @@ const About = () => {
           <span className="aboutTitle">About Us</span>
           <div className="aboutDesc">
             <p>
-              <span className="miyags">Miyags Signtech Services</span>, a Davao-based supplier specializing in
-              printing and fabrication services in the Mindanao region.<br/>Our team
-              is dedicated to providing high-quality solutions for your
-              advertising needs, and we would love the opportunity to become a
-              trusted supplier to your company.
-            </p>
-            <br/>
-            <p>Every project will benefit from our creative team of highly experienced professionals who will work one on one with you from the initial concept through completion of your project! Look no farther, we are here for you with expert custom signage and billboard advertising for your business. Let us show you what our team can do for you
-            and your brand.</p>
+              <span className="miyags">Miyags Signtech Services</span>, is a company that specializes in providing both large and
+small businesses with innovative and distinctive print services. This business, which
+was founded in 2013 and has its headquarters at #8 Jordan St., Riverview Village,
+Davao City, specializes in designing, printing, producing, and installing signage choices,
+including billboards, indoor/outdoor signs, and digital signs.
+The company's objective is to offer print that help clients’ businesses become more
+visible. Miyags Signtech Services strives to deliver customized services that meet each
+clients’ expectations and the goal is to become a technology and signage company that
+integrates creative, effective, and reasonably priced display systems with an emphasis
+on the expansion and development of progressive, forward-thinking companies.
+The primary market for Miyags Signtech Services now includes large multinational
+companies that seek per product visibility in the malls and supermarkets and also brand
+recognition in the mass market area thru stores signages.
+</p>
+<div className="container-mission">
+  <div className="vision">
+    <h1>Vision</h1>
+    <p>Miyags Signtech Services will be the printer that offers high-quality outputs, always
+delivers on time, and covers all segments in the printing industry. We aim to become a
+leading provider of print solutions to increase business visibility and communication.
+The company's objective is to achieve business goals by partnering with customers and
+exceeding their expectations via the use of business transformation technologies and
+creative design.</p>
+  </div>
+  <div className="mission">
+    <h1>Mission</h1>
+    <p>• To consistently provide businesses with high-quality print products that drive
+customer engagement, enhance brand visibility, and support long-term success.
+<br/>• To collaborate closely with businesses, offering tailored print solutions that
+combine innovation, creativity, and eco-friendly printing solutions.
+<br/>• To be the best employer in Davao by fostering a supportive and inspiring
+workplace where every employee feels proud to be part of our team.
+<br/>• To grow our business by 20% each year by providing creative, reliable printing
+solutions through excellent service, strong partnerships, and a focus on our
+customers.</p>
+  </div>
+</div>
             <h1>WE OFFER  FREE QOUTATION!</h1>
             <div className="connect-btn-container">
               <RouterLink to='/contact' onClick={handleScrollToTop}>
