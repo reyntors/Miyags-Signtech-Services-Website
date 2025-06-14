@@ -13,7 +13,8 @@ import Services from "./components/WeBuild/services"
 import Feedbacks from "./components/Feedbacks/feedbacks"
 import ServicesPage from "./components/ServicesPage/servicesPage";
 import ProjectsGallery from "./components/ProjectsGallery/projects"
-import Calculator from "./components/Calculator/rollCalculator";
+// import Calculator from "./components/Calculator/rollCalculator";
+import PrivacyPolicy from "./components/PrivacyPolicy/privacyPolicy"
 
 
 function App() {
@@ -54,7 +55,7 @@ function App() {
               <Route path="/About" element={<About />}/>
               <Route path="/Contact" element={<Contact /> }/>
               <Route path="/ProjectsGallery/projects" element={<ProjectsGallery />}/>
-              <Route path="/Calculator/calculator" element={<Calculator/>}/>
+              <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
 
            
             </Routes>

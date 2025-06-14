@@ -1,0 +1,18 @@
+#privacyPolicy {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 50px;
+    border-radius: 5px;
+    color: black;
+    width: 50%;
+    margin: 0 auto;
+   
+}
+.privacy-content{
+    text-align: center;
+}
+
+.privacyTitle{
+    font-size: 2rem;
+    text-align: center;
+}

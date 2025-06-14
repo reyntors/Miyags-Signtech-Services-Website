@@ -5,6 +5,11 @@ import fb from '../../assets/facebook.png';
 import ig from '../../assets/instagram.png';
 // import Fade from 'react-reveal/Fade';
 // import {motion} from 'framer-motion'
+import {  Link as RouterLink } from "react-router-dom";
+
+const handleScrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
 const Footer = () => {
   return (
@@ -98,7 +103,7 @@ const Footer = () => {
         
         <div className="copyright">
   <p className="center">Copyright &#169; 2025 Miyags Signtech Services. All rights reserved.</p>
-  <p className="right">Powered By <a href="https://reynardportfolio.netlify.app/" className="powered">REYNT0RS</a> | Privacy Policy</p>
+  <p className="right">Powered By <a href="https://reynardportfolio.netlify.app/" className="powered">REYNT0RS</a> |<RouterLink to='/privacyPolicy' onClick={handleScrollToTop} className='privacy'>  Privacy Policy </RouterLink></p>
 </div>
 
       </footer>

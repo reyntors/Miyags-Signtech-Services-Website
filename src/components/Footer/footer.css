@@ -225,3 +225,8 @@
         text-align: center; /* Center align contact details */
     }
 }
+
+.privacy{
+    color: inherit;
+    text-decoration: none;
+}
