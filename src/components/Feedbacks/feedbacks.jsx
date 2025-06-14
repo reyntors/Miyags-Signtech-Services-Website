@@ -2,7 +2,7 @@ import './feedbacks.css';
 import React, { useState, useRef, useEffect } from 'react';
 import { Link as RouterLink } from "react-router-dom";
 import { motion } from 'framer-motion';
-import logo from '../../assets/miyags-logo2.png'
+import logo from '../../assets/miyags-logo.png'
 
 const handleScrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
