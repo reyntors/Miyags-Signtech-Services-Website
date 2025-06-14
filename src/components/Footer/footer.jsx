@@ -1,8 +1,8 @@
 import React from 'react';
 import './footer.css';
-import logo from '../../assets/miyags-logo2.png';
-import fb from '../../assets/facebook.png';
-import ig from '../../assets/instagram.png';
+import logo from '../../assets/miyags-logo.png';
+// import fb from '../../assets/facebook.png';
+// import ig from '../../assets/instagram.png';
 // import Fade from 'react-reveal/Fade';
 // import {motion} from 'framer-motion'
 import {  Link as RouterLink } from "react-router-dom";
@@ -30,10 +30,10 @@ const Footer = () => {
                 <h3>Email</h3>
                 <p>sales@miyagssigntech.com</p>
               </div>
-              <div className="icon-images">
+              {/* <div className="icon-images">
                 <img src={fb} alt="Facebook" className="icon-img" />
                 <img src={ig} alt="Instagram" className="icon-img" />
-              </div>
+              </div> */}
           </div>
 
           {/* Middle Section */}
@@ -60,7 +60,7 @@ const Footer = () => {
           <div className="rightFooter">
             <h2>Our Company</h2>
             <ul className="companyLinks">
-              <li><a href="#home">Home</a></li>
+              <li><RouterLink to="/" onClick={handleScrollToTop}> Home</RouterLink></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>

@@ -14,9 +14,9 @@ const About = () => {
    
       <section id="about">
       <div className="about-content">
-         <motion.div 
-                                initial={{ opacity: 0, x: -100 }}  
-                                whileInView={{ opacity: 1, x: 0 }} 
+      <motion.div 
+                                initial={{ opacity: 0, y: 100 }}  
+                                whileInView={{ opacity: 1, y: 0 }} 
                                 viewport={{ once: true, amount: 0.5 }} 
                                 transition={{ duration: 0.5 }}>
           <span className="aboutTitle">About Us</span>
@@ -37,6 +37,11 @@ companies that seek per product visibility in the malls and supermarkets and als
 recognition in the mass market area thru stores signages.
 </p>
 <div className="container-mission">
+<motion.div 
+                                initial={{ opacity: 0, y: 100 }}  
+                                whileInView={{ opacity: 1, y: 0 }} 
+                                viewport={{ once: true, amount: 0.5 }} 
+                                transition={{ duration: 0.5 }}>
   <div className="vision">
     <h1>Vision</h1>
     <p>Miyags Signtech Services will be the printer that offers high-quality outputs, always
@@ -46,6 +51,12 @@ The company's objective is to achieve business goals by partnering with customer
 exceeding their expectations via the use of business transformation technologies and
 creative design.</p>
   </div>
+  </motion.div>
+  <motion.div 
+                                initial={{ opacity: 0, y: 100 }}  
+                                whileInView={{ opacity: 1, y: 0 }} 
+                                viewport={{ once: true, amount: 0.5 }} 
+                                transition={{ duration: 0.5 }}>
   <div className="mission">
     <h1>Mission</h1>
     <p>• To consistently provide businesses with high-quality print products that drive
@@ -58,13 +69,21 @@ workplace where every employee feels proud to be part of our team.
 solutions through excellent service, strong partnerships, and a focus on our
 customers.</p>
   </div>
+  </motion.div>
 </div>
-            <h1>WE OFFER  FREE QOUTATION!</h1>
+<motion.div 
+                                initial={{ opacity: 0, x: 100 }}  
+                                whileInView={{ opacity: 1, x: 0 }} 
+                                viewport={{ once: true, amount: 0.5 }} 
+                                transition={{ duration: 0.5 }}>
+
+          
             <div className="connect-btn-container">
-              <RouterLink to='/contact' onClick={handleScrollToTop}>
-              <button className='connect-btn'>Get Qoute</button>
+              <RouterLink to='/about' onClick={handleScrollToTop}>
+              <button className='connect-btn'>Learn more...</button>
               </RouterLink>
             </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

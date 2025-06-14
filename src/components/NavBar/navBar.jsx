@@ -21,9 +21,6 @@ const handleScrollToTop = () => {
 
 
 
-
-
-
 const imagePaths = {
   OnTheShelf: require('../../assets/ShelfTalkers/shelf-talkers.png'),
   ClassicShelf: require('../../assets/ShelfTalkers/simple.png'),
